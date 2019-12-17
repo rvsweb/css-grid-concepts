@@ -1,0 +1,88 @@
+<!-- 
+Created on : 07-oct-2019 18:25:42 
+User : Raul Vela 
+Ref :
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Example Gutters</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content="Example Gutters">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" type="text/css" href="src/css/grid-css-main.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <style>
+
+      .title-grid {
+        font-size: 1.5em;
+        width: 58%;
+      }
+
+      figure{
+        padding: 2% ;
+        border-radius: 7px;
+        background-color: #fff;
+      }
+
+      figcaption{
+        width: 100%;
+        font-size: 1.5em;
+      }
+
+      .wrapper-gutters{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10px;
+        row-gap: 1em;
+      }
+
+      .wrapper-gutters{
+        /*Espacio entre columnas */
+        grid-column-gap: 10px; 
+        /*Espacio entre filas*/
+        grid-row-gap: 1em;
+
+        border: 2px solid #dfcdc3;
+        border-radius: 5px;
+        background-color: #5f6769;
+      }
+
+      .wrapper-gutters > div{
+        padding: 1em;
+        color: #fff;
+        border: 2px solid #dfcdc3;
+        border-radius: 5px;
+        background-color: #719192;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h1 class="title-grid">
+      Grid Gutters &#61; Espacio entre lineas
+    </h1>
+
+    <div class="wrapper-gutters">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+
+
+
+
+
+  </body>
+</html>

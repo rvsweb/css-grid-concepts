@@ -1,0 +1,53 @@
+<!-- 
+Created on : 08-nov-2019 17:57:51 
+User : Raul Vela 
+Ref :
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>CSS Grid Complete Guide To Grid Template</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content=".">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <style>
+      .container-columns{
+        display: grid;
+        grid-template:
+          [row1-start] "header header header" 25px [row1-end] 
+          [row2-start] "footer footer footer" 25px [row2-end] / auto 50px auto;
+      }
+
+      .header{
+        grid-area: header;
+      }
+
+      .header--deco{
+        background-color: #d79abc;
+      }
+
+      .footer{
+        grid-area: footer;
+      }
+
+      .footer--deco{
+        background-color: #baabda;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-columns">
+      <div class="header header--deco">header</div>
+      <div class="footer footer--deco">footer</div>
+    </div>
+  </body>
+</html>

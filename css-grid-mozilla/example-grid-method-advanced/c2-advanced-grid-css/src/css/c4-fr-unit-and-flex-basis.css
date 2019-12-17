@@ -1,0 +1,127 @@
+/* 
+    Created on : 09-oct-2019, 10:54:26
+    Author     : RVS
+*/
+
+*{
+  box-sizing: border-box;
+  font-family: Roboto,sans-serif;
+}
+
+header {
+  width: 50%;
+  height: auto;
+  padding: 1% 1%;
+  margin: 3% auto;
+}
+
+.first-header{
+  text-align: center; 
+  font-size: 1em;
+  background: #00adb5;
+}
+
+h1{
+  width: 80%;
+  height: auto;
+  padding: 2% 1%;
+  margin: 1% auto;
+} 
+
+.title{
+  text-align: center;
+  background: #eeeeee;
+}
+
+main {
+  width: 90%;
+  margin: 1% auto;
+  padding: 2% 2%;
+}
+
+.principal {
+  background: #eeeeee;
+
+}
+
+section {
+  width: 100%;
+  height: auto;
+  padding: 2% 2%;
+  margin: 1% auto;
+}
+
+.main__section-space ,
+.main__section-2 ,
+.main__section-3 ,
+.main__section-4 {
+  text-align: left;
+  border-radius: 7px;
+}
+
+div {
+  padding: 1% 1%;
+}   
+
+.section__box-1 ,
+.section__box-2 {
+  width: 100%;
+}
+
+.div__paragraph{
+  width: 80%;
+  margin: 1% auto;
+  text-align: center;
+  background: #ddb6c6;
+  padding: 1%;
+}
+
+h2 {
+  width: 30%;
+  padding: 2% 2%;
+  height: auto;
+  margin: 1% auto;
+}
+
+.section__subtitle {
+  background: #00adb5;
+  text-align: center;
+}
+
+.section__subtitle-deco-3 {
+  width: 40%;
+  background: #00adb5;
+  text-align: center;
+}
+
+.section__subtitle-deco-4 {
+  width: 50%;
+  background: #00adb5;
+  text-align: center;
+}
+
+.section__subtitle-deco-5 {
+  width: 100%;
+  padding: 1%;
+  margin: 1% auto;
+  color: #fff;
+  text-align: center;
+  background: #484c7f;
+}
+
+.section__subtitle-deco-6 {
+  width: 50%;
+  padding: 1%;
+  margin: 1% auto;
+  color: #fff;
+  text-align: center;
+  background: #484c7f;
+}
+
+.box-container{
+  font-weight: bolder;
+  font-size: 1em;
+  text-align: left;
+}
+
+

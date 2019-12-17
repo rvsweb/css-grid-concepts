@@ -1,0 +1,168 @@
+/* 
+    Created on : 08-nov-2019, 14:06:37
+    Author     : RVS
+*/
+
+body{
+  box-sizing: content-box;
+}
+
+section {
+  margin: 2% auto;
+}
+
+section , div{
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-2 {
+  grid-area: header;
+  width: inherit;
+}
+
+.header-2--deco {
+  border: 5px solid goldenrod;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.div__span-header {
+  display: block;
+  float: left;
+}
+
+.span--deco {
+  font-size: 4em;
+}
+
+.main-2 {
+  grid-area: main;
+  width: inherit;
+}
+
+.main-2--deco {
+  border: 5px solid yellow;
+}
+
+.div__span-main {
+
+}
+
+.div__img {
+  display: block;
+  margin: 1% auto;
+}
+
+.img--deco{
+  border-radius: 7px;
+}
+
+.sidebar-2 {
+  grid-area: sidebar;
+  width: inherit;
+}
+
+.sidebar-2--deco {
+  border: 5px solid red;
+}
+
+.div__span-side {
+
+} 
+
+.sidebar__span{
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.sidebar--deco{
+  background-color: #dcffcc;
+}
+
+.footer-2 {
+  grid-area: footer;
+  width: inherit;
+}
+
+.footer-2--deco {
+  border: 5px solid tomato;
+}
+
+.main-box-2{
+  height: auto;
+  width: inherit;
+}
+
+.main-2--deco {
+
+}
+
+.div__span-footer {
+  text-align: center;
+}
+
+.box--deco-2{
+  background-color: #95e1d3;
+}
+
+.container-2 {
+  box-sizing: border-box;
+  width: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: repeat(3 , auto);
+  grid-template-areas:
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+  grid-gap: 10px 10px;
+}
+
+.container--deco-2 {
+  background-color: #95e1d3;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.div-ul {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 2%;
+  float: right;
+}
+
+.ul--deco {
+  font-size: 4em;
+}
+
+.li-link {
+  display: inline-block;
+}
+
+.link-deco {
+  list-style: none;
+}
+
+.div-ul-2 {
+  display: inline-block;
+  margin: 1% auto;
+  padding: 0 15%;
+  float: right;
+}
+
+.ul--deco-2 {
+  font-size: 2.5em;
+}
+
+.li-link-2 {
+  display: inline-block;
+}
+
+.link-deco-2 {
+  list-style: none;
+}
+
+a , .enlaces{
+  display: block;
+  text-decoration: none;
+}
+

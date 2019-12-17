@@ -1,0 +1,234 @@
+<!-- 
+Created on : 06-oct-2019 17:22:40 
+User : Raul Vela 
+Ref : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Grid Basic</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content="Grid Basic">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta name="theme-color" content="#4285f4">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!--<link rel="manifest" href="/site.webmanifest">-->
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <link rel="stylesheet" type="text/css" href="css/ex2-grid-basic-template-row-columns.css">
+    <style>
+
+      *{
+        box-sizing: border-box;
+        font-family: Roboto ,sans-serif;
+      }
+
+      header{
+        padding: 1%;
+        background-color: #719192;
+      }
+
+      .title-grid{
+        width: 50%;
+        height: auto;
+        margin: 1% auto;
+        font-size: 1em;
+      }
+
+      h1{
+        width: 30%;
+        height: auto;
+        margin: 0 auto;
+        padding: 1%;
+        text-align: center;
+        background-color: #dfcdc3;
+      }
+
+      .box-txt{
+        width: 50%;
+        height: auto;
+        padding: 2%;
+        margin: 1% 0 1% 2%;
+        background-color: #dfcdc3;
+        border-radius: 7px;
+      }
+
+      .text-effusive{
+        font-size: 1.5em;
+      }
+
+      figure{
+        margin: 0 auto;
+        padding: 1%;
+      }
+
+      .img-grid-track{
+        display: block;
+        width: 45%;
+        height: auto;
+        margin: 1% auto;
+      }
+
+      figcaption{
+        margin: 1% auto;
+        text-align: center; 
+        font-size: 2em;
+      }
+
+      /* Grid para personalizar las filas y columnas usando pixeles */
+      .wrapper-repeat-3-1fr {
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+      }
+
+      .wrapper-fr{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .wrapper-percen{
+        display: grid;
+        grid-template-columns: 33.3% 33.3% 33.3%;
+      }
+
+      .wrapper-2fr{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+
+      .wrapper-mix{
+        display: grid;
+        grid-template-columns: 500px 1fr 2fr;
+        /*Valores aceptados*/
+        /*grid-template-columns: 200px 10em 10% 2fr;*/
+      }
+
+      .wrapper-repeat-3-1fr , 
+      .wrapper-fr ,
+      .wrapper-percen , 
+      .wrapper-2fr ,
+      .wrapper-mix
+      {
+        margin: 2% auto;
+        border: 2px solid #f76707;
+        border-radius: 5px;
+        background-color: #fff4e6;
+      }
+
+      .wrapper-repeat-3-1fr > div ,
+      .wrapper-fr > div , 
+      .wrapper-percen > div ,
+      .wrapper-2fr > div ,
+      .wrapper-mix > div 
+      {
+        border: 2px solid #ffa94d;
+        border-radius: 5px;
+        background-color: #ffd8a8;
+        padding: 1em;
+        color: #d9480f;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1>Grid Tracks</h1>
+      <div class="box-txt">
+        <b>grid-template-rows</b> &RightTriangle; Para <b>filas</b>
+      </div>
+
+      <div class="box-txt">
+        <b>grid-template-columns</b> &RightTriangle; Para <b>columnas</b>
+      </div>
+
+      <div class="box-txt">
+        <b>grid-track &RightTriangle;</b>
+        Espacio entre cualquier linea dentro del <b>&apos;Grid&apos;</b>
+        <br>
+        La parte de color Turquesa
+        
+        <figure>
+          <img class="img-grid-track" src="../src/img/grid-track.jpg" 
+               alt="Rectangulo divido en 2 filas cuya 
+               parte superior tiene una franja verde claro 
+               y la parte inferior 3 columnas 
+               divididas por lineas negras">
+          <figcaption>Grid Track</figcaption>
+        </figure>
+      </div>
+    </header>
+
+    <h1 class="title-grid">
+      Grid para personalizar las filas y 
+      columnas usando <span class="text-effusive">pixeles</span>
+    </h1>
+
+    <div class="wrapper-repeat-3-1fr">
+      <p></p>
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+
+    <h1 class="title-grid">
+      Grid para personalizar las filas y 
+      columnas usando <span class="text-effusive"> fr unit </span>
+    </h1>
+
+    <div class="wrapper-fr">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+
+    <h1 class="title-grid">
+      Grid para personalizar las filas y 
+      columnas usando <span class="text-effusive"> Porcentajes &#65285; </span>
+    </h1>
+
+    <div class="wrapper-percen">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+
+    <h1 class="title-grid">
+      Grid para personalizar las filas y 
+      columnas usando <span class="text-effusive"> <br> 2fr 1fr 1fr </span>
+    </h1>
+
+    <div class="wrapper-2fr">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+
+    <h1 class="title-grid">
+      Grid para personalizar las filas y 
+      columnas usando <span class="text-effusive"> <br> 500px 10em 10% 2fr </span>
+    </h1>
+
+    <div class="wrapper-mix">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+
+  </body>
+</html>

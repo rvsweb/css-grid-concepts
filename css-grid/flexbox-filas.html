@@ -1,0 +1,88 @@
+<!-- 
+Created on : 25-sep-2019 20:17:35 
+User : Raul Vela 
+Name archive : flexbox-filas.html
+Ref : https://codepen.io/team/css-tricks/pen/1ea1ef35d942d0041b0467b4d39888d3
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Flex Wrap</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content="Flex Wrap">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!--<link rel="manifest" href="/site.webmanifest">-->
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <style>
+
+      .flex-container-column {
+        display: flex;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -moz-flex;
+        display: -webkit-flex;
+
+        padding:0;
+        margin: 0;
+
+        list-style: none;
+        border: 1px solid silver;
+        -ms-box-orient: horizontal;
+      }
+
+      .wrap-reverse { 
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+      }  
+
+      .flex-item {
+        background: tomato;
+        padding: 5px;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+
+        line-height: 100px;
+        color: white;
+        font-weight: bold;
+        font-size: 2em;
+        text-align: center;
+      }
+
+      .mas-ancho {
+        height: 300px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <ul class="flex-container-column wrap-reverse">
+      <li class="flex-item">1</li>
+      <li class="flex-item mas-ancho">2</li>
+      <li class="flex-item">3</li>
+      <li class="flex-item mas-ancho">4</li>
+      <li class="flex-item">5</li>
+      <li class="flex-item mas-ancho">6</li>
+      <li class="flex-item">7</li>
+      <li class="flex-item mas-ancho">8</li>
+      <li class="flex-item">9</li>
+      <li class="flex-item mas-ancho">10</li>
+      <li class="flex-item">11</li>
+      <li class="flex-item mas-ancho">12</li>
+      <li class="flex-item">13</li>
+      <li class="flex-item mas-ancho">14</li>
+      <li class="flex-item">15</li>
+      <li class="flex-item mas-ancho">16</li>
+    </ul>
+
+  </body>
+</html>

@@ -1,0 +1,274 @@
+<!-- 
+Created on : 09-oct-2019 10:23:53 
+User : Raul Vela 
+Ref :
+minmax() - La función CSS define un rango de tamaño mayor 
+           o igual que min y menor o igual que max. 
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Fr unit and Flex Basis</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content="Fr unit and Flex Basis">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" type="text/css" href="src/css/c4-fr-unit-and-flex-basis.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <style>
+
+      /*
+      * Definir elementos del Grid Layout para ingresar elementos 
+      * dentro de la columna 
+      */
+      .wrapper-auto-filling {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 200px);
+        grid-auto-rows: 100px;
+      }
+
+      /*
+      * Establecer el diseño del Grid Layout
+      */
+      .wrapper-auto-filling {
+        border: 2px solid #f76707;
+        border-radius: 5px;
+        background-color: #fff4e6;
+      }
+
+      .wrapper-auto-filling > div {
+        border: 2px solid #ffa94d;
+        border-radius: 5px;
+        background-color: #ffd8a8;
+        padding: 1%;
+        color: #d9480f;
+      }
+
+      /*
+      * Tenemos un 'Grid-Container' con 3 box
+      *
+      * funcion - minmax() define :
+      * tamaño min -> mayor o igual que min
+      * tamaño max -> menor o igual que max                                
+      */
+      .wrapper-flexible-track {
+        display: grid;
+        /*26% equivale aproximadamente a 200px */
+        /*grid-template-columns: repeat(auto-fill, minmax(26%, 1fr));*/
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-auto-rows: 150px;
+      }
+
+      .wrapper-flexible-track {
+        border: 5px solid #484c7f;
+        border-radius: 5px;
+        background-color: #ddb6c6;
+      }
+
+      .wrapper-flexible-track > div {
+        border: 2px solid #ffa94d;
+        border-radius: 5px;
+        background-color: #ffd8a8;
+        padding: 1em;
+        color: #000;
+      }
+
+      .wrapper-flexible-track-ex {
+        display: grid;
+        grid-template-columns: minmax(max-content,300px) minmax(200px , 1fr) 150px;
+        /*grid-template-columns: minmax(max-content,30%) minmax(20% , 1fr) 15%;*/
+        grid-gap: 5px;
+        grid-auto-rows: 150px;
+        width: 100%;
+        padding: 1%;
+        height: auto;
+      }
+
+      .wrapper-flexible-track-ex {
+        padding: 1%;
+        background-color: #ac8daf;
+      }
+
+      .wrapper-flexible-track-ex > div {
+        padding: 1%;
+        text-align: center;
+        background-color: #f1d4d4;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <header class="first-header">
+      <h1 class="title">Fr unit and Flex Basis</h1>
+    </header>
+
+    <main class="principal">
+
+      <section class="main__section-space">
+        <div class="section__box-1">
+          <h2 class="section__subtitle">
+            Fr Unit
+          </h2>
+        </div>
+
+        <div class="section__box-2">
+          <p class="div__paragraph">
+            Asigna una porci&oacute;n de espacio disponible dentro de
+            un <b>&apos;Grid Container&apos;</b> para nuestra 
+            <b>&apos;Grid Tracks o Elementos en forma de franjas&apos;</b>
+          </p>
+          <p class="div__paragraph">
+            Cuando <b>&apos;Fr Unit&apos;</b> la combinamos con la funcion <b>minmax()</b>
+            da un comportamiento similar a las propiedades <b>&apos;flex&apos;</b>
+            dentro de <b>&apos;FlexBox&apos;</b> mientras permita la creaci&oacute;n
+            de un diseño de 2 dimensiones
+          </p>
+        </div>
+      </section>
+
+      <section class="main__section-2">
+        <div class="section__box-1">
+          <h2 class="section__subtitle">
+            Flex Layout
+          </h2>
+        </div>
+
+        <div class="section__box-2">
+          <p class="div__paragraph">
+            Si arrastramos la ventana desde lo amplio 
+            a lo mas pequeño el <b>&apos;Flex-Box&apos;</b>
+            se ajusta al numero de &apos;Elementos&apos; dentro de cada <b>fila</b>
+            acorde al espacio <b>&apos;Flex-box ideal para elementos interiores&apos;</b>
+            porque se ajusta al espacio interior del contenedor principal.</p>
+
+          <p class="div__paragraph">
+            Si tenemos un monton de espacio para 5 
+            &apos;Elementos o Items&apos; podemos
+            fijar todos en una sola fila.
+            Si tenemos un contenedor muy estrecho solo 
+            tendremos espacio para un <b>&apos;Elemento o Item&apos;</b>
+          </p>
+          <p class="div__paragraph">
+            En comparacion la version <b>&apos;Grid-Layout&apos;</b> 
+            siempre tiene 3 columnas de <b>&apos;Track&apos;</b> 
+            que ellos mismos creceran o encogeran pero siempre 
+            habra 3 elementos porque son los definidos por nuestra cuadricula
+          </p>
+        </div>
+      </section>
+
+      <section class="main__section-3">
+        <div class="section__box-1">
+          <h2 class="section__subtitle-deco-3">
+            Auto-filling grid tracks
+          </h2>
+        </div>
+
+        <div class="section__box-2">
+          <p class="div__paragraph">
+            Crear efecto similar a <b>FlexBox</b> con <b>Grid Track</b> 
+            mientras tenemos el contenido organizado en estrictas
+            <b>filas</b> o <b>columnas</b> creando nuestros 
+            <b>Track - &apos;Elementos en forma de listado&apos;</b>
+            usando las propiedades de <b>auto-fill</b> y <b>auto-fit</b>
+            automatico de las propiedades
+          </p>
+        </div>
+      </section>
+
+      <div class="wrapper-auto-filling">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+      </div>
+
+      <section class="main__section-4">
+        <div class="section__box-1">
+          <h2 class="section__subtitle-deco-4">
+            A flexible number of tracks
+          </h2>
+        </div>
+
+        <div class="section__box-2">
+          <p class="div__paragraph">
+            Cuando los <b>&apos;Elementos&apos; o &apos;Item&apos;</b> 
+            superan el largo de la envoltura <b>&apos;wrapping&apos;</b>
+          </p>
+          <p class="div__paragraph">
+            Podemos alcanzar todo el ancho de los <b>&apos;Elementos&apos;</b> 
+            igual que con las propiedades Flex-box usando <b>&apos;Grid-Layout&apos;</b>
+            combinando <b>&apos;auto-fill&apos;</b> y la funcion <b>&apos;minmax()&apos;</b>
+          </p>
+          <p class="div__paragraph">
+            Vamos a crear el auto llenado de <b>&apos;Track&apos;</b> 
+            usando funcion <b>&apos;minmax()&apos;</b> el cual los <b>&apos;Track&apos;</b>
+            tendran un minimo de <b>&apos;200px&apos;</b> asi que establecemos el maximo
+            en <b>&apos;1fr&apos;</b>. 
+          </p>
+
+          <p class="div__paragraph">
+            Una vez que el navegador ha resuelto cuántas veces caben <b>200 píxeles</b> 
+            en el contenedor <b>&apos;Container&apos;</b> para llenarlo tambien 
+            considerando los huecos entre cada
+            <b>&apos;Grid-Gaps&apos;</b> , el navegador intentara el maximo 
+            <b>&apos;1fr&apos;</b> en cada instruccion para compartir el espacio 
+            entre los restantes elementos
+          </p>
+        </div>
+      </section>
+
+      <p class="section__subtitle-deco-5">
+        Ahora tenemos la capacidad de crear una cuadrícula con un número flexible de pistas flexibles, pero al mismo tiempo ver los elementos dispuestos en la cuadrícula alineados por filas y columnas.
+      </p>
+
+      <div class="wrapper-flexible-track">
+        <div class="box-container">
+          display: grid;<br>
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));<br>
+          grid-auto-rows: 100px;<br>
+        </div>
+        <div class="box-container">
+          display: grid;<br>
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));<br>
+          grid-auto-rows: 100px;<br>
+        </div>
+        <div class="box-container">
+          display: grid;<br>
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));<br>
+          grid-auto-rows: 100px;<br>
+        </div>
+      </div>
+
+      <p class="section__subtitle-deco-6">
+        Ejemplo de la funcion minmax()
+      </p>
+
+      <p class="section__subtitle-deco-6">
+        Para un mejor ajuste usar &percnt;;
+      </p>
+
+      <div class="wrapper-flexible-track-ex">
+        <div>
+          Elemento tan ancho como el contenido,<br>
+          pero de máximo 300 píxeles.
+        </div>
+        <div>
+          Elemento con un ancho flexible, pero con un mínimo de 200 píxeles.
+        </div>
+        <div>
+          Elemento inflexible de 150 píxeles de ancho.
+        </div>
+      </div>
+
+    </main>
+
+  </body>
+</html>

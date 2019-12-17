@@ -1,0 +1,112 @@
+<!-- 
+Created on : 06-oct-2019 20:36:53 
+User : Raul Vela 
+Ref : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Example grid method</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content="Example grid method">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="stylesheet" type="text/css" href="src/css/grid-css-main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <style>
+
+      .wrapper-repeat-3-1fr{
+        display: grid;
+        /*Forma manual*/
+        /*grid-template-columns: 1fr 1fr 1fr;*/
+        /*Forma con metodo*/
+        grid-template-columns: repeat(3,1fr);
+      }
+
+      .wrapper-repeat-basic-80px{
+        display: grid;
+        grid-template-columns: 80px repeat(6,1fr) 100px;
+      }
+
+      .wrapper-grid-auto-rows{
+        display: grid;
+        /*5 columnas a rellenar con 1fr y luego una 2fr*/
+        grid-template-columns: repeat(5, 1fr 2fr);
+      }
+
+      .wrapper-repeat-3-1fr ,
+      .wrapper-repeat-basic-80px ,
+      .wrapper-grid-auto-rows
+      {
+        margin: 2% auto;
+        border: 2px solid #3c4245;
+        border-radius: 5px;
+        background-color: #dfcdc3;
+      }
+
+      .wrapper-repeat-3-1fr > div ,
+      .wrapper-repeat-basic-80px > div ,
+      .wrapper-grid-auto-rows > div
+      {
+        border: 2px solid #5f6769;
+        border-radius: 5px;
+        padding: 1em;
+        color: #fff;
+        background-color: #719192;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h1 class="title-grid">
+      Grid para personalizar las filas y 
+      columnas usando 
+    </h1>
+    <span class="text-effusive"> repeat(3 , 1fr);<br></span>
+
+    <div class="wrapper-repeat-3-1fr">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+
+    <h1 class="title-grid">
+      Grid para personalizar las filas y 
+      columnas usando 
+    </h1>
+    <span class="text-effusive"> 20px repeat(6 , 1fr) 20px<br></span>
+
+    <div class="wrapper-repeat-basic-80px">
+      <div>start - track 80px</div>
+      <div>1fr - Two</div>
+      <div>1fr - Three</div>
+      <div>1fr - Four</div>
+      <div>last - track 80px</div>
+    </div>
+
+    <h1 class="title-grid">
+      Grid para personalizar las filas y 
+      columnas usando 
+    </h1>
+    <span class="text-effusive"> repeat(5,1fr 2fr)<br></span>
+
+    <div class="wrapper-grid-auto-rows">
+      <div>1fr - One</div>
+      <div>2fr - Two</div>
+      <div>1fr - Three</div>
+      <div>2fr - Four</div>
+      <div>1fr - Five</div>
+    </div>
+
+  </body>
+</html>

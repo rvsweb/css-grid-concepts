@@ -1,0 +1,144 @@
+/* 
+    Created on : 09-oct-2019, 10:54:26
+    Author     : RVS
+*/
+
+*{
+  box-sizing: border-box;
+  font-family: Roboto,sans-serif;
+}
+
+header {
+  width: 50%;
+  height: auto;
+  padding: 1%;
+  margin: 1% auto;
+}
+
+.first-header{
+  text-align: center; 
+  font-size: 1em;
+  background: #00adb5;
+}
+
+h1{
+  width: 80%;
+  height: auto;
+  padding: 1%;
+} 
+
+.title{
+  margin: 1% auto;
+  text-align: center;
+  background: #eeeeee;
+}
+
+main {
+  width: 90%;
+  height: auto;
+  margin: 1% auto;
+  padding: 1%;
+  border-radius: 7px;
+  border: 5px solid #484c7f;
+}
+
+.principal {
+  margin: 1% auto;
+  height: available;
+  background: #eeeeee;
+}
+
+section {
+  width: 100%;
+  height: auto;
+  padding: 1%;
+  margin: 1% auto;
+}
+
+.main__section-space ,
+.main__section-2 {
+  margin: 0 auto;
+  text-align: left;
+  border-radius: 7px;
+}
+
+div {
+  padding: 1% 1%;
+}   
+
+.section__box-1 ,
+.section__box-2 {
+  width: 100%;
+}
+
+.section__subtitle {
+  margin: 0 auto;
+  background: #00adb5;
+  text-align: center;
+}
+
+.section__subtitle-2 {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 1.5em;
+  text-align: center;
+  background: #00adb5;
+  border-radius: 7px;
+}
+
+.div__paragraph{
+  width: 80%;
+  margin: 1% auto;
+  text-align: center;
+  background: #ddb6c6;
+  padding: 2%;
+  border-radius: 7px;
+}
+
+.div__paragraph-1 ,
+.div__paragraph-2 ,
+.div__paragraph-3 {
+  padding: 5%;
+  font-size: 0.8em;
+  text-align: left;
+  border-radius: 7px;
+  background-color: #ac8daf;
+}
+
+.subtitle--highlighted{
+  width: 40%;
+  max-width: 200px;
+  height: auto;
+  padding: 1%;
+  margin-left: 1%;
+  color: #fff;
+  background-color: #ff2e63;
+}
+
+.subtitle--highlighted--grid-area{
+  width: 80%;
+  max-width: 650px;
+  height: auto;
+  padding: 1%;
+  margin-left: 1%;
+  color: #fff;
+  background-color: #ff2e63;  
+}
+
+h2 {
+  width: 30%;
+  padding: 2% 2%;
+  height: auto;
+  margin: 1% auto;
+}
+
+.box-container{
+  font-weight: bolder;
+  font-size: 1em;
+  text-align: left;
+}
+
+.b__subtitle-grid-area {
+  padding: 1%;
+  color: #000;
+}

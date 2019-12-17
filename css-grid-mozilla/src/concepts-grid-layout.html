@@ -1,0 +1,130 @@
+<!-- 
+Created on : 04-oct-2019 11:28:22 
+User : Raul Vela 
+Ref : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Concepts Grid Layout</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content="Grid Layout Concepts">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto|Nunito+Sans|Dosis&display=swap">
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="stylesheet" type="text/css" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="icon" type="image/png" sizes="48x48" 
+          href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <link rel='stylesheet' type='text/css' href="css/concepts-grid-layout-main.css">
+    <link rel='stylesheet' type='text/css' href="css/concepts-grid-layout.css">
+  </head>
+  <body>
+
+    <header>
+      <h1 class="header__title title--deco">Grid Layout</h1>
+      <p class="header__paragraph paragraph--deco">Grid-Layout usa &apos;fractional unit
+        &apos; &vartriangleright; fr unit &#61; 
+        1 parte o porci&oacute;n del espacio disponible
+      </p>
+    </header>
+
+    <main>
+      <section class="section--color">
+        <div class="section-box box--center-text">
+          Introduce 2 dimensiones al sistema <b>&apos;grid&apos;</b> de CSS, 
+          se usa para poner areas grandes de dise&#241;o o pequeños 
+          elementos de interfaz de usuario.
+        </div>
+
+        <div class="section-box box--center-text">
+          <b>&apos;Grid&apos;</b> establece lineas horizontales y verticales,
+          establecida las columnas y las filas los elementos pueden ser
+          introducidos dentro del <b>&apos;Grid&apos;</b> mediante las columnas 
+          las filas.
+        </div>
+      </section>
+
+      <section class="section--color">
+        <h3 class="section-title">Ajustado y vias o zonas de tamaños flexibles</h3>
+        <div class="section-box box--center-text">
+          Crear un &apos;Grid&apos; con tama&#241;o ajustadas 
+          a las zonas usando PIXELES , puedes crear &apos;Grid&apos; 
+          usando porcentajes  o con <b>&apos;Fr Unit&apos;</b> 
+        </div>
+      </section>
+
+      <section class="section--color">
+        <h3 class="section-title">Establecimiento de los elementos</h3>
+        <div class="section-box box--center-text">
+          Establecer los &apos;Elementos&apos; dentro 
+          de una localizaci&oacute;n dentro del &apos;Grid&apos; 
+          usando numeros , nombres o zonas de una area del &apos;Grid&apos; 
+        </div>
+      </section>
+
+      <section class="section--color">
+        <h3 class="section-title">Crear zonas adicionales para mantener contenidos</h3>
+        <div class="section-box box--center-text">
+          Definir una zona explicita con <b>&apos;Grid Layout&apos;</b>
+          <b>&apos;Grid Layout&apos;</b> es flexible para añadir filas y columnas 
+          adicionales
+          Agregar tantas columnas como se ajusten al contenedor
+        </div>
+      </section>
+
+      <section class="section--color">
+        <h3 class="section-title">Control de Alineaci&oacute;n</h3>
+        <div class="section-box box--center-text">
+          <b>&apos;Grid&apos;</b> contiene caracteristicas para alinear 
+          elementos una vez introducidos dentro de una area del 
+          <b>&apos;Grid&apos;</b> y como alinearlos
+        </div>
+      </section>
+
+      <section class="section--color">
+        <h3 class="section-title">Controlar el contenido del superposicionamiento</h3>
+        <div class="section-box box--center-text">
+          En una celda o area del  <b>&apos;Grid Layout&apos;</b> se puede 
+          colocar más de un elemento y se pueden superponerse 
+          parcialmente entre si.<br>
+          Esta estratificaci&oacute;n se puede controlar con la 
+          propiedad <b> &apos;z-index&apos;</b>;
+        </div>
+        <div class="section-box box--center-text">
+          Usando <b>&apos;grid container&apos;</b> podemos combinar 
+          <b>Flex-box</b> y <b>Grid-Layout</b> para crear Layouts
+        </div>
+      </section>
+
+      <section class="section__grid">
+        <h1 class="section-grid--title">Grid Container</h1>
+        <p class="section__p">
+          Crear &apos;Grid Container&apos; con <br>
+          <b>display: grid</b> o <b>display: inline-grid</b> 
+        </p>
+        <p class="section__p">
+          Crear filas b&aacute;sicas
+        </p>
+        <div class="wrapper-repeat-3-1fr wrapper--deco">
+          <div>One</div>
+          <div>Two</div>
+          <div>Three</div>
+          <div>Four</div>
+          <div>Five</div>
+        </div>
+
+      </section>
+
+    </main>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,55 @@
+/* 
+    Created on : 08-nov-2019, 14:06:37
+    Author     : RVS
+*/
+
+body{
+  box-sizing: content-box;
+}
+
+.header {
+  grid-area: header;
+  border: 5px solid goldenrod;
+}
+
+.main {
+  grid-area: main;
+  border: 5px solid yellow;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  border: 5px solid red;
+}
+
+.footer {
+  grid-area: footer;
+  border: 5px solid tomato;
+}
+
+.main-box{
+  height: auto;
+}
+
+.box--deco{
+  background-color: #95e1d3;
+  border: 3px solid red;
+}
+
+.container-columns {
+  box-sizing: border-box;
+  width: auto;
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+}
+
+.container--deco{
+  background-color: #95e1d3;
+  border: 5px solid blue;
+}
+

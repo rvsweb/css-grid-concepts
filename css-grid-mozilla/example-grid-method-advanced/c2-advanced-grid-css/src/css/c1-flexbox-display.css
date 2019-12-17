@@ -1,0 +1,30 @@
+/* 
+    Created on : 08-oct-2019, 20:23:03
+    Author     : RVS
+*/
+
+.wrapper-flex-box{
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper-flex-box{
+  /*Mostrar la presentacion usando 'flex' */ 
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  margin: 1% auto;
+}
+
+.wrapper-flex-box > div{
+  border: 2px solid #ffa94d;
+  border-radius: 7px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #000;
+}
+
+.wrapper-flex-box > div{
+  flex: 1 1 150px;
+}

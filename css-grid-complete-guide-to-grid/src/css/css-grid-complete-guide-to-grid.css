@@ -1,0 +1,147 @@
+/* 
+    Created on : 31-oct-2019, 19:54:30
+    Author     : RVS
+*/
+
+body{
+  box-sizing: border-box;
+}
+
+section{
+  position: relative;
+  width: 80%;
+  height: available;
+  top: 10px;
+  bottom: 10px;
+}
+
+/*
+* Grid-Container
+*
+*/
+.container-columns {
+  display: grid;
+  grid-template-columns: 40px 50px auto 50px 40px;
+  grid-template-rows: 25% 100px auto;
+  grid-gap: 10px 20px;
+}
+
+.container--deco{
+  border: 5px solid red;  
+  background-color: #fce38a;
+}
+
+.item-directions{
+  margin: 0.5%;
+  text-align: center;
+  font-size: 1.05em;
+  font-family: Roboto , sans-serif;
+  border: 1px solid #000;
+}
+
+.item-deco {
+  background-color: red;
+}
+
+.item-child {
+  background-color: green;
+}
+
+.item-3 {
+  background-color: #9999ff;
+}
+
+.item-4 {
+  background-color: aqua;
+}
+
+.item-5 {
+  background-color: orange;
+}
+
+/*
+* Grid-Container-text
+*
+*/
+.container-text {
+  display: grid;
+
+  grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+  grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
+  /*grid-template-rows: [row1-start] 25% [row1-end row2-start] 25% [row2-end];*/
+}
+
+.item-1-text {
+  grid-column-start: first;
+  grid-row-start: row1-start;
+  grid-row-end: row1-end;
+  background-color: red;
+}
+
+.item-2-text {
+  grid-column-start: line2;
+  grid-row-start: row1-end;
+  grid-row-end: third-line;
+  background-color: green;
+}
+
+.item-3-text {
+  grid-column-start: line3;
+  grid-row-start: third-line;
+  grid-row-end: last-line;
+  background-color: #9999ff;
+}
+
+.item-4-text {
+  grid-column-start: col4-start;
+  grid-row-start: third-line;
+  grid-row-end: last-line;
+  background-color: aqua;
+}
+
+.item-5-text {
+  grid-column-start: five;
+  grid-column-end: end;
+  grid-row-start: last-line;
+  grid-row-end: end;
+  background-color: orange;
+}
+
+/*
+* Unit 1fr
+*/
+.container-1fr{
+  display: grid;
+  grid-template-columns: repeat(5 , 1fr );
+  grid-template-rows: repeat(3 , 1fr );
+  grid-gap: 20px 20px;
+}
+
+.item-1-fr{
+  /*Propiedad que reduce o amplia la anchura de las fias */ 
+  grid-row: 2/10;
+  /*Propiedad que reduce o amplia la anchura de las columnas
+  Si la anchura es demasiado grande pasa a la siguiente fila*/ 
+  grid-column: 1/2;
+}
+
+.item-2-fr{
+  grid-row: 2/5;
+  grid-column: 2/5;
+}
+
+.item-3-fr{
+  grid-row: 4/7;
+  grid-column: 3/5;
+} 
+
+.item-4-fr{
+  grid-row: 6/10;
+  grid-column: 4/5;
+}
+
+.item-5-fr{
+  grid-row: 2/10;
+  grid-column: 5/5;
+}
+
