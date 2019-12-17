@@ -1,0 +1,6 @@
+# ignore all logs
+*.log
+*.json
+
+#ignore the directory
+/.vscode/*
