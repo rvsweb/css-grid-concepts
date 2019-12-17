@@ -3,4 +3,4 @@
 *.json
 
 #ignore the directory
-/.vscode/*gi
+/.vscode/*
