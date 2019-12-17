@@ -3,7 +3,7 @@
     Author     : RVS
 */
 
-body{
+body {
   box-sizing: content-box;
 }
 
@@ -11,7 +11,8 @@ section {
   margin: 2% auto;
 }
 
-section , div{
+section,
+div {
   width: 100%;
   box-sizing: border-box;
 }
@@ -23,7 +24,7 @@ section , div{
 
 .header-2--deco {
   border: 5px solid goldenrod;
-  font-family: 'Luckiest Guy', cursive;
+  font-family: "Luckiest Guy", cursive;
 }
 
 .div__span-header {
@@ -45,7 +46,6 @@ section , div{
 }
 
 .div__span-main {
-
 }
 
 .div__img {
@@ -53,7 +53,7 @@ section , div{
   margin: 1% auto;
 }
 
-.img--deco{
+.img--deco {
   border-radius: 7px;
 }
 
@@ -67,15 +67,14 @@ section , div{
 }
 
 .div__span-side {
+}
 
-} 
-
-.sidebar__span{
+.sidebar__span {
   margin: 0 auto;
   padding: 5%;
 }
 
-.sidebar--deco{
+.sidebar--deco {
   background-color: #dcffcc;
 }
 
@@ -88,20 +87,19 @@ section , div{
   border: 5px solid tomato;
 }
 
-.main-box-2{
+.main-box-2 {
   height: auto;
   width: inherit;
 }
 
 .main-2--deco {
-
 }
 
 .div__span-footer {
   text-align: center;
 }
 
-.box--deco-2{
+.box--deco-2 {
   background-color: #95e1d3;
 }
 
@@ -110,7 +108,7 @@ section , div{
   width: auto;
   display: grid;
   grid-template-columns: auto auto auto auto;
-  grid-template-rows: repeat(3 , auto);
+  grid-template-rows: repeat(3, auto);
   grid-template-areas:
     "header header header header"
     "main main . sidebar"
@@ -120,7 +118,7 @@ section , div{
 
 .container--deco-2 {
   background-color: #95e1d3;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .div-ul {
@@ -161,8 +159,8 @@ section , div{
   list-style: none;
 }
 
-a , .enlaces{
+a,
+.enlaces {
   display: block;
   text-decoration: none;
 }
-
