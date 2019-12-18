@@ -1,0 +1,67 @@
+.grid {
+  position: relative;
+  width: 33.33%;
+  float: left;
+  height: 200px;
+  color: #fff;
+  background-position: center; /* Forgot to mention in the tutorial, please add this line*/
+  background-repeat: no-repeat; /* Forgot to mention in the tutorial, please add this line*/
+  background-size: cover; /* Forgot to mention in the tutorial, please add this line*/
+}
+
+.grid:nth-child(3n + 1) .details:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #b72121;
+}
+
+.grid:nth-child(3n + 2) .details:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #b72121;
+}
+
+.grid:nth-child(3n + 3) .details:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #b72121;
+  transform: rotate(180deg);
+}
+
+/* Using PS :target */
+
+.grid:nth-child(3n + 1) .details:target {
+  opacity: 1;
+  left: 100%;
+  z-index: 99;
+}
+
+.grid:nth-child(3n + 2) .details:target {
+  opacity: 1;
+  left: 100%;
+  z-index: 99;
+}
+
+.grid:nth-child(3n + 3) .details:target {
+  opacity: 1;
+  left: -100%;
+  z-index: 99;
+}
