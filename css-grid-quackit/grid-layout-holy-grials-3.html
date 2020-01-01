@@ -1,31 +1,111 @@
 <!-- https://www.quackit.com/css/grid/tutorial/create_a_website_layout.cfm -->
-
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="src/css/grid-layout-holy-grials-3/grid-layout-holy-grials-3-structure.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="src/css/grid-layout-holy-grials-3/grid-layout-holy-grials-3-header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="src/css/grid-layout-holy-grials-3/grid-layout-holy-grials-3-article.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="src/css/grid-layout-holy-grials-3/grid-layout-holy-grials-3-aside.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="src/css/grid-layout-holy-grials-3/grid-layout-holy-grials-3-footer.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cinzel|Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script|Orbitron|Special+Elite&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="src/grid-layout-holy-grials-3.css">
     <title>grid-layout-holy-grials</title>
-</head>
+  </head>
 
-<body>
+  <body onload="reloj()">
+    <header id="header-page">
+      <div class="header">
+        <span class="header-title">John Wick</span>
+        <ul class="menu">
+          <li class="link"><a class="link-anchor" href="#">Home</a></li>
+          <li class="link"><a class="link-anchor" href="#">New</a></li>
+          <li class="link"><a class="link-anchor" href="#">Media</a></li>
+          <li class="link"><a class="link-anchor" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </header>
 
-    <div class="container">
-        <header id="pageHeader-2">Header</header>
-        <article id="mainArticle-2">Article</article>
-        <nav id="mainNav-2">
-            <div class="box">nav</div>
-            <div class="box">nav</div>
-            <div class="box">nav</div>
-            <div class="box">nav</div>
-        </nav>
-        <aside id="siteAds-2">Ads</aside>
-        <footer id="pageFooter-2">Footer</footer>
-    </div>
+    <main class="container">
+      <article id="main-article">
+        <div class="main-box-article">
+          <span class="article-title">History</span>
+          <span id="hora-completa"></span>
 
-</body>
+          <div class="box-center">
+            <div class="box-left">
+              <img
+                class="img-john"
+                src="https://live.staticflickr.com/7677/17112992581_abdd94aa1d_n.jpg"
+              />
+              <div id="hora">
+                <iframe
+                  class="video-basic"
+                  src="https://www.youtube.com/embed/Ct-zGV4TgKY"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
 
+            <div class="box-right">
+              <p class="box-paragraph">
+                After John Wick loses his wife, Helen, to a terminal illness, he
+                receives a beagle puppy named Daisy from his late wife to help
+                him cope with his grief. Despite John's stoic demeanor, he bonds
+                with the puppy and they spend their day driving around in his
+                vintage 1969 Ford Mustang Mach 1. At a gas station, he
+                encounters a trio of Russian gangsters whose leader, Iosef,
+                insists on buying his car, but John repeatedly states that it is
+                not for sale. Frustrated, the mobsters follow John to his home,
+                knock him unconscious, steal his car, and kill Daisy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <nav id="main-nav">
+        <div class="box">nav</div>
+        <div class="box" id="dia">nav</div>
+        <div class="box" id="mes">nav</div>
+        <div class="box" id="anio">nav</div>
+      </nav>
+      <aside id="aside-right">Ads</aside>
+    </main>
+
+    <footer id="footer-center">Footer</footer>
+
+    <script src="src/js/reloj.js"></script>
+  </body>
 </html>
