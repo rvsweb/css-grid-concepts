@@ -1,0 +1,16 @@
+.main-nav {
+}
+
+.box {
+  margin: 5px;
+  display: flex;
+  width: 100px;
+  height: 80px;
+
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #00f;
+}
+
+#aside-right {
+}

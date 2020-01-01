@@ -1,0 +1,39 @@
+/* Design Header */
+#header-page {
+  width: 100%;
+  border: 5px solid #f00;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #f00;
+}
+
+.header-title {
+  font-size: 2em;
+  font-family: "Permanent Marker", cursive;
+}
+
+.menu {
+  display: flex;
+  flex-flow: row wrap;
+
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  list-style-type: none;
+  border: 2px solid #0f0;
+}
+
+.link {
+  display: flex;
+  margin: 10px;
+  border: 1px solid #f00;
+}
+
+.link-anchor {
+  color: #fff;
+  font-size: 0.5em;
+  text-decoration: none;
+}
