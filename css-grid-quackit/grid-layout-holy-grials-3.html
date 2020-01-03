@@ -50,7 +50,7 @@
   <body onload="reloj()">
     <header id="header-page">
       <div class="header">
-        <span class="header-title">John Wick</span>
+        <h1 class="header-title">John Wick</h1>
         <ul class="menu">
           <li class="link"><a class="link-anchor" href="#">Home</a></li>
           <li class="link"><a class="link-anchor" href="#">New</a></li>
@@ -59,16 +59,14 @@
         </ul>
       </div>
     </header>
-
+    
     <main class="container">
       <article id="main-article">
-        
         <div class="main-box-article">
-          <span class="article-title">History</span>
-          <span id="hora-completa"></span>
-
+          <h1 class="article-title">
+            History
+          </h1>
           <div class="box-center">
-            
             <div class="box-left">
               <img
                 class="img-john"
@@ -104,17 +102,98 @@
       </article>
 
       <nav id="main-nav">
-        <div class="box">nav</div>
-        <div class="box" id="dia">nav</div>
-        <div class="box" id="mes">nav</div>
-        <div class="box" id="anio">nav</div>
+        <div id="box">
+          <h2 class="title-nav">
+            Date
+            <i class="fas fa-calendar fa-sm"></i>
+          </h2>
+        </div>
+
+        <div id="box-date">
+          <span class="span-date" id="dia"></span>
+          <span>/</span>
+          <span class="span-date" id="mes"></span>
+          <span>/</span>
+          <span class="span-date" id="anio"></span>
+          <span id="hora-completa"></span>
+        </div>
+
+        <div id="box">
+          <h2 class="title-nav">
+            Link
+            <i class="fas fa-link fa-sm"></i>
+          </h2>
+        </div>
+
+        <div class="box-link">
+          <div class="box-link-element">
+            <img
+              class="box-link-img"
+              src="src/img/watchmen-icon.jpg"
+              alt="watchmen"
+            />
+            <a class="box-link-text">
+              Watchmen is an American superhero drama television
+            </a>
+          </div>
+
+          <div class="box-link-element">
+            <img
+              class="box-link-img"
+              src="src/img/watchmen-icon.jpg"
+              alt="watchmen"
+            />
+            <a class="box-link-text">
+              Watchmen is an American superhero drama television
+            </a>
+          </div>
+
+          <div class="box-link-element">
+            <img
+              class="box-link-img"
+              src="src/img/watchmen-icon.jpg"
+              alt="watchmen"
+            />
+            <a class="box-link-text">
+              Watchmen is an American superhero drama television
+            </a>
+          </div>
+        </div>
+
+        <div id="box">
+          <h2 class="title-nav">
+            Category
+            <i class="fas fa-tags fa-sm"></i>
+          </h2>
+        </div>
+
+        <ul class="title-nav-category">
+          <li class="link-category">
+            <a class="link-anchor" href="#">Action</a>
+          </li>
+          <li class="link-category">
+            <a class="link-anchor" href="#">Drama</a>
+          </li>
+          <li class="link-category">
+            <a class="link-anchor" href="#">Comedy</a>
+          </li>
+          <li class="link-category">
+            <a class="link-anchor" href="#">Adventure</a>
+          </li>
+          <li class="link-category">
+            <a class="link-anchor" href="#">Historical</a>
+          </li>
+        </ul>
       </nav>
 
       <aside id="aside-right">Ads</aside>
     </main>
 
-    <footer id="footer-center">Footer</footer>
+    <footer id="footer-center">
+      Footer
+    </footer>
 
     <script src="src/js/reloj.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </body>
 </html>
