@@ -2,9 +2,13 @@
 function reloj() {
 
 
-    document.getElementById('dia').innerHTML = new Date().getDate();
-    document.getElementById('mes').innerHTML = new Date().getMonth() + 1;
-    document.getElementById('anio').innerHTML = new Date().getFullYear();
+    var dia, mes, anio;
+
+    dia = new Date().getDate();
+    mes = new Date().getMonth() + 1;
+    anio = new Date().getFullYear();
+
+    document.getElementById('abbr-date').innerHTML = dia + "/" + mes + "/" + anio;
 
     var hora = new Date().getHours();
     var min = new Date().getMinutes();
@@ -12,7 +16,7 @@ function reloj() {
 
     var sgZero;
     var minZero;
-    
+
     sgZero = setZero(seg);
     minZero = setZero(min);
 

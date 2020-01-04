@@ -18,26 +18,26 @@ article {
 
   color: #fff;
   font-family: "Special Elite", cursive;
-  background-color: rgb(189, 129, 129);
   border: 5px solid yellow;
+  background-color: rgb(189, 129, 129);
 }
 
 .article-title {
+  display: block;
   width: auto;
   height: auto;
   padding: 10px;
   margin: 10px auto;
-
-  font-size: 100px;
+  font-size: 3em;
   background-color: rgb(199, 98, 124);
 }
 
 /*Contenedor principal*/
 .box-center {
   width: 100%;
-  height: auto;
+  height: 90%;
 
-  display: flex;
+  display: inline-flex;
   flex-flow: row wrap;
   border: 5px solid #00f;
 }
@@ -79,12 +79,90 @@ article {
   height: auto;
 
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   border: 5px solid #0f0;
 }
 
-.box-paragraph {
-  padding: 2%;
+.box-right-paragraph {
+  margin: 5px;
+  padding: 10px;
+  font-size: 1em;
+  text-align: left;
+}
+
+.box-right-line {
+  margin: 0 10px;
+  width: 95%;
+  color: #fff;
+}
+
+.box-right-suite-link-1 {
+  display: inline-block;
+  width: 190px;
+  height: auto;
+  margin: 5px 5px 10px 10px;
+  padding-left: 10px;
+}
+
+.box-rightward::after {
+  content: " \27A7";
+  color: #fff;
+}
+
+.box-right-link-read,
+.box-right-link {
+  display: inline-block;
+  width: 48%;
+  height: auto;
+  color: #fff;
   font-size: 1em;
   text-align: center;
+  text-decoration: none;
+}
+
+.box-right-link-read {
+  font-weight: bolder;
+}
+
+.box-right-suite-link-2 {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin: 10px 5px 10px 5px;
+  padding-left: 5px;
+
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  font-family: Roboto, sans-serif;
+}
+
+.box-share {
+  display: inline-block;
+  padding: 2px;
+  font-weight: bolder;
+}
+
+.box-fa,
+.box-tw,
+.box-pin {
+  width: 110px;
+  height: auto;
+  margin: 1px;
+  padding: 5px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.box-fa {
+  background: #3b5998;
+}
+
+.box-tw {
+  background: #00acee;
+}
+
+.box-pin {
+  background: #ca2127;
 }

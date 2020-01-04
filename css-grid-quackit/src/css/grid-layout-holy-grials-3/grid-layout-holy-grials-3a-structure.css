@@ -12,7 +12,7 @@
   display: grid;
   grid-template-areas:
     "header header header"
-    "article nav ads" /* Previously this was "nav article ads" */
+    "article nav ads"
     "footer footer footer";
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr 20% 15%;
@@ -55,6 +55,6 @@ aside {
   justify-content: center;
   align-items: center;
 
-  background: rgb(131, 142, 161);
+  background: rgb(29, 111, 255);
   color: #fff;
 }
