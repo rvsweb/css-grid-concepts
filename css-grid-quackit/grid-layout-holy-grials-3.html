@@ -271,11 +271,33 @@
       </nav>
 
       <aside id="aside-right">
-        <div id="box">
-          <h2 class="title-nav">
+        <div id="box-aside-right">
+          <h2 class="title-nav-right">
             Premiere
-            <i class="fas fa-tags fa-sm"></i>
+            <i class="fas fa-film"></i>
           </h2>
+          <div class="box-aside-films">
+            <img
+              class="box-aside-poster"
+              src="src/img/easy-street.jpg"
+              alt="charlie"
+            />
+
+
+            <picture>
+              <source
+                srcset="large.webp"
+                media="(min-width: 992px)"
+                type="image/webp"
+              />
+              <source
+                srcset="large.jpg"
+                media="(min-width: 992px)"
+                type="image/jpeg"
+              />
+              <img src="small.jpg" alt="" />
+            </picture>
+          </div>
         </div>
       </aside>
     </main>

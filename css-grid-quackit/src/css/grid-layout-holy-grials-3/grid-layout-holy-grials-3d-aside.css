@@ -1,3 +1,52 @@
-#aside-right{
+aside {
+  width: auto;
+  height: auto;
 
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+#aside-right {
+  font-family: Roboto, sans-serif;
+}
+
+.box-aside-right {
+  width: auto;
+  height: auto;
+  padding: 5px;
+  margin: 2%;
+  background-color: #000;
+  border: 5px solid #00f;
+}
+
+.title-nav-right {
+  width: 90%;
+  height: auto;
+  padding: 3%;
+  margin: 5%;
+  text-align: left;
+  color: #fff;
+  background-color: #000;
+}
+
+.box-aside-films {
+  width: 100%;
+  height: auto;
+
+  margin: 20px;
+  padding: 10px;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #f00;
+}
+
+.box-aside-poster {
+  width: 128px;
+  height: auto;
 }
