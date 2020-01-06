@@ -82,7 +82,7 @@
 .box-link-img {
   display: inline-block;
   width: 64px;
-  height: 64px;
+  height: auto;
   margin: 0%;
   padding: 1%;
   border-radius: 15px;
