@@ -1,6 +1,5 @@
-
 a.heading {
-  position: absolute;
+  /* position: absolute;
   width: 100%;
   height: 200px;
   line-height: 200px;
@@ -9,12 +8,31 @@ a.heading {
   color: #fff;
   font-size: 24px;
   z-index: 1;
+  border: 1px solid #ccc; */
+}
+
+a.heading span {
+  /* position: relative;
+  top: 65px;
+  padding: 8px;
+  border: 2px solid #fff;
+  background-color: rgba(103, 9, 9, 0.4); */
+}
+
+a.heading {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  z-index: 1;
+  color: #fff;
+  font-size: 1em;
+  font-family: "Roboto", sans-serif;
   border: 1px solid #ccc;
 }
 
 a.heading span {
-  position: relative;
-  top: 65px;
   padding: 8px;
   border: 2px solid #fff;
   background-color: rgba(103, 9, 9, 0.4);

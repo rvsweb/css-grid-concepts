@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* General Grid Layout */
+.container {
+  width: 100%;
+  height: auto;
+
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "article nav ads"
+    "footer footer footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 20% 15%;
+  grid-gap: 2px;
+}
+
+#header-page {
+  grid-area: header;
+}
+
+#main-article {
+  grid-area: article;
+}
+
+#main-nav {
+  grid-area: nav;
+}
+
+#aside-right {
+  grid-area: ads;
+}
+
+#footer-center {
+  grid-area: footer;
+}
+
+header,
+footer,
+article,
+nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+header,
+nav {
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  background: rgb(29, 111, 255);
+}
+
+aside,
+footer {
+  border: 5px solid #f3f;
+}

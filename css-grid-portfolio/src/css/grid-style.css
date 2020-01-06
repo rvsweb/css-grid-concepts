@@ -4,9 +4,13 @@
   float: left;
   height: 200px;
   color: #fff;
-  background-position: center; /* Forgot to mention in the tutorial, please add this line*/
-  background-repeat: no-repeat; /* Forgot to mention in the tutorial, please add this line*/
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover; /* Forgot to mention in the tutorial, please add this line*/
+}
+
+.title {
+  display: block;
 }
 
 .grid:nth-child(3n + 1) .details:before {

@@ -1,0 +1,313 @@
+<!-- https://www.quackit.com/css/grid/tutorial/create_a_website_layout.cfm -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cinzel|Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="src/css/grid-layout-holy-grials-3/grid-layout-holy-grials-3a-structure.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="src/css/grid-layout-holy-grials-3/grid-layout-holy-grials-3b-header.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="src/css/grid-layout-holy-grials-3/grid-layout-holy-grials-3c-article.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="src/css/grid-layout-holy-grials-3/grid-layout-holy-grials-3d-aside.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="src/css/grid-layout-holy-grials-3/grid-layout-holy-grials-3e-nav.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="src/css/grid-layout-holy-grials-3/grid-layout-holy-grials-3f-footer.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script|Orbitron|Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>grid-layout-holy-grials</title>
+  </head>
+
+  <body onload="reloj()">
+    <header id="header-page">
+      <div class="header">
+        <h1 class="header-title">John Wick</h1>
+        <ul class="menu">
+          <li class="link"><a class="link-anchor" href="#">Home</a></li>
+          <li class="link"><a class="link-anchor" href="#">New</a></li>
+          <li class="link"><a class="link-anchor" href="#">Media</a></li>
+          <li class="link"><a class="link-anchor" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="container">
+      <article id="main-article">
+        <div class="main-box-article">
+          <h1 class="article-title">
+            History
+          </h1>
+          <div class="box-center">
+            <div class="box-left">
+              <img
+                class="img-john"
+                src="https://live.staticflickr.com/7677/17112992581_abdd94aa1d_n.jpg"
+              />
+
+              <div id="hora">
+                <iframe
+                  class="video-basic"
+                  src="https://www.youtube.com/embed/Ct-zGV4TgKY"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+
+            <div class="box-right">
+              <p class="box-right-paragraph">
+                After John Wick loses his wife, Helen, to a terminal illness, he
+                receives a beagle puppy named Daisy from his late wife to help
+                him cope with his grief. Despite John's stoic demeanor, he bonds
+                with the puppy and they spend their day driving around in his
+                vintage 1969 Ford Mustang Mach 1. At a gas station, he
+                encounters a trio of Russian gangsters whose leader, Iosef,
+                insists on buying his car, but John repeatedly states that it is
+                not for sale. Frustrated, the mobsters follow John to his home,
+                knock him unconscious, steal his car, and kill Daisy.
+              </p>
+
+              <div class="box-right-suite-link-1">
+                <span class="box-rightward"></span>
+                <a class="box-right-link-read" href="#">Read More</a>
+              </div>
+
+              <hr class="box-right-line" />
+
+              <div class="box-right-suite-link-2">
+                <i class="fas fa-share-alt"></i>
+                <span class="box-share">
+                  Share
+                </span>
+
+                <a class="box-right-link box-fa" href="#">
+                  <i class="fas fa-share-alt fa-sm"></i>
+                  <span class="box-share">
+                    Facebook
+                  </span>
+                </a>
+
+                <a class="box-right-link box-tw" href="#">
+                  <i class="fab fa-twitter fa-sm"></i>
+                  <span class="box-share">
+                    Twitter
+                  </span>
+                </a>
+
+                <a class="box-right-link box-pin" href="#">
+                  <i class="fab fa-pinterest fa-sm"></i>
+                  <span class="box-share">
+                    Pinterest
+                  </span>
+                </a>
+              </div>
+
+              <hr class="box-right-line" />
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <nav id="main-nav">
+        <div id="box">
+          <h2 class="title-nav">
+            Date
+            <i class="fas fa-calendar fa-sm"></i>
+          </h2>
+        </div>
+
+        <div id="box-date">
+          <abbr id="abbr-date"></abbr>
+        </div>
+
+        <div id="box">
+          <h2 class="title-nav">
+            Link
+            <i class="fas fa-link fa-sm"></i>
+          </h2>
+        </div>
+
+        <div class="box-link">
+          <div class="box-link-element">
+            <img
+              class="box-link-img"
+              src="src/img/watchmen-icon.jpg"
+              alt="watchmen"
+            />
+            <a class="box-link-text">
+              Watchmen is an American superhero drama television
+            </a>
+          </div>
+
+          <div class="box-link-element">
+            <img
+              class="box-link-img"
+              src="src/img/watchmen-icon.jpg"
+              alt="watchmen"
+            />
+            <a class="box-link-text">
+              Watchmen is an American superhero drama television
+            </a>
+          </div>
+
+          <div class="box-link-element">
+            <img
+              class="box-link-img"
+              src="src/img/watchmen-icon.jpg"
+              alt="watchmen"
+            />
+            <a class="box-link-text">
+              Watchmen is an American superhero drama television
+            </a>
+          </div>
+
+          <div class="box-link-element">
+            <img
+              class="box-link-img"
+              src="src/img/watchmen-icon.jpg"
+              alt="watchmen"
+            />
+            <a class="box-link-text">
+              Watchmen is an American superhero drama television
+            </a>
+          </div>
+
+          <div class="box-link-element">
+            <img
+              class="box-link-img"
+              src="src/img/watchmen-icon.jpg"
+              alt="watchmen"
+            />
+            <a class="box-link-text">
+              Watchmen is an American superhero drama television
+            </a>
+          </div>
+        </div>
+
+        <div id="box">
+          <h2 class="title-nav">
+            Category
+            <i class="fas fa-tags fa-sm"></i>
+          </h2>
+        </div>
+
+        <ul class="title-nav-category">
+          <li class="link-category">
+            <a class="link-anchor" href="#">Action</a>
+          </li>
+          <li class="link-category">
+            <a class="link-anchor" href="#">Drama</a>
+          </li>
+          <li class="link-category">
+            <a class="link-anchor" href="#">Comedy</a>
+          </li>
+          <li class="link-category">
+            <a class="link-anchor" href="#">Adventure</a>
+          </li>
+          <li class="link-category">
+            <a class="link-anchor" href="#">Historical</a>
+          </li>
+        </ul>
+
+        <div id="box">
+          <h2 class="title-nav">
+            Interview
+            <i class="fas fa-microphone-alt fa-sm"></i>
+          </h2>
+        </div>
+
+        <div class="box-link">
+          <div class="box-link-element">
+            <img
+              class="box-link-img-interview"
+              src="src/img/keanu.jpg"
+              alt="watchmen"
+            />
+            <a class="box-link-text">
+              Keano Reeve
+            </a>
+          </div>
+          <div class="box-link-element">
+            <img
+              class="box-link-img-interview"
+              src="src/img/laurence.jpg"
+              alt="watchmen"
+            />
+            <a class="box-link-text">
+              Laurence Fishburne
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <aside id="aside-right">
+        <div id="box-aside-right">
+          <h2 class="title-nav-right">
+            Premiere
+            <i class="fas fa-film"></i>
+          </h2>
+          <div class="box-aside-films">
+            <img
+              class="box-aside-poster"
+              src="src/img/easy-street.jpg"
+              alt="charlie"
+            />
+
+
+            <picture>
+              <source
+                srcset="large.webp"
+                media="(min-width: 992px)"
+                type="image/webp"
+              />
+              <source
+                srcset="large.jpg"
+                media="(min-width: 992px)"
+                type="image/jpeg"
+              />
+              <img src="small.jpg" alt="" />
+            </picture>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer id="footer-center">
+      Footer
+      <span id="hora-completa"></span>
+    </footer>
+
+    <script src="src/js/reloj.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </body>
+</html>
