@@ -35,15 +35,15 @@ aside {
   width: auto;
   height: auto;
 
-  margin: 20px;
-  padding: 10px auto;
+  margin: 10px auto;
+  padding: 1%;
 
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
 
-  border: 5px solid #f00;
+  border: 1px solid #f00;
 }
 
 .box-aside-film-section-1 {
@@ -51,6 +51,7 @@ aside {
 }
 
 .film-section-1 {
+  border: 1px solid #f00;
 }
 
 .film-section-1-text {
@@ -60,6 +61,14 @@ aside {
 }
 
 .film-section-date {
+}
+
+.film-section-pg{
+
+}
+
+.film-section-date{
+
 }
 
 .box-aside-poster {
