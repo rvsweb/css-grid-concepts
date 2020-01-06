@@ -12,10 +12,10 @@
   display: grid;
   grid-template-areas:
     "header header header"
-    "article nav ads"
+    "article ads nav"
     "footer footer footer";
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr 20% 15%;
+  grid-template-columns: 1fr 15% 20%;
+  grid-template-rows: auto auto auto;
   grid-gap: 2px;
 }
 

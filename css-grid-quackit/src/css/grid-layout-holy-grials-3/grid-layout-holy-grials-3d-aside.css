@@ -6,6 +6,7 @@ aside {
   flex-flow: column wrap;
   justify-content: flex-start;
   align-items: stretch;
+  box-sizing: border-box;
 }
 
 #aside-right {
@@ -22,7 +23,7 @@ aside {
 }
 
 .title-nav-right {
-  width: 90%;
+  width: auto;
   height: auto;
   padding: 3%;
   margin: 5%;
@@ -47,28 +48,120 @@ aside {
 }
 
 .box-aside-film-section-1 {
-  border: 1px solid #0f0;
+  width: 100%;
+  border: 5px solid #0f0;
 }
 
 .film-section-1 {
+  width: auto;
+  height: auto;
   border: 1px solid #f00;
 }
 
 .film-section-1-text {
+  display: block;
+  width: auto;
+  height: auto;
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: bolder;
 }
 
 .film-section-2 {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  border: 1px solid #f00;
+}
+
+.film-section-type {
+  align-self: center;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 3%;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #0f0;
+}
+
+.film-pg {
+  align-self: center;
+  width: 30%;
+  height: auto;
+  margin: 0 auto;
+  padding: 1%;
+  border: 1px solid #f00;
+}
+
+.film-section-type-2 {
+  align-self: center;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 1%;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #0f0;
+}
+
+.film-nc-17 {
+  align-self: center;
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  padding: 1%;
+  border: 1px solid #f00;
+}
+
+.film-section-type-3{
+  align-self: center;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 1%;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #0f0;
+}
+
+.film-pg-13{
+  align-self: center;
+  width: 40%;
+  height: auto;
+  margin: 0 auto;
+  padding: 1%;
+  border: 1px solid #f00;
 }
 
 .film-section-date {
+  align-self: stretch;
+  width: 100%;
+  height: auto;
+  border: 1px solid #00f;
+
+  margin: 1% auto;
+  padding: 2px;
+
+  align-self: baseline;
 }
 
-.film-section-pg{
-
-}
-
-.film-section-date{
-
+#abbr-date-2,
+#abbr-date-3,
+#abbr-date-4 {
+  display: block;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bolder;
 }
 
 .box-aside-poster {
