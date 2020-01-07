@@ -33,7 +33,7 @@ function reloj() {
     sgZero = setZero(seg);
     minZero = setZero(min);
 
-    document.getElementById('hora-completa').innerHTML =
+    document.getElementById('hours').innerHTML =
         hora + ":" + minZero + ":" + sgZero;
 
     setTimeout(reloj);
