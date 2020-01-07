@@ -2,6 +2,7 @@
 
 article {
   border: 5px solid turquoise;
+  box-sizing: border-box;
 }
 
 #main-article {
@@ -26,7 +27,7 @@ article {
   display: block;
   width: auto;
   height: auto;
-  padding: 10px;
+  padding: 20px 20px 0 20px;
   margin: 10px auto;
   font-size: 3em;
   background-color: rgb(199, 98, 124);
@@ -125,22 +126,21 @@ article {
 }
 
 .box-right-suite-link-2 {
-  display: inline-block;
-  width: auto;
+  display: inline-flex;
+  width: 90%;
   height: auto;
-  margin: 10px 5px 10px 5px;
-  padding-left: 5px;
+  margin: 5% auto;
 
   flex-flow: row wrap;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: center;
 
   font-family: Roboto, sans-serif;
 }
 
 .box-share {
   display: inline-block;
-  padding: 2px;
+  padding: 0 4%;
   font-weight: bolder;
 }
 
