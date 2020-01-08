@@ -27,7 +27,18 @@
 <body onload="reloj()">
   <header id="header-page">
     <div class="header">
-      <h1 class="header-title">John Wick</h1>
+      <div class="header-icon">
+        <a href="#">
+          <img class="anchor-img" src="src/img/logo-64x64.jpg" alt="logo">
+        </a>
+      </div>
+      <div class="header-input">
+        <input type="text" class="header-form-input" placeholder="Search Movies" value="" autocomplete="off"
+          maxlength="200" />
+        <button class="header-search">
+          <i id="header-search-color" class="fas fa-search fa-lg"></i>
+        </button>
+      </div>
       <ul class="menu">
         <li class="link"><a class="link-anchor" href="#">Home</a></li>
         <li class="link"><a class="link-anchor" href="#">New</a></li>
@@ -35,6 +46,8 @@
         <li class="link"><a class="link-anchor" href="#">Contact</a></li>
       </ul>
     </div>
+    <h1 class="header-title">John Wick</h1>
+
   </header>
 
   <main class="container">
@@ -229,6 +242,7 @@
 
     <aside id="aside-right">
       <div id="box-aside-right">
+
         <h2 class="title-nav-right">
           Premiere
           <i class="fas fa-film"></i>
@@ -357,22 +371,59 @@
       <div class="footer-box-rigth">
         <ul class="footer-list">
           <li class="footer-link">
-            <a class="footer-anchor" href="#">Press Area</a>
+            <a class="footer-anchor" href="#">Sitemap</a>
           </li>
           <li class="footer-link">
-            <a class="footer-anchor" href="#">Cookie preferences</a>
+            <a class="footer-anchor" href="#">who I am?</a>
           </li>
           <li class="footer-link">
-            <a class="footer-anchor" href="#">Legal notices</a>
+            <a class="footer-anchor" href="#">Affiliation</a>
           </li>
         </ul>
       </div>
+
     </div>
 
     <div class="footer-box-down">
-      <span id="hours"></span>
-      <img id="footer-flags" src="src/img/spain.svg" alt="flag spain"></img>
+
+      <div class="footer-box-brand">
+        <picture class="footer-img-logo">
+          <source srcset='src/img/logo-160x160.jpg' media='(min-width: 1024px)' type='image/jpg'>
+          <source srcset='src/img/logo-64x64.jpg' media='(min-width: 768px) and (max-width: 1023px)' type='image/jpg'>
+          <source srcset='src/img/logo-64x64.jpg' media='(max-width: 767px)' type='image/jpg'>
+          <img src='src/img/logo-180x179.jpg' alt='logo oficial'>
+        </picture>
+
+        <span class="footer-box-text">
+          Copyright
+          <i class="far fa-copyright"></i>
+          <span id="footer-date-year"></span>
+          <span>Film Vice, Inc.</span>
+        </span>
+      </div>
+
+      <div class="footer-box-down-link">
+        <ul class="footer-list-down">
+          <li class="footer-link-down">
+            <a class="footer-anchor-2" href="#">Press Area</a>
+          </li>
+          <li class="footer-link-down">
+            <a class="footer-anchor-2" href="#">Cookie preferences</a>
+          </li>
+          <li class="footer-link-down">
+            <a class="footer-anchor-2" href="#">Legal notices</a>
+          </li>
+          <li class="footer-link-down">
+            <span id="hours"></span>
+          </li>
+        </ul>
+
+
+      </div>
     </div>
+
+
+
   </footer>
 
   <script src="src/js/reloj.js"></script>

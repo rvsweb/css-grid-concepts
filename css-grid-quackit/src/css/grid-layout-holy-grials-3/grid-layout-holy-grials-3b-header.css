@@ -2,38 +2,116 @@
 #header-page {
   width: 100%;
   height: auto;
+
+  box-sizing: border-box;
 }
 
 .header {
   width: 100%;
   height: auto;
-  text-align: center;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+
+  border: 1px solid #000;
+}
+
+.header-icon{
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  
+  padding: 10px;
+  margin: 10px;
+  flex-basis: 1%;
+  flex-grow: 1;
+}
+
+.anchor-img{
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 10px;
+}
+
+.header-input{
+  width: 50%;
+  height: auto;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+
+  flex-grow: 1;
+  flex-basis: 25%;
+  
+}
+
+.header-form-input{
+  display: inline-block; 
+  width: 55%;
+  height: auto;
+  
+  margin: 10px 0 0 50px;
+  padding: 10px;
+  align-self: baseline;
+
+  color: #505763;
+}
+
+.header-search{
+  display: inline-block; 
+   width: 35px;
+   height: 40px;
+   align-self: baseline;
+ }
+
+ #header-search-color{
+  color:#2196F3;
+ }
+
+.menu {
+  width: auto;
+  height: auto;
+  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  
+  list-style-type: none;
+  flex-basis: 60%;
+} 
+
+.link-anchor{
+  margin: 10px 0 0 2px;
+}
+
+.link {
+  margin: 10px 15px 10px 15px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  border: 1px solid #000;
+}
+
+.link-anchor {
+  flex-grow: 1;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: bolder;
+  text-decoration: none;
 }
 
 .header-title {
   font-size: 5em;
   font-family: "Permanent Marker", cursive;
-}
-
-.menu {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-  align-items: flex-end;
-
-  list-style-type: none;
-  border: 2px solid #0f0;
-}
-
-.link {
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #f00;
-  font-family: Roboto, sans-serif;
-}
-
-.link-anchor {
-  color: #fff;
-  font-size: 2em;
-  text-decoration: none;
 }

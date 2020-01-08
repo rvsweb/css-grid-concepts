@@ -6,6 +6,8 @@ function date() {
     anio = new Date().getFullYear();
 
     document.getElementById('abbr-date').innerHTML = dia + "/" + mes + "/" + anio;
+    document.getElementById('footer-date-year').innerHTML = anio;
+
 }
 
 function date_2() {

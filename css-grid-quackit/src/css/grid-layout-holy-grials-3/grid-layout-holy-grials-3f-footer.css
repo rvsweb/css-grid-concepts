@@ -3,7 +3,7 @@ footer{
     box-sizing: border-box;
 }
 
-#footer-center {
+#center {
 width: auto;
 height: auto;
 border: 5px solid #00f;
@@ -42,7 +42,6 @@ border: 5px solid #00f;
     width: 80%;
     height: auto;
 
-
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -52,7 +51,6 @@ border: 5px solid #00f;
 }
 
 .footer-link{
-    display: block;
     width: 100%;
     height: auto;
     margin: 10px;
@@ -72,26 +70,93 @@ border: 5px solid #00f;
     font-size: 1em;
     text-align: center;
     text-decoration: none;
+    color: #686f7a;
     border: 1px solid #00f;
     font-family: "Roboto" , sans-serif;
-    font-weight: bolder;
 }
 
 .footer-box-down{
     width: 100%;
     height: auto;
 
-    display: inline-flex;
+    display: flex;
     flex-flow: row wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;    
 
-    border: 1px solid springgreen;
+    border: 5px solid springgreen;
 }
 
-#footer-flags{
-    width: 64px;
+.footer-box-brand{
+    width: 45%;
     height: auto;
-    padding: 1%;
-    margin: 0;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+    font-size: 0.9em;
+    font-weight: lighter;
+    font-family: "Roboto" , sans-serif;
+    border: 5px solid teal;
 }
+
+.footer-img-logo{
+    width: auto;
+    height: auto;
+    margin: 0 20px 0 5%;
+    
+    align-self: baseline;
+}
+
+.footer-box-text{
+    align-items: center;
+    color: #686f7a;
+}
+
+.footer-box-down-link{
+    width: 55%;
+    height: auto;
+
+    border: 5px solid tomato;
+}
+
+.footer-list-down{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;  
+
+    border: 5px solid #0f0;
+    list-style-type: none;
+    
+}
+
+.footer-link-down{
+    border: 1px solid lightpink;
+    margin: 5px 10px;
+    flex-basis: auto;
+}
+
+.footer-anchor-2{
+    padding: 5px;
+    color: #686f7a;
+    font-size: 0.9em;
+    font-family: "Roboto" , sans-serif;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+#hours{
+    padding: 10px;
+    color: #686f7a;
+    font-size: 1em;
+    font-family: Roboto , sans-serif;
+}
+
