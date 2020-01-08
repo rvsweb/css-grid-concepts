@@ -86,7 +86,6 @@ nav {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-
   border: 1px solid #f00;
 }
 
@@ -94,7 +93,7 @@ nav {
   display: inline-block;
   width: 64px;
   height: auto;
-  margin: 0%;
+  margin: 10% auto;
   padding: 1%;
   border-radius: 15px;
   border: 1px solid #f00;
@@ -112,11 +111,11 @@ nav {
 
 .box-link-text {
   display: inline-block;
-  width: 61%;
+  width: 50%;
   height: auto;
-  margin: 1px;
-  padding: 2% 2%;
-  text-align: left;
+  margin: 10px;
+  padding: 1%;
+  text-align: center;
   font-size: 1em;
   border: 1px solid #00f;
 }
