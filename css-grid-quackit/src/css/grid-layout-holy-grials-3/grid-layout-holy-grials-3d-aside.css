@@ -9,6 +9,10 @@ aside {
   box-sizing: border-box;
 }
 
+aside {
+  border: 5px solid #f3f;
+}
+
 #aside-right {
   font-family: Roboto, sans-serif;
 }
