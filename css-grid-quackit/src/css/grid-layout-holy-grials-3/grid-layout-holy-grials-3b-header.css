@@ -1,20 +1,17 @@
 /* Design Header */
 #header-page {
-  width: 100%;
-  height: auto;
-
-  box-sizing: border-box;
-}
-
-header{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 
+  width: 70%;
+  height: auto;
+  
+  margin: 0 auto;
+
   color: #fff;
   background: rgb(29, 111, 255);
-
 }
 
 .header {
@@ -30,17 +27,19 @@ header{
 }
 
 .header-icon{
-  width: auto;
+  width: 10%;
   height: auto;
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   
   padding: 10px;
   margin: 10px;
   flex-basis: 1%;
   flex-grow: 1;
+  border: 1px solid #f00;
+  flex-grow: 0;
 }
 
 .anchor-img{
@@ -51,27 +50,29 @@ header{
 }
 
 .header-input{
-  width: 50%;
+  width: 100%;
   height: auto;
 
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  align-items: center;
+  align-items: baseline;
   align-content: center;
   align-self: stretch;
 
   flex-grow: 1;
-  flex-basis: 25%;
+  flex-basis: 20%;
+
+  border: 1px solid #000;
   
 }
 
 .header-form-input{
   display: inline-block; 
-  width: 55%;
+  width: 160px;
   height: auto;
   
-  margin: 10px 0 0 50px;
+  margin: 0;
   padding: 10px;
   align-self: baseline;
 
@@ -95,35 +96,39 @@ header{
   
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: space-around;
+  align-items: baseline;
   align-content: center;
   
   list-style-type: none;
-  flex-basis: 60%;
+  border: 1px solid #f00;
+  flex-basis: 50%;
 } 
 
-.link-anchor{
-  margin: 10px 0 0 2px;
-}
-
 .link {
-  margin: 10px 15px 10px 15px;
-  padding: 10px;
+  margin: 10px 5px 10px 5px;
+  padding: 5px;
   font-family: "Roboto", sans-serif;
-
+  align-self: baseline;
   border: 1px solid #000;
 }
 
 .link-anchor {
-  flex-grow: 1;
   color: #fff;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: bolder;
   text-decoration: none;
+  align-self: baseline;
 }
 
 .header-title {
-  font-size: 5em;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #000;
+  font-size: 3em;
   font-family: "Permanent Marker", cursive;
 }
