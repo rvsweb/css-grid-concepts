@@ -6,6 +6,17 @@
   box-sizing: border-box;
 }
 
+header{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  background: rgb(29, 111, 255);
+
+}
+
 .header {
   width: 100%;
   height: auto;
@@ -100,6 +111,7 @@
   margin: 10px 15px 10px 15px;
   padding: 10px;
   font-family: "Roboto", sans-serif;
+
   border: 1px solid #000;
 }
 

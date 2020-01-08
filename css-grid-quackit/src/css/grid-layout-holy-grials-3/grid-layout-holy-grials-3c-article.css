@@ -1,13 +1,23 @@
-/* Main Design  */
-
 article {
+  display: flex;
+  flex-flow: row wrap;
+
   border: 5px solid turquoise;
   box-sizing: border-box;
 }
 
+
 #main-article {
-  width: 100%;
+  width: auto;
   height: auto;
+
+  display: flex;
+  flex-flow: row wrap;
+
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  
 }
 
 .main-box-article {
@@ -62,8 +72,12 @@ article {
   border-radius: 2%;
 }
 
-#hora {
-  color: #f00;
+.box-video {
+  width: 100%;
+  height: auto;
+
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .video-basic {
