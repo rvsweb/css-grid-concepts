@@ -1,6 +1,6 @@
 @media screen and (min-width: 425px) and (max-width: 767px){
 
-    .grid-1 {
+    /* .grid-1 {
         max-width: 800px;
 
         grid-template-columns: repeat(3, 1fr);
@@ -14,10 +14,12 @@
 
         background: teal;
         border: 5px solid #0f0;
-    }
+    } */
 
     .grid-1 div {
         font-size: 20px;
         padding: 20px;
+
+        border: 1px solid #000;
     }
 }

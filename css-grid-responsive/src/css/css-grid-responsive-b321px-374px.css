@@ -15,7 +15,7 @@
             "sidebar"
             "footer";
         background: #4794bb;
-        border: 5px solid #4794bb;
+        border: 5px solid red;
     }
 
     /* Items */
@@ -29,7 +29,7 @@
     }
 
     .item-1 {
-        background: #b03532;
+        background: honeydew;
         grid-area: header;
     }
 
@@ -43,35 +43,35 @@
         grid-gap: 20px;
 
         grid-template-areas:
-            "header header"
-            "article sidebar";
+            "header header" /* cabecera */
+            "article sidebar"; 
 
-        background: yellowgreen;
+        background: cadetblue;
         border: 2px solid #000;
     }
 
     .item-3 {
-        background: violet;
+        background: sandybrown;
         grid-area: sidebar;
     }
 
     .item-4 {
-        background: slateblue;
+        background: fuchsia;
         grid-area: footer;
     }
 
     .item-5 {
-        background: #30997a;
+        background: hotpink;
         grid-area: header;
     }
 
     .item-6 {
-        background: #30997a;
+        background: aqua;
         grid-area: article;
     }
 
     .item-7 {
-        background: #30997a;
+        background: salmon;
         grid-area: sidebar;
     }
 }

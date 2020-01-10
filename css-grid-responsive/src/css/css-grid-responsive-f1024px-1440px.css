@@ -24,7 +24,7 @@
     }
 
     .item-1{    
-        grid-area: header; 
+        grid-area: header ; 
         background: mediumaquamarine;
     }
     
