@@ -1,11 +1,18 @@
 @media screen and (max-width: 320px) {
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+    
     div{
         text-align: center;
         font-weight: bolder;
         border: 1px solid #000;
     }
 
+    /* Estructura general */
     .grid-1 {
         display: grid;
         width: 95%;
@@ -17,7 +24,7 @@
 
         grid-template-areas:
             "header"
-            "main"
+            "main-element"
             "sidebar"
             "footer";
 
@@ -27,16 +34,19 @@
 
     .item-1 {
         grid-area: header;
-        background: #30997a;
+        background: chartreuse;
     }
 
+    /* Estructura central */
     .item-2 {
+        width: 99%;
+        height: auto;
         display: grid;
         
         grid-template-columns: 1fr 30%;
         grid-template-rows: auto auto;
         grid-gap: 20px;
-        grid-area: main;
+        grid-area: main-element;
         
         grid-template-areas:
             "header header"
@@ -55,21 +65,21 @@
 
     .item-4 {
         grid-area: footer;
-        background: #30997a;
+        background: wheat;
     }
 
     .item-5 {
         grid-area: header;
-        background: #30997a;
+        background: tomato;
     }
 
     .item-6 {
         grid-area: article;
-        background: #30997a;
+        background: #4794bb;
     }
 
     .item-7 {
         grid-area: sidebar;
-        background: #30997a;
+        background: violet;
     }
 }

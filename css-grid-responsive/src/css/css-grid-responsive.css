@@ -1,42 +1,84 @@
 /* Items */
 
+  /* Estructura general */
+  .grid-1 {
+       display: grid;
+       width: 95%;
+       margin: 1% auto;
+       grid-template-columns: auto auto auto;
+       grid-template-rows: auto auto auto;
+       grid-gap: 10px;
+
+       grid-template-areas:
+           "header header header"
+           "main-element main-element sidebar"
+           "footer footer footer";
+
+       text-align: center;
+       font-weight: bolder;
+       font-family: "Roboto" , sans-serif;
+       background: #4794bb;
+       border: 5px solid hotpink;
+}
+
 .grid-1 div {
-    color: #000;
-
-    font-weight: bolder;
-    font-size: 16px;
-    padding: 10px;
-}
-
-.grid-1{
-    background: #fff;
-}
+       color: #000;
+       font-size: 1.5em;
+       padding: 10px;
+ }
 
  .item-1 {
-            border: 1px solid #000;
+        border: 1px solid #000;
+        grid-area: header;
+
  }
 
  .item-2 {
-        content: "main";
-        border: 1px solid #00f;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 100px 100px 100px 100px;
+        grid-gap: 10px;
+        grid-template-areas: 
+        "into-header into-header"
+        "into-article into-sidebar"
+        "into-article into-sidebar"
+        "into-article into-sidebar";
+        
+        grid-area: main-element;
+        justify-items: stretch;
+        align-items: stretch;
+
+        border: 5px solid #00f;
+        font-size: 1em;
  }
 
  .item-3 {
+        grid-area: sidebar;
         border: 1px solid #0ff;
  }
 
  .item-4 {
+        grid-area: footer;
         border: 1px solid #f0f;
 }
 
  .item-5 {
-        border: 1px solid #ff0;
-}
+       display: flex;
+       flex-flow: row wrap;
+       justify-content: center;
+       align-items: center;
+       align-self: stretch;
 
+       grid-area: into-header;
+       border: 5px solid #ff0;
+}
+       
  .item-6 {
-        border: 1px solid violet;
+        grid-area: into-article;
+        border: 5px solid violet;
 }
-
+       
  .item-7 {
-        border: 1px solid red;
+        grid-area: into-sidebar;
+        border: 5px solid red;
 }
