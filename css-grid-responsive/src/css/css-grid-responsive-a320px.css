@@ -1,0 +1,75 @@
+@media screen and (max-width: 320px) {
+
+    div{
+        text-align: center;
+        font-weight: bolder;
+        border: 1px solid #000;
+    }
+
+    .grid-1 {
+        display: grid;
+        width: 95%;
+        margin: 10% auto;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px auto auto 80px;
+        grid-gap: 10px;
+
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+
+        background: #4794bb;
+        border: 5px solid hotpink;
+    }
+
+    .item-1 {
+        grid-area: header;
+        background: #30997a;
+    }
+
+    .item-2 {
+        display: grid;
+        
+        grid-template-columns: 1fr 30%;
+        grid-template-rows: auto auto;
+        grid-gap: 20px;
+        grid-area: main;
+        
+        grid-template-areas:
+            "header header"
+            "article sidebar";
+
+        padding: 5px;
+        margin: 10px auto;
+        text-align: center;
+        background: red;
+    }
+
+    .item-3 {
+        grid-area: sidebar;
+        background: #30997a;
+    }
+
+    .item-4 {
+        grid-area: footer;
+        background: #30997a;
+    }
+
+    .item-5 {
+        grid-area: header;
+        background: #30997a;
+    }
+
+    .item-6 {
+        grid-area: article;
+        background: #30997a;
+    }
+
+    .item-7 {
+        grid-area: sidebar;
+        background: #30997a;
+    }
+}

@@ -1,0 +1,42 @@
+/* Items */
+
+.grid-1 div {
+    color: #000;
+
+    font-weight: bolder;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.grid-1{
+    background: #fff;
+}
+
+ .item-1 {
+            border: 1px solid #000;
+ }
+
+ .item-2 {
+        content: "main";
+        border: 1px solid #00f;
+ }
+
+ .item-3 {
+        border: 1px solid #0ff;
+ }
+
+ .item-4 {
+        border: 1px solid #f0f;
+}
+
+ .item-5 {
+        border: 1px solid #ff0;
+}
+
+ .item-6 {
+        border: 1px solid violet;
+}
+
+ .item-7 {
+        border: 1px solid red;
+}

@@ -1,0 +1,42 @@
+body {
+    padding-top: 20px;
+    box-sizing: border-box;
+
+    background: #f5f7f8;
+    font-family: "Roboto", sans-serif;
+}
+
+.item-1 {
+            border: 1px solid #000;
+ }
+
+ .item-2 {
+            border: 1px solid #00f;
+ }
+
+ .item-2-paragraph {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    border: 1px solid #f00;
+}
+
+ .item-3 {
+            border: 1px solid #0ff;
+ }
+
+ .item-4 {
+            border: 1px solid #f0f;
+}
+
+ .item-5 {
+            border: 1px solid #ff0;
+}
+
+ .item-6 {
+            border: 1px solid violet;
+}
+
+ .item-7 {
+            border: 1px solid red;
+}
