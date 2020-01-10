@@ -1,0 +1,67 @@
+
+@media screen and (min-width: 1024px) and (max-width: 1440px){
+
+    .grid-1 {
+        max-width: 800px;
+
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 80px auto 80px;
+        grid-gap: 20px;
+
+        grid-template-areas:
+            "header header header"
+            "main main sidebar"
+            "footer footer footer";
+
+        background: teal;
+        border: 5px solid #0f0;
+    }
+
+    .grid-1 div {
+        font-size: 20px;
+        padding: 20px;
+        border: 1px solid #000;
+    }
+
+    .item-1{    
+        grid-area: header; 
+        background: mediumaquamarine;
+    }
+    
+    .item-2{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 80px 80px;
+        grid-gap: 10px;
+
+        grid-template-areas: 
+        "article sidebar"
+        "article sidebar";
+        background: red;
+    }
+    
+    .item-5{
+        grid-area: article; 
+        background: sandybrown;
+    }
+    
+    .item-6{
+        grid-area: article; 
+        background: teal;
+    }
+    
+    .item-7{
+        grid-area: sidebar; 
+        background: skyblue;
+    }
+    
+    .item-3{
+        grid-area: sidebar; 
+        background: springgreen;
+    }
+    
+    .item-4{
+        grid-area: footer; 
+        background: tomato;
+    }
+
+}

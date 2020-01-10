@@ -66,6 +66,7 @@ aside {
   display: block;
   width: auto;
   height: auto;
+  padding: 1%;
   font-size: 1.5em;
   text-align: center;
   font-weight: bolder;
@@ -86,10 +87,10 @@ aside {
 
 .film-section-type {
   align-self: center;
-  width: 100%;
+  width: 50%;
   height: auto;
   margin: 0 auto;
-  padding: 3%;
+  padding: 1%;
   font-size: 1em;
   font-weight: bold;
   text-align: center;
@@ -98,7 +99,7 @@ aside {
 
 .film-pg {
   align-self: center;
-  width: 30%;
+  width: 40%;
   height: auto;
   margin: 0 auto;
   padding: 1%;
@@ -107,7 +108,7 @@ aside {
 
 .film-section-type-2 {
   align-self: center;
-  width: 100%;
+  width: 50%;
   height: auto;
   margin: 0 auto;
   padding: 1%;
@@ -119,7 +120,7 @@ aside {
 
 .film-nc-17 {
   align-self: center;
-  width: 50%;
+  width: 40%;
   height: auto;
   margin: 0 auto;
   padding: 1%;
@@ -128,7 +129,7 @@ aside {
 
 .film-section-type-3{
   align-self: center;
-  width: 100%;
+  width: 50%;
   height: auto;
   margin: 0 auto;
   padding: 1%;

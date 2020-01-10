@@ -27,7 +27,7 @@ footer{
 .footer-box-left,
 .footer-box-center,
 .footer-box-rigth{
-    width: 45%;
+    width: 100%;
     height: auto;
 
     display: flex;
@@ -54,10 +54,9 @@ footer{
 .footer-link{
     width: 100%;
     height: auto;
-    margin: 10px;
+    margin: 10px auto;
 
     text-align: center;
-    align-self: center;
     border: 5px solid #0f0;
 }
 
