@@ -1,12 +1,19 @@
 /* Items */
+*{
+       box-sizing: border-box;
+}
+
+section {
+       font-weight: bolder;
+}
 
   /* Estructura general */
   .grid-1 {
        display: grid;
        width: 95%;
-       margin: 1% auto;
+       height: auto;
        grid-template-columns: auto auto auto;
-       grid-template-rows: auto auto auto;
+       grid-template-rows: 100px auto auto;
        grid-gap: 10px;
 
        grid-template-areas:
@@ -14,23 +21,21 @@
            "main-element main-element sidebar"
            "footer footer footer";
 
-       text-align: center;
-       font-weight: bolder;
-       font-family: "Roboto" , sans-serif;
-       background: #4794bb;
+           padding: 10px;
+           text-align: center;
+           font-family: "Roboto" , sans-serif;
+           background: #4794bb;
        border: 5px solid hotpink;
 }
 
 .grid-1 div {
        color: #000;
-       font-size: 1.5em;
        padding: 10px;
  }
 
  .item-1 {
         border: 1px solid #000;
         grid-area: header;
-
  }
 
  .item-2 {
@@ -49,17 +54,16 @@
         align-items: stretch;
 
         border: 5px solid #00f;
-        font-size: 1em;
  }
 
  .item-3 {
         grid-area: sidebar;
-        border: 1px solid #0ff;
+        border: 5px solid slategrey;
  }
 
  .item-4 {
         grid-area: footer;
-        border: 1px solid #f0f;
+        border: 5px solid #0ff;
 }
 
  .item-5 {
@@ -80,5 +84,5 @@
        
  .item-7 {
         grid-area: into-sidebar;
-        border: 5px solid red;
+        border: 5px solid green;
 }

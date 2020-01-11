@@ -1,9 +1,13 @@
 @media screen and (min-width: 375px) and (max-width: 424px){
 
+    section{
+        margin: 0 auto;
+    }
+
     .grid-1 {
         display: grid;
-        width: 95%;
-        margin: 10% auto;
+        width: 95%; 
+        margin: 1% auto;
 
         grid-template-columns: 1fr;
         grid-template-rows: 80px auto auto 80px;
@@ -14,7 +18,6 @@
             "main"
             "sidebar"
             "footer";
-        text-align: center;
         background: #4794bb;
         border: 5px solid hotpink;
     }
@@ -24,8 +27,6 @@
     .grid-1 div {
         color: #000;
 
-        font-weight: bolder;
-        font-size: 16px;
         padding: 10px;
         border: 1px solid #000;
     }
@@ -37,42 +38,43 @@
 
     .item-2 {
         grid-area: main;
-
         display: grid;
+        width: auto;
+        height: 300px;
 
-        grid-template-columns: 1fr 30%;
-        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
         grid-gap: 20px;
 
         grid-template-areas:
-            "header header"
-            "article sidebar";
-
+            "into-article"
+            "into-article-2"
+            "into-sidebar";
         background: yellowgreen;
     }
 
     .item-3 {
-        background: #30997a;
+        background: thistle;
         grid-area: sidebar;
     }
 
     .item-4 {
-        background: #30997a;
+        background: #b03532;
         grid-area: footer;
     }
 
     .item-5 {
         background: #30997a;
-        grid-area: header;
+        grid-area: into-article;
     }
 
     .item-6 {
         background: #30997a;
-        grid-area: article;
+        grid-area: into-article-2;
     }
 
     .item-7 {
         background: #30997a;
-        grid-area: sidebar;
+        grid-area: into-sidebar;
     }
 }

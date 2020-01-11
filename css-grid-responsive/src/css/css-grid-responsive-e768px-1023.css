@@ -1,23 +1,11 @@
 @media screen and (min-width: 768px) and (max-width: 1023px){
 
     .grid-1 {
-        max-width: 800px;
 
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 80px auto 80px;
-        grid-gap: 20px;
-
-        grid-template-areas:
-            "header header header"
-            "main main sidebar"
-            "footer footer footer";
-
-        background: teal;
-        border: 1px solid #0f0;
     }
 
     .grid-1 div {
-        font-size: 20px;
-        padding: 20px;
-    }
+
+    } 
+
 }
