@@ -1,11 +1,41 @@
 @media screen and (min-width: 768px) and (max-width: 1023px){
 
     .grid-1 {
-
+       margin: 0 auto;
+       padding: 10px;
     }
 
     .grid-1 div {
+        color: crimson;
+    }
 
-    } 
+    .item-1{
+        background: slategray;
+    }
+
+    .item-2{
+     background: palegoldenrod;
+    }
+
+    .item-3{
+    background: burlywood;
+    }
+    
+    .item-4{
+        background: teal;
+    }
+    
+    .item-5{
+        background: tomato;
+    }
+    
+    .item-6{
+        background: darkgoldenrod;
+    }
+    
+    .item-7{
+        background: dodgerblue;
+    }
+
 
 }
