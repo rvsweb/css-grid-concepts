@@ -54,8 +54,16 @@ span{
 }
 
 .image{
+    display: block;
+    width: auto;
+    height: auto;
     flex-grow: 1;
     margin: 5px;
+}
+
+.logo{
+    width: 100%;
+    height: auto;
 }
 
 footer{
@@ -78,12 +86,6 @@ footer{
         flex-direction: column;
     }
 
-    .image{
-        display: block;
-        height: 100px;
-        background: gold;
-    }
-
 }
 
 @media only screen and (min-width: 320px) and (max-width: 374px){
@@ -101,7 +103,8 @@ footer{
 
     .image{
         display: block;
-        height: 100px;
+        width: 100px;
+        height: auto;
         background: gold;
     }
 }
@@ -121,6 +124,7 @@ footer{
 
     .image{
         display: block;
+        width: auto;
         height: 100px;
         background: gold;
     }
@@ -142,6 +146,7 @@ footer{
 
     .image{
         display: block;
+        width: auto;
         height: 100px;
         background: gold;
     }
@@ -154,7 +159,7 @@ footer{
     .grid-wrapper{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-auto-rows: minmax(min-content,max-content);
+        grid-template-rows: 100px 825px 100px;
         grid-template-areas: 
         "header header"
         "aside article"

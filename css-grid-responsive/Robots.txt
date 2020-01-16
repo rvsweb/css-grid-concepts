@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /donttrackthis/
+Disallow: /cgi-bin/
+Sitemap: https://misitioweb.com/sitemap.xmlggit 
