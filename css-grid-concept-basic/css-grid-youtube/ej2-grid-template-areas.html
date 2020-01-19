@@ -1,0 +1,203 @@
+<!-- 
+Created on : 22-oct-2019 18:25:58 
+User : Raul Vela 
+Ref :
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Grid Template Area</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content=".">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <style>
+
+      *{
+        box-sizing: border-box;
+      }
+
+      body{
+        font-family: Roboto, sans-serif;
+      }
+
+      header{
+        width: 40%;
+        max-height: 100px; 
+        margin: 5% auto;
+        padding: 0.9%;
+        background: #393e46;
+      }
+
+      .title{
+        padding: 10%;
+        text-align: center;
+        font-family: Roboto , sans-serif;
+        background: #00adb5;
+        border-radius: 7px;
+      }
+
+      .wrapper-grid-area{
+        display: grid;
+        width: 100%;
+        height: 500px;
+        max-height: 500px;
+
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        /*grid-gap: 5px 5px;*/
+        grid-template-areas: 
+          "item-2 item-2 item-3"
+          "item-2 item-2 item-3"
+          "item-2 item-2 item-3"
+          "item-1 .      item-3"
+      }
+
+      .item-deco{
+        /*grid-column-start: 1;*/
+        /*grid-column-end: 3;*/
+        /*grid-column: 1/3;*/
+
+        /*grid-row-start: 1;*/
+        /*grid-row-end: 3;*/
+        /*grid-row: 1/3;*/
+
+        /*Resumen de todas anteriores propiedades*/
+        /*grid-area: 1/1/3/3;*/
+        grid-area: item-1;
+        background: #00adb5;
+      } 
+
+      .item-child{
+        /*grid-column-start: 1;*/
+        /*grid-column-end: 3;*/
+        /*grid-column: 1/3;*/
+
+        /*grid-row-start: 1;*/
+        /*grid-row-end: 3;*/
+        /*grid-row: 1/3;*/
+        grid-area: item-2;
+        background: #393e46;
+      }
+
+      .item-3{
+        /*grid-column-start: 1;*/
+        /*grid-column-end: 3;*/
+        /*grid-column: 1/3;*/
+
+        /*grid-row-start: 1;*/
+        /*grid-row-end: 3;*/
+        /*grid-row: 1/3;*/
+        grid-area: item-3;
+        background: #8aadb5;
+      }
+
+      .item-deco{
+        font-size: 2em;
+        font-family: Roboto, sans-serif;
+        border: 3px solid #000;
+      }
+
+      /*
+      * 2º Grid-Layout define la explicacion 
+           del uso de los 'grid-template-areas'
+      *
+      */
+      .grid-container {
+        position: relative;
+        top: 50px;
+        display: grid;
+        width: 100%;
+        height: auto;
+        margin: 1% 0 15% 0;
+
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+      }
+
+      .div--deco {
+        background: #95e1d3;  
+      }
+
+      .grid-item-txt__p {
+        padding: 1%;
+        grid-area: 1/3/1/1;
+      }
+
+      .paragraph--deco {
+        background: #eaffd0;  
+      }
+
+      .grid-item-txt__pre {
+        padding: 1%;
+      }
+
+      .pre--deco {
+        background: #ffe7d1;  
+        font-weight: bolder;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1 class="title">Grid Template Area</h1>
+    </header>
+
+    <main>
+      <section class="wrapper-grid-area">
+        <div class="item-deco item-deco">Item-1</div>
+        <div class="item-child item-deco">Item-2</div>
+        <div class="item-3 item-deco">Item-3</div>
+      </section>
+
+      <div class="grid-container div--deco">
+        <p class="grid-item-txt__p paragraph--deco">
+          Podemos alinear cada <b>&apos;Grid-Item&apos;</b>
+          y diseñar el <b>&apos;Grid-Layout&apos;</b> de forma manual
+          utilizando la propiedad <b>&apos;grid-template-areas&apos;</b>
+          e identificando cada <b>&apos;Grid-Item&apos;</b> mediante
+          la propiedad <b>&apos;grid-area&apos;</b> , una vez definido
+          solamente tenemos que colocarlo en el <b>&apos;Grid-Layout&apos;</b>
+          <br>
+          El <b>&apos;Grid-Layout&apos;</b> tiene definido un ancho y un alto
+          el cual si cada <b>&apos;Grid-Item&apos;</b> ocupa mas espacio
+          que el establecido cogera el espacio del <b>&apos;Grid-Item&apos;</b>
+          mas cercano a su posicion
+        </p>
+
+        <pre class="grid-item-txt__pre pre--deco">
+          grid-template-areas: 
+          "item-2 item-2 item-3"
+          "item-2 item-2 item-3"
+          "item-2 item-2 item-3"
+          "item-1 .      item-3"
+        </pre>
+      </div>
+
+      <section class="main-section">
+        <h1 class="display-name"></h1>
+        <div class="avatar">
+          <img src="" alt="">
+        </div>
+        <section class="about"></section>
+        <section class="posts"></section>
+      </section> 
+
+    </main>
+
+
+
+
+
+  </body>
+</html>

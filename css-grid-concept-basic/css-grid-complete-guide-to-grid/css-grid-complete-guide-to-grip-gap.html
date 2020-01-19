@@ -1,0 +1,90 @@
+<!-- 
+Created on : 01-nov-2019 23:49:21 
+User : Raul Vela!
+Ref : 
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>CSS Grid Complete Guide To Grip Gap</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content=".">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <style>
+
+      *{
+        box-sizing: content-box;
+        font-family: Roboto , sans-serif;
+      }
+
+      div{
+        width: 100%;
+        padding: 1%;
+        max-width: 325px;
+        height: auto;
+        max-height: 500px;
+      }
+
+      .container-columns{
+        margin: 1% auto;
+
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 80px 80px 80px;
+
+        grid-column-gap: 10px;
+        grid-row-gap: 15px;
+      }
+
+      .container--deco{
+        border: 1px solid #00f;
+        border-radius: 12px;
+      }
+
+      .flex-item{
+        text-align: center;
+        line-height: 70px;
+        vertical-align: middle;
+        border: 1px solid #f00;
+        border-radius: 12px;
+      }
+
+      .item-deco{
+        background-color: #ffcc99;
+      }
+
+      .item-child{
+        background-color: #66ff66;
+      }
+
+      .item-3{
+        background-color: #6666ff;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container-columns container--deco">
+      <div class="flex-item item-deco">header</div>
+      <div class="flex-item item-deco">header</div>
+      <div class="flex-item item-deco">header</div>
+
+      <div class="flex-item item-child">main</div>
+      <div class="flex-item item-child">main</div>
+      <div class="flex-item item-child">main</div>
+
+      <div class="flex-item item-3">footer</div>
+      <div class="flex-item item-3">footer</div>
+      <div class="flex-item item-3">footer</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,134 @@
+/* 
+    Created on : 05-nov-2019, 23:55:46
+    Author     : RVS
+*/
+
+body{
+  font-family: Sunshiney , cursive;
+}
+
+.header__main{
+  width: auto;
+  height: auto;
+  padding: .5%;
+  margin: 0 auto;
+}
+
+.header--deco{
+  box-sizing: content-box;
+  background-color: #95e1d3;
+}
+
+.header__hgroup{
+  width: inherit;
+  max-width: 98%;
+  height: 10%;
+  max-height: 50%;
+  padding: .5%;
+  margin: 0 auto;
+}
+
+.hgroup--deco{
+  box-sizing: border-box;
+  background-color: #eaffd0;
+  border-radius: 7px;
+}
+
+.header__h2{
+  width: inherit;
+  max-width: 25%;
+  height: 10%;
+  max-height: 50%;
+  padding: 1%;
+  margin: 0 0 0 2%;
+}
+
+.h2--deco{
+  text-align: center;
+  font-size: 2.5em;
+  font-family: Righteous, cursive;
+  background-color: #fce38a;
+  box-sizing: border-box;
+  border-radius: inherit;
+}
+
+.main-center {  
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.main-deco{
+  background: #cccccc;
+}
+
+.container-columns {
+  display: grid;
+  /* Indicamos cuantas columnas de elementos queremos tener : 2 */
+  grid-template-columns: auto auto;
+  /* Indicamos cuantas filas de elementos queremos de ancho : 3 */
+  grid-template-rows: 500px 500px 500px;
+  grid-gap: 10px 10px;
+  
+  padding: 2%;
+}
+
+.container-deco{
+  background-image: url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-repeat: no-repeat;
+}
+
+.item-directions{
+  padding: 1%;
+  border: 1px solid #000;
+} 
+
+.item-deco {
+  background: #dedef0;
+}
+
+.item-child {
+  background: #ffad87;
+}
+
+.item-3 {
+  background: #fa877f;
+}
+
+.item-4 {
+  background: #bd574e;
+}
+
+.item-5 {
+  background: #9be3de;
+}
+
+.item-5 {
+  background: #ff99ff;
+}
+
+.item-img-1{
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  max-height: 66.6%;
+  margin: 2% auto;
+}
+
+.img--deco{
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+}
+
+.div__paragraph-1{
+  display: block;
+  float: left;
+  padding: 1%;
+}
+
+.paragraph-1--deco{
+  text-align: left;
+  color: #333333;
+}

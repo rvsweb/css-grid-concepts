@@ -1,0 +1,282 @@
+<!-- 
+Created on : 09-oct-2019 18:08:57 
+User : Raul Vela 
+Ref :
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Grid and Absolutely Positioned Elements</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content="Grid and Absolutely Positioned Elements">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <link rel="stylesheet" type="text/css" href="src/css/c5-grid-and-absolutely-positioned-elements.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <style>
+
+      .wrapper-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(32% ,1fr));
+        grid-auto-rows: auto;
+        grid-gap: 10px;
+        height: auto;
+        padding: 1%;
+        margin: 1% auto;
+      }
+
+      .wrapper-box > div {
+
+      }
+
+      .box--deco {
+        border-radius: 7px;
+        background-color: #484c7f;
+      }
+
+      .wrapper-relative {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows : 200px;
+        grid-gap: 20px;
+        height: auto;
+      }
+
+      .wrapper-relative--box-1 , 
+      .wrapper-relative--box-2 , 
+      .wrapper-relative--box-4 {
+        text-align: center;
+        background-color: #ff2e63;
+        padding: 5%;
+        font-weight: bold;
+      }
+
+      .b__title{
+        color: #fff;
+        font-weight: bolder;
+      }
+
+      .b__title--black{
+        color: #000;
+        font-weight: bolder;
+      }
+
+      .b__subtitle{
+        color: #ff2e63;
+      }
+
+      .wrapper-relative--box-3--absolute {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        color: #fff;
+        padding: 5%;
+        font-size: 0.5em;
+        background-color: #252a34;
+        border-radius: 7px;
+      }
+
+      /*
+      *
+      *
+      */
+      .wrapper-grid-area--parent {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 200px;
+        grid-gap: 20px;
+      }
+
+      .wrapper-grid-area--box{
+        background-color: #ff2e63;
+        padding: 5%;
+      }
+
+      .wrapper-grid-area--box-3{
+        position:relative;
+        grid-column-start: 2;
+        grid-column-end: 4;
+
+        grid-row-start: 1;
+        grid-row-end: 3;
+
+        color: #fff;
+        background-color: #ff2e63;
+      }
+
+      .abs-pos {
+        position: absolute;
+        top: 145px;
+        left: 40px;
+        padding: 1%;
+
+        color: #000;
+        border: 1px solid rgba(0,0,0,0.5);
+        background-color: rgba(255,255,255,.5);
+      }
+
+      /*
+       *
+       *
+       */
+
+
+
+    </style>
+  </head>
+  <body>
+
+    <header class="first-header">
+      <h1 class="title">Grid and absolutely positioned elements</h1>
+    </header>
+
+    <main class="principal">
+      <section class="main__section-space">
+        <div class="section__box-1">
+          <p class="div__paragraph">
+            <b>&apos;Grid&apos;</b> interactua de forma absoluta 
+            posicionamiento de los elementos el cual puede ser util
+            si deseas posicionar un <b>&apos;Elemento o Item&apos;</b>
+            dentro de un <b>&apos;Grid&apos;</b> o una <b>&apos;Grid-Area&apos;</b>
+          </p>
+          <p class="div__paragraph">
+            La especificacion define el comportamiento cuando un 
+            <b>&apos;Grid Container&apos;</b> es un contenedor de bloques
+            y un elemento <b>&apos;Parent&apos;</b> tiene posicionamiento absoluto
+          </p>
+        </div>
+
+        <h2 class="section__subtitle-2">
+          A grid container as containing block 
+        </h2>
+        <div class="wrapper-box box--deco">
+          <p class="div__paragraph-1">
+            Para crear un <b>&apos;Grid Container&apos;</b> con
+            contenedores de bloques necesitas agregar la <b>&apos;Propiedad&apos;</b>
+            <b>&apos;position : relative &apos;</b> del contenedor <b>&apos;Parent&apos;</b>
+            Igual que se haría con un bloque de <b>&apos;Container&apos;</b> para
+            cualquier otro elemento en <b>&apos;position: absolute&apos;</b>
+          </p>
+
+          <p class="div__paragraph-2">
+            Hecho esto , si tu le das a los
+            <b>&apos;elementos hijos&apos;</b> 
+            o <b>&apos;Grid Items &apos;</b> la propiedad
+            <b>&apos;position: absolute&apos;</b> , 
+            ello hara que el <b>&apos;Grid Items &apos;</b> 
+            lo tomes como un contenedor de bloques el
+            <b>&apos;Grid Container&apos;</b> o
+            si el <b>&apos;Grid Item&apos;</b> tambien
+            tiene un <b>&apos;Grid Position &apos;</b><br>
+            El area de la <b>&apos;Grid&apos;</b> sera
+            donde se coloque.
+          </p>
+
+          <p class="div__paragraph-3">
+            En el ejemplo tenemos un <b>&apos;Grid Container&apos;</b> 
+            con 4 <b>&apos;Elementos hijos&apos;</b> <br>
+            Los 3 elementos o <b>&apos;3 Items&apos;</b> estan absolutamente 
+            posicionados y colocados sobre <b>&apos;Grid Container&apos;</b> 
+            usando la linea de <b>&apos;line-based&apos;</b> para colocarlo<br>
+            El <b>&apos;Grid Container&apos;</b> tiene posicionamiento 
+            <b>&apos;position: relative&apos;</b> asi se convertira en
+            el posicionamiento del contexto de este  <b>&apos;Elemento&apos;</b>
+            o <b>&apos;Item&apos;</b>
+          </p>
+      </section>
+
+      <h3 class="subtitle--highlighted">Position : relative</h3>
+      <div class="wrapper-relative">
+        <div class="wrapper-relative--box-1">
+          One
+        </div>
+        <div class="wrapper-relative--box-2">
+          Two
+        </div>
+        <div class="wrapper-relative--box-3--absolute">
+          <b class="b__title">Three</b><br>
+          <b class="b__subtitle">position: absolute</b><br>
+          grid-column-start: 2;<br>
+          grid-column-end: 4;<br>
+          grid-row-start: 1;<br>
+          grid-row-end: 3;<br>
+          position: absolute;<br>
+          top: 40px;<br>
+          left: 40px;<br>
+          <hr>
+          Este bloque utiliza posicionamiento &apos;absolute&apos;<br>
+          En este ejemplo el contenedor &apos;Grid-Container&apos; 
+          es un contenedor de bloques asi que los valores absolutos
+          del desplazamiento del posicionamiento absoluto
+          son calculados desde los bordes exteriores
+          de la zona en la que se han colocado
+        </div>
+        <div class="wrapper-relative--box-4">
+          Four
+        </div>
+      </div>
+
+      <hr>
+
+      <h2 class="section__subtitle-2">
+        With a grid area as the parent
+      </h2>
+      <h3 class="subtitle--highlighted--grid-area">
+        Elemento Hijo &apos;Grid-Area&apos; 
+        es el contenedor de elementos secundarios
+      </h3>
+
+      <div class="wrapper-grid-area--parent">
+        <div class="wrapper-grid-area--box">
+          One
+        </div>
+        <div class="wrapper-grid-area--box">
+          Two
+        </div>
+        <div class="wrapper-grid-area--box-3">
+          <b class="b__title--black">Three</b><br>
+          <b class="b__title" style="color: #252a34;">
+            &nbsp; position: relative;<br>
+          </b>
+          <b class="b__title">
+            grid-column-start: 2;<br>
+            grid-column-end: 4;<br>
+            <br>
+            grid-row-start: 1;<br>
+            grid-row-end: 3;<br>
+          </b>
+          <div class="abs-pos">
+            <b class="b__subtitle-grid-area"> position:absolute</b><br>
+            top: 145px;<br>
+            left: 40px;<br>
+            <hr>
+            Este bloque está absolutamente posicionado.<br>
+            <hr>
+            En este ejemplo,<br>
+            El área de la cuadrícula es el bloque contenedor 
+            y, por lo tanto, los valores de desplazamiento de
+            posicionamiento absoluto se calculan desde los bordes <br>
+            exteriores del área de la cuadrícula.
+          </div>
+        </div>
+        <div class="wrapper-grid-area--box">
+          Four
+        </div>
+      </div>
+
+    </main>
+
+  </body>
+</html>

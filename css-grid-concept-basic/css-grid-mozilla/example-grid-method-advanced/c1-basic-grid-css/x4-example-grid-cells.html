@@ -1,0 +1,121 @@
+<!-- 
+Created on : 07-oct-2019 0:15:33 
+User : Raul Vela 
+Ref : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Example grid cells</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content="example grid cells">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="stylesheet" type="text/css" href="src/css/grid-css-main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <style>
+
+      body{
+        box-sizing: border-box;
+      }
+
+      .title-grid{
+        font-size: 3em;
+        width: 30%;
+      }
+
+      figcaption{
+        width: 70%;
+        height: auto;
+      }
+
+      .wrapper-grid-cell{
+        /*Creamos la cuadricula*/
+        display: grid;
+        /*Indicamos el numero de columnas mediante la funcion */ 
+        grid-template-columns: repeat(3, 1fr);
+        /*Indicamos la anchura de cada fila*/
+        grid-auto-rows: 100px;
+      }
+
+      .wrapper-grid-cell{
+        border: 2px solid #f76707;
+        border-radius: 5px;
+        background-color: #fff4e6;
+        margin-bottom: 200px;
+      }
+
+      .wrapper-grid-cell > div{
+        padding: 1em;
+        border: 2px solid #3c4245;
+        border-radius: 5px;
+        background-color: #dfcdc3;
+        color: #d9480f;
+      }
+
+      .box1 , 
+      .box2{
+        font-size: 2em;
+      }
+
+      .box1{
+        color: #fff !important;  
+        background-color: #5dc1b9 !important;
+      }
+
+      .box2{
+        color: #000 !important;  
+        background-color: #fff !important;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 class="title-grid">
+      Grid Line
+    </h1>
+
+    <figure>
+      <img src="https://mdn.mozillademos.org/files/14643/1_Grid_Cell.png" 
+           alt="Cuadricula donde se enumeran las distintas 
+           partes horizontales y verticales">
+      <figcaption>
+        <b>Grid Cell</b> es la unidad más pequeñas del <b>'Grid'</b><br>
+        El concepto igual a la celda de una tabla<br><br>
+        1º Definido el <b>'grid'</b> como elemento padre <br>
+        los elementos hijos se colocaran <br>
+        en una celda de la cuadricula definida <br>
+        En el ejemplo se ve de color <b>turquesa</b>
+      </figcaption>
+    </figure>
+
+    <div class="wrapper-grid-cell">
+      <div class="box1">
+        <b>'Grid'</b> cell
+      </div>
+      <div class="box2">
+        <b>'Grid'</b> cell
+      </div>
+      <div class="box2">
+        <b>'Grid'</b> cell
+      </div>
+      <div class="box2">
+        <b>'Grid'</b> cell
+      </div>
+      <div class="box2">
+        <b>'Grid'</b> cell
+      </div>
+      <div class="box2">
+        <b>'Grid'</b> cell
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,45 @@
+/* 
+    Created on : 16-sep-2019, 14:19:19
+    Author     : RVS
+*/
+
+/*
+* Colorear las zonas de los contenedores de la web semantica y 
+* asigna el ancho y alto de cada caja
+*
+*/
+
+.nav--color{
+  margin: 1% auto;
+  padding: 1%;
+  text-align: center;
+  color: #fff;
+  background-color: #5ca966;
+}
+
+section{
+  font-family: 'Saira Stencil One', cursive;
+  line-height: 80px;
+}
+
+.section--red{
+  background-color: #dc4d4d;
+}
+
+.section--orange{
+  background-color: #fd9a5c;
+}
+
+.section--pink{
+  background-color: #e8a2af;
+}
+
+.footer--blue{
+  width: 50%;
+  height: auto;
+  margin: 0.5% auto;
+  padding: 1%;
+  text-align: center;
+  color: #fff;
+  background-color: #2795ee;
+}

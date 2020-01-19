@@ -1,0 +1,53 @@
+/* 
+    Created on : 16-sep-2019, 14:28:37
+    Author     : RVS
+*/
+
+/*
+* Personalizar los titulos de cada ejemplo 
+* la imagen dandole un marco , titulo 
+* y la linea de separacion
+* 
+*/
+
+h2{
+  width: 30%;
+  height: 150px;
+  margin: 1% auto;
+  padding: 1%;
+  line-height: 130px;
+  text-align: center;
+  background-color: #f8a978;
+}
+
+.h2--deco{
+  font-family: 'Roboto',sans-serif;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+figure{
+  margin: 1% auto;
+  width: 80%;
+  height: 100%;
+  padding: 1%;
+  text-align: center;
+  border-radius: 12px;
+  border: 5px solid #71c9ce;
+}
+
+img{
+  display: block;
+  width: 90%;
+  height: auto;
+  margin: 1% auto;
+}
+
+figcaption{
+  width: 50%;
+  margin: 1% auto;
+  padding: 1%;
+  font-size: 1.5em;
+  background-color: #71c9ce;
+  border-radius: 12px;
+}

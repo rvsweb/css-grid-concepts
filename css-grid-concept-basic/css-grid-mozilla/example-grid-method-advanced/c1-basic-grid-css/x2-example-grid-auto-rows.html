@@ -1,0 +1,93 @@
+<!-- 
+Created on : 06-oct-2019 20:36:53 
+User : Raul Vela 
+Ref : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Example grid method</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content="Example grid method">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="stylesheet" type="text/css" href="src/css/grid-css-main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <style>
+
+      .wrapper-grid-auto-rows{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-rows: 200px;
+      }
+
+      .wrapper-grid-auto-rows-minmax {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        /*El tamaño de las filas sera el minimo 100px y max AUTO */
+        grid-auto-rows: minmax(100px , auto);
+      }
+
+      .wrapper-grid-auto-rows ,
+      .wrapper-grid-auto-rows-minmax {
+        margin: 2% auto;
+        border: 2px solid #3c4245;
+        border-radius: 5px;
+        background-color: #dfcdc3;
+      }
+
+      .wrapper-grid-auto-rows > div ,
+      .wrapper-grid-auto-rows-minmax > div
+      {
+        border: 2px solid #5f6769;
+        border-radius: 5px;
+        padding: 1em;
+        color: #fff;
+        background-color: #719192;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h1 class="title-grid">
+      The implicit and explicit grid<br>
+      Filas con contenido fijo <br> 
+    </h1>
+    <span class="text-effusive"> grid-auto-rows: 200px; </span>
+
+    <div class="wrapper-grid-auto-rows">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+
+    <h1 class="title-grid">
+      The implicit and explicit grid<br>
+      Filas con un minimo de 100px
+    </h1>
+    <span class="text-effusive"> 
+      grid-auto-rows : minmax(100px, auto);</span>
+
+    <div class="wrapper-grid-auto-rows-minmax">
+      <div>One</div>
+      <div>Two
+        <p>I have some more content in.</p>
+        <p>This makes me taller than 100 pixeles</p>
+      </div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+
+  </body>
+</html>

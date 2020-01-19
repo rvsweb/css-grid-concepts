@@ -1,0 +1,37 @@
+/* 
+    Created on : 09-oct-2019, 0:14:31
+    Author     : RVS
+*/
+
+*{
+  box-sizing: border-box;
+  font-family: Roboto , sans-serif;
+}
+
+body{
+  background: #eeeeee;
+}
+
+header{
+  width: 40%;
+  margin: 1% auto;
+  padding: 1% 2%;
+}
+
+.title{
+  padding: 2% 2%;
+  text-align: center;
+  background: #00adb5;
+}
+
+.box-principal{
+
+}
+
+.section--color{
+
+}
+
+.box-content{
+
+}

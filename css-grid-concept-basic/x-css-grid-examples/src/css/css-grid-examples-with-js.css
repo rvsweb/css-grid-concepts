@@ -1,0 +1,67 @@
+/* 
+    Created on : 29-oct-2019, 14:49:10
+    Author     : RVS
+*/
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 100px;
+}
+
+
+body {
+  background: #aldada;
+  padding: 3rem 5rem;
+}
+
+main , button {
+  box-shadow: -5px -5px 10px 0 rgba(0,0,0, .25);
+}
+
+.main--bed{
+  width: 100%;
+  height: auto;
+  background-image: url(https://www.youtube.com/watch?v=q76bMs-NwRk);
+}
+
+button {
+  /* sticky = fixed */
+  position: sticky;
+  top: 1rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-family: Roboto, sans-serif;
+  background: white;
+  color: #444;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.item-directions:nth-child(5n + 1){
+  background: #ccffcc;
+}
+
+.item-directions:nth-child(5n + 2){
+  background: #ccffff;
+}
+
+.item-directions:nth-child(5n + 3){
+  background: #ccccff;
+}
+
+.item-directions:nth-child(5n + 4){
+  background: #ffcccc;
+}
+
+.item-directions:nth-child(5n + 5){
+  background: #ffffcc;
+}
+
+@media(max-width: 800px){
+
+  body {
+    padding: 3rem 0;
+  }
+}

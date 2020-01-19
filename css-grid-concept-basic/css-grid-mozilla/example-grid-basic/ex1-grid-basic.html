@@ -1,0 +1,60 @@
+<!-- 
+Created on : 06-oct-2019 17:22:40 
+User : Raul Vela 
+Ref : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Grid Basic</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content="Grid Basic">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta name="theme-color" content="#4285f4">-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!--<link rel="manifest" href="/site.webmanifest">-->
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <link rel="stylesheet" type="text/css" href="css/ex1-grid-basic.css">
+    <style>
+     
+      *{
+        box-sizing: border-box;
+        font-family: Roboto ,sans-serif;
+      }
+
+      .wrapper-repeat-3-1fr {
+        display: grid;
+      }
+
+      .wrapper-repeat-3-1fr{
+        border: 2px solid #f76707;
+        border-radius: 5px;
+        background-color: #fff4e6;
+      }
+
+      .wrapper-repeat-3-1fr > div {
+        border: 2px solid #ffa94d;
+        border-radius: 5px;
+        background-color: #ffd8a8;
+        padding: 1em;
+        color: #d9480f;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="wrapper-repeat-3-1fr">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+/* 
+    Created on : 15-oct-2019, 17:45:50
+    Author     : RVS
+*/
+
+*{
+  box-sizing: border-box;
+  font-family: Roboto , sans-serif;  
+}
+
+body {
+  background-color: #eaffd0;
+}
+
+header {
+  width: 40%;
+  height: auto;
+  max-height: 50px;
+  margin: 1% auto;
+}
+
+.header--color {
+  background-color: #fce38a;
+}
+
+.header__title {
+  text-align: center; 
+}
+
+.main--color{
+  height: 1000px;
+}
+
+img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}

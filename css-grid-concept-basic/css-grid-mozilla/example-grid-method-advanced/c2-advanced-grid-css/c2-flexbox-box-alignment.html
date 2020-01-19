@@ -1,0 +1,143 @@
+<!-- 
+Created on : 08-oct-2019 20:54:23 
+User : Raul Vela 
+Ref :
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Flexbox box alignment</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content=".">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <style>
+
+      *{
+        box-sizing: border-box;
+        font-family: Roboto, sans-serif;
+      }
+
+      h1 {
+        width: 30%;
+        margin: 1% auto;
+        padding: 1% 2%;
+        text-align: center;
+        background-color: #8bbabb; 
+      } 
+
+      h2 {
+        width: 35%;
+        margin: 1% auto;
+        padding: 1% 2%;
+        text-align: center;
+        background-color: #8bbabb; 
+      }
+
+      .div__paragraph{
+        width: 50%;
+        margin: 1% auto;
+        padding: 1% 2%;
+        text-align: center;
+        background-color: #c7f0db; 
+      }
+
+      /* FlexBox Layout - Alineacion */
+      .wrapper-flexbox-align {
+        display: flex;
+        /*Se colocaran todos los elementos abajo si no se modifican*/
+        align-items: flex-end;
+        /*Maxima altura*/
+        min-height: 200px;
+      }
+
+      .wrapper-flexbox-align {
+        border: 2px solid #000;
+        background: #6c7b95;
+      }
+
+      .wrapper-flexbox-align > div{
+        padding: 1em;
+        color: #000;
+        border: 5px solid #464159;
+        border-radius: 7px;
+        background-color: #8bbabb;
+      }
+
+      .box1{
+        /* Estirable */
+        align-self: stretch;
+      }
+
+      .box2{
+        /* Estirable */
+        align-self: flex-start;
+      }
+
+      .box3{
+        align-self: center;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1>
+        Box alignment
+      </h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>
+          Flexbox - Layout
+        </h2>
+        <div class="div__paragraph">
+          Facilita centrar un &apos;Box&apos; en la pagina web
+          Los Flex &apos;Item&apos; o &apos;Elementos&apos; 
+          se puede estirar sobre el contenedor del Flexbox Layout.
+          Podemos ajustar el alto 'height' de las columnas automaticamente
+        </div>
+        <h2>
+          Cuando usar Flexbox - Layout
+        </h2>          
+        <div class="div__paragraph">
+          Cuando tenemos un contenedor &apos;container&apos; 
+          con 3 elementos &apos;items&apos; dentro.
+          El wrapper &apos;min-height&apos; esta establecida y
+          define el alto de los &apos;Flex Container&apos;
+        </div>
+        <div class="div__paragraph">
+          Establecemos &apos;align-items&apos; sobre 
+          &apos;Flex Container&apos; a &apos;flex-end&apos; 
+          asi que los elementos se alinean hasta el 
+          final del &apos;flex container&apos;
+        </div>
+        <div class="div__paragraph">
+          Tenemos que establecer los &apos;align-self&apos; sobre &apos;box1&apos;
+          asi que sobreescribiremos por defecto el estiramiento de la altura
+          del contenedor y sobre la &apos;box2&apos; asi que ellos se alinean
+          al comienzo de las &apos;Flex Container&apos;
+        </div>
+      </section>
+
+      <div class="wrapper-flexbox-align">
+        <div class="box1">align-self: stretch;</div>
+        <div class="box2">align-self: flex-start;</div>
+        <div class="box3">align-self: center;</div>
+        <div class="box4">align-items: flex-end;</div>
+      </div>
+
+    </main>
+
+  </body>
+</html>
