@@ -1,0 +1,109 @@
+<!-- 
+Created on : 07-oct-2019 22:58:36 
+User : Raul Vela 
+Ref :
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Example nesting grids</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content="Example nesting grids">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" type="text/css" href="src/css/grid-css-main.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <style>
+
+      .title-grid{
+        font-size: 1.8em;
+      }
+
+      .box1-subgrid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-start: 1;
+        grid-column-end: 4;
+
+        grid-row-start: 1;
+        grid-row-end: 3;
+        background-color: violet;
+      }
+
+      .box1-subgrid {
+        grid-column-start: 1;
+        grid-column-end: 4;
+
+        grid-row-start: 1;
+        grid-row-end: 3;
+        display: grid;
+        grid-template-columns: subgrid;
+        background-color: violet;
+      }
+
+      .wrapper-nesting-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        border: 2px solid red;
+        border-radius: 5px;
+        background-color: blue;
+      }
+
+      .box{
+        padding: 1em;
+        color: #000;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: wheat;
+      }
+
+      .box1{
+        /* Partes que divide el 'Track' interior */
+        grid-column: 1 / 4;
+      }
+
+      .nested{
+        padding: 1em;
+        border: 2px solid purple;
+        border-radius: 5px;
+        background-color: green;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div>
+
+      <h1 class="title-grid">
+        Nesting grids &#61; Anidando cuadriculas
+        <br> 
+      </h1>
+
+      <span class="text-effusive">
+        Elemento &apos;Grid&apos; se convierte <br>
+        en un &apos;Grid&apos; Container para almacenar elementos<br>
+        agregamos el valor &apos;subgrid&apos;
+      </span>
+
+      <div class="wrapper-nesting-grid">
+        <div class="box box1-subgrid">
+          <div class="nested">Anidado 1</div>
+          <div class="nested">Anidado 2</div>
+          <div class="nested">Anidado 3</div>
+        </div>
+        <div class="box box2">Two</div>
+        <div class="box box3">Three</div>
+        <div class="box box4">Four</div>
+        <div class="box box5">Five</div>
+      </div>
+
+  </body>
+</html>

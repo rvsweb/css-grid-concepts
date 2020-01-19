@@ -1,0 +1,102 @@
+/* 
+    Created on : 17-sep-2019, 13:08:06
+    Author     : RVS
+*/
+
+/*
+* Utilizar unidad fr 'fraction' asignar el total del espacio
+* disponible del contenedor.
+*
+* Utilizar la funcion 'repeat()' que acepta 
+* 
+* 1º parametro nº de veces a repetir
+* 2º parametro un valor
+*
+* propiedad grid-gap -> los "ESPACIOS" entre las filas 
+                        y las columnas de la cuadrícula.
+
+  grid-template-areas: 
+    "f f f"  -> first
+    "s s s"  -> second
+    "t t t"; -> third
+
+*/
+
+*{
+  color: white;
+  text-align: center;
+  font-family: 'Roboto',sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-radius: 4px;
+}
+
+nav{
+  width: 100%;
+  height: auto;
+  line-height: 2em;
+  background-color: #5ca966
+}
+
+.nav-deco{
+  width: 60%;
+  height: auto;
+  margin: 1% auto;
+  font-size: 2em;
+  background-color: #dc4d4d;
+}
+
+.container-columns {
+  /*Posicionar container con 3 elementos div */
+  display: grid;
+  grid-template-column: repeat(3, 1fr);
+  grid-template-row: repeat(3 , auto);
+  grid-gap: 1%;
+  grid-template-areas: 
+    "f f f"
+    "s s s"
+    "t t t";
+/*  grid-template-areas: 
+    "t . f"
+    "t s s"
+    "t s s";*/
+  margin: 5px 0;
+  padding: 5px;
+  border: 2px solid #656363;
+}
+
+section{
+  line-height: 100px;
+}
+
+.container-columns {
+  background-color: #dc4d4d;
+  /*1º fila tiene 1 columna*/
+  grid-column-start: 1;
+  /*2º fila tiene 2 columna*/
+  grid-column-end: 3;
+  grid-area: f;
+}
+
+.center {
+  background-color: #fd9a5c;
+  grid-area: s;
+}
+
+.right {
+  background-color: #e8a2af;
+  grid-area: t;
+}
+
+footer{
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #2795ee;
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+}

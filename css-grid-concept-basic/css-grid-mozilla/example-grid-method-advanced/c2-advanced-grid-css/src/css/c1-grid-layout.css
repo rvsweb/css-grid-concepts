@@ -1,0 +1,64 @@
+/* 
+    Created on : 08-oct-2019, 20:40:48
+    Author     : RVS
+*/
+
+/*
+ * Configuracion con Grid sobre uso del flexbox Layout  
+ *
+ */
+.wrapper-flexbox-align{
+  display: grid;
+  width: 85%;
+  margin: 0 auto;
+  /* Propiedad para definir el total de las columnas */ 
+  /* Establecemos 2 columnas con 1 fragmento de ancho cada una */
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 110px;
+}
+
+.box{
+  text-align: center;
+}
+
+.box1{
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: #c7f0db;
+}
+
+.box2{
+  grid-column-start: 2;
+  grid-column-end: 2;
+
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-color: #8bbabb;
+}
+
+/*
+ * Configuracion con Grid - Ejemplo sobre Grid Layout  
+ *
+ */
+.wrapper-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 5% auto;
+}
+
+.wrapper-grid{
+  border: 2px solid #f76707;
+  border-radius: 7px;
+  background-color: #fff4e6;
+}
+
+.wrapper-grid > div{
+  border: 2px solid #ffa94d;
+  border-radius: inherit;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}

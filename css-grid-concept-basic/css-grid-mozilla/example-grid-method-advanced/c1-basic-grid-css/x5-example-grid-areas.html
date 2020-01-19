@@ -1,0 +1,140 @@
+<!-- 
+Created on : 07-oct-2019 16:56:37 
+User : Raul Vela 
+Ref : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Example Grid Areas</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content="Example Grid Areas">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" type="text/css" href="src/css/grid-css-main.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <style>
+
+      .title-grid{
+        font-size: 3em;
+        width: 30%;
+      }
+
+      figure{
+        padding: 2% ;
+        border-radius: 7px;
+        background-color: #fff;
+      }
+
+      figcaption{
+        width: 100%;
+        font-size: 1.5em;
+      }
+
+      .wrapper-areas{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-auto-rows: 150px; 
+        border-radius: 7px;
+      }
+
+      .box1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        grid-row-start: 1;
+        grid-row-end: 3;
+        background-color: #50e3c2 !important; 
+      }
+
+      .box2{
+        grid-column-start: 3;
+        grid-column-end: 4;
+
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background-color: #fff !important; 
+      }
+
+      .box-3{
+        grid-column-start: 3;
+        grid-column-end: 4;
+
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background-color: #fff !important; 
+      }
+
+      .wrapper-areas {
+        width: 50%;
+        height: auto;
+        padding: 2%;
+        margin: 1% auto;
+        background-color: #719192;
+      }
+
+      .wrapper-areas > div{
+        padding: 2%;
+        background-color: #5f6769;
+        border: 1px solid #999999;
+      }
+
+
+    </style>
+
+  </head>
+  <body>
+    <h1 class="title-grid">
+      Grid Areas
+    </h1>
+
+    <figure>
+      <img src="https://mdn.mozillademos.org/files/14645/1_Grid_Area.png" 
+           alt="Cuadricula donde se enumeran las distintas 
+           partes horizontales y verticales">
+      <figcaption>
+        Los elementos puede abarcar una o mas celdas 
+        tanto por fila como por columna<br>
+
+        Los <b>&apos;Grid Area&apos;</b> deben ser <b>Rectangulares</b>
+        En el ejemplo <b>&apos;Grid Area&apos;</b> el espaciado <br> 
+        abarca 2 <b>Filas</b> y 2 <b>Columnas</b> <br>
+        <hr>
+
+        grid-template-columns: repeat(3,1fr); <br>
+        grid-auto-rows: 200px; <br>
+      </figcaption>
+    </figure>
+
+    <div class="wrapper-areas">
+      <div class="box1">
+        grid-column-start: 1; <br>
+        grid-column-end: 3; <br>
+
+        grid-row-start: 1; <br>
+        grid-row-end: 3; <br>
+      </div>
+      <div class="box2">        
+        grid-column-start: 3; <br>
+        grid-column-end: 4; <br>
+        grid-row-start: 1; <br>
+        grid-row-end: 2; <br>
+
+      </div>
+      <div class="box-3">        
+        grid-column-start: 3; <br>
+        grid-column-end: 4; <br>
+        grid-row-start: 2; <br>
+        grid-row-end: 3; <br>
+      </div>
+
+
+  </body>
+</html>

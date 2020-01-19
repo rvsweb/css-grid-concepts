@@ -1,0 +1,167 @@
+<!-- 
+Created on : 15-oct-2019 17:42:34 
+User : Raul Vela 
+Ref : https://www.youtube.com/watch?v=AnMlnYeTIH0&feature=youtu.be&fbclid=IwAR1aEPcf4qoNhkfdM6tj2oVWZhg2WvcxdThR8BAAynZIb2kMjG6ls_pww-k
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Ej1 Flexbox & Grid-Layout</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content="Flexbox & Grid-Layout">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" type="text/css" href="src/css/ej1-flexbox-grid-layout.css">
+    <link rel="stylesheet" type="text/css" href="src/css/ej1-flexbox-grid-layout-wrapper.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <style>
+
+      /*
+      * Creacion del Flexbox - Componentes
+      * Creacion del Grid - Layout o Distribucion
+      *
+      */
+
+      .grid-container{
+        display: grid;
+        /* Una propiedad 'auto' por cada 'div' creado para almacenar elementos 
+        que se ajustan a cada elemento */ 
+        grid-template-columns: auto auto auto auto auto;
+        grid-auto-rows: auto auto auto auto auto;
+        /*Propiedad usada para modificar todo el main axis*/
+        /*justify-content: center;*/
+        /*Propiedad usada para alinear todo el cross axis*/
+        height: 400px; /*1º Establecer el ancho de la columna */
+        align-content: center;  /*2º Establecer la posicion de la columna */
+        grid-column-gap: 10px; /*3º Establecer el ancho */
+        grid-row-gap: 50px;
+        /*grid-gap: fila y columna*/
+      }
+
+      .grid-item{
+        border: 2px solid #000;
+        padding: 10px;
+        margin: 5px;
+      }
+
+      .section--color{
+        background-color: #95e1d3;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <header class="header--color">
+      <h1 class="header__title title--color">
+        Flexbox & Grid-Layout
+      </h1>
+    </header> 
+
+    <main class="main--color">
+      <section class="grid-container section--color">
+
+        <div class="grid-item box--color">
+          <figure>
+            <img src="src/img/1-flexbox-concept.jpg" 
+                 alt="Ejemplo de flexbox donde aparecen 
+                 1 fila que contiene dentro 3 
+                 elementos posicionados en consecucion">
+            <figcaption>
+              Concepto de FlexBox para almacenar componentes
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="grid-item box--color">
+          <figure>
+            <img src="src/img/2-grid-layout-concept.jpg" 
+                 alt="Ejemplo de Grid en el aparece
+                 2 filas de elementos con 3 columnas 
+                 en las cuales tiene dentro 6 elementos
+                 en consecucion">
+            <figcaption>
+              Concepto de Grid para crear el Layout de los Componentes
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="grid-item box--color">
+          <figure>
+            <img src="src/img/3-grid-container-grid-items-concepts.jpg" 
+                 alt="Ejemplo muestra que un contenedor de elementos se llama 
+                 Grid Container en el aparece 2 filas 
+                 de elementos con 3 columnas en las cuales 
+                 tiene dentro 6 elementos en consecucion donde cada 1
+                 de los elementos se conocen como Grid Items">
+            <figcaption>
+              Concepto de Grid Item en cual cada parte es un elemento
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="grid-item box--color">
+          <figure>
+            <img src="src/img/4-grid-layout-main-axis-cross-axis.jpg" 
+                 alt="Ejemplo muestra que un contenedor de elementos llamado 
+                 Grid Container en el aparecen las coordenadas main axis y cross axis">
+            <figcaption>
+              Concepto de Grid donde aparecen las coordenadas main axis y cross axis
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="grid-item box--color">
+          <figure>
+            <img src="src/img/5-grid-line-columns-rows.jpg" 
+                 alt="Ejemplo que muestra las lineas ROWS y COLUMNS que marcar 
+                 el principio y el final de ambos para posicionar los elementos">
+            <figcaption>
+              Concepto de Grid donde aparecen las coordenadas main axis y cross axis
+            </figcaption>
+          </figure>
+        </div>
+
+      </section>
+
+      <section class="wrapper-grid-container">
+        <div class="wrapper-grid-item item-deco">
+          1
+        </div>
+        <div class="wrapper-grid-item item-child">
+          2
+        </div>
+        <div class="wrapper-grid-item item-3">
+          3
+        </div>
+        <div class="wrapper-grid-item item-4">
+          4
+        </div>
+        <div class="wrapper-grid-item item-5">
+          5
+        </div>
+        <div class="wrapper-grid-item item-5">
+          6
+        </div>
+        <div class="wrapper-grid-item item-7">
+          7
+        </div>
+        <div class="wrapper-grid-item item-8">
+          8
+        </div>
+        <div class="wrapper-grid-item item-9">
+          9
+        </div>
+      </section>
+
+    </main>
+
+  </body>
+</html>

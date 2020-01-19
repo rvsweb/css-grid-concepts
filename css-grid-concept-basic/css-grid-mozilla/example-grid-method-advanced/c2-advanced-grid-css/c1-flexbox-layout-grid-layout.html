@@ -1,0 +1,158 @@
+<!-- 
+Created on : 08-oct-2019 13:35:59 
+User : Raul Vela 
+Ref : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Diferencia entre Flexbox Layout & Grid Layout</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content="Diferencia entre Flexbox Layout & Grid Layout">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-conlor" content="#4285f4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" type='text/css' href="src/css/c1-grid-layout.css">
+    <link rel="stylesheet" type='text/css' href="src/css/c1-flexbox-display.css">
+    <link rel="stylesheet" type='text/css' href="src/css/c1-flexbox-grid-main-style.css">
+    <link rel="icon" type="image/png" sizes="48x48" 
+          href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1 class="title">
+        Diferencia entre Flexbox Layout & Grid Layout
+      </h1>
+    </header>
+
+    <main>
+      <h2 class="subtitle-left">
+        Usar Flexbox Layout <br>
+        Para crear el diseño de filas o columnas unicamente.
+      </h2>
+      <h2 class="subtitle-right">
+        Usar Grid Layout<br>
+        Para crear el diseño por fila y columna conjuntamente.
+      </h2>
+
+      <section>
+        <p class="paragraph-left">
+          Utilizar <b>Flexbox</b> en contenidos cuando tienes un conjunto<br>
+          de elementos y deseas espaciarlos<br> uniformemente en un contenedor<br>
+          <b>Dejas</b> que el tamaño del <b>contenido</b> decida<br>
+          cuánto espacio individual ocupa cada elemento.<br> 
+          <b>Si</b> los elementos se ajustan a una <b>nueva línea</b><br>
+          calcularán su espacio según su tamaño y el <br>
+          espacio disponible en esa línea.<br>
+        </p>
+
+        <p class="paragraph-right">
+          Grid se usa para los diseño Layout hacia dentro<br>
+          Se usa para crear Layout &apos;diseño&apos;<br>
+          y colocar los elementos dentro de el<br>
+          o te permite establecer las reglas de <br>
+          colocacion de los elementos dentro de las celdas<br>
+          conforme a la forma estricta del &apos;Grid&apos;<br>
+          Se puede crear &apos;Track&apos; que responden<br>
+          al tamaño del contenido aunque <br>
+          tambien cargue enteramente el &apos;Track&apos;
+        </p>
+      </section>
+
+
+      <div class="wrapper-flexbox-align">
+        <div class="box box1">
+          <h2 class="subtitle">
+            Flexbox Layout 
+          </h2>
+          <p class="div__paragraph">Se usa para el diseño de una dimension<br>
+            Para crear filas o columnas pero no ambas a la vez
+          </p>
+        </div>
+        <div class="box box2">
+          <h2 class="subtitle">
+            Grid Layout
+          </h2>
+          <p class="div__paragraph">
+            Se usa para el diseño de dos dimensiones<br>
+            Para crear filas o columnas a la misma vez
+          </p>
+        </div>
+      </div>
+
+      <header>
+        <h1 class="title">
+          One-dimensional vs. two-dimensional layout
+        </h1>
+      </header>
+
+      <h2 class="title-concept">
+        One-dimensional - Flexbox Layout
+      </h2>
+
+      <p class="div__paragraph">
+        Usar Flexbox para diseñar cajas &apos;Boxes&apos; <br>
+        Solo con una dirección <br>
+        <b>Horizontal o Vertical</b>
+      </p>
+
+      <!-- Le damos propiedad flexbox para que pueda crecer y reducir -->
+      <div class="wrapper-flex-box">
+        <!--Elementos hijo del contenedor --> 
+        <div>One - Flex-box</div>
+        <div>Two - Flex-box</div>
+        <div>Three - Flex-box</div>
+        <div>Four - Flex-box</div>
+        <div>Five - Flex-box</div>
+      </div>
+
+      <p class="div__paragraph paragraph-left">
+        Los elementos no estan alineados<br>
+        <b>Horizontal o Vertical</b> respecto<br>
+        a los posteriores
+      </p>
+
+      <p class="div__paragraph paragraph-right">
+        Sucede porque los elementos <b>&apos;flex items&apos;</b><br>
+        de cada nueva <b>fila o columna &apos;</b> cuando <br>
+        trabaja como columna&apos; se convierte en un <br>
+        nuevo <b>&apos;flex container&apos;</b><br>
+        La distribuci&oacute;n del espacio <br>
+        ocurre a traves de la fila
+      </p>
+
+      <h2 class="title-concept">
+        Two-dimensional - CSS grid - Distribución de filas y columnas
+      </h2>
+
+      <p class="div__paragraph">
+        Mismo layout usando <b> Grid Layout</b><br>
+        No necesitamos establecer  <br>
+        ninguno en los elementos <br>
+        Cada elemento se posiciona <br>
+        en cada celda del <b>&apos;Grid&apos;</b>
+      </p>
+
+      <div class="wrapper-grid">
+        <div>One - <b>Grid</b></div>
+        <div>Two - <b>Grid</b></div>
+        <div>Three - <b>Grid</b></div>
+        <div>Four - <b>Grid</b></div>
+        <div>Five - <b>Grid</b></div>
+      </div>
+
+    </main>
+  </body>
+</html>

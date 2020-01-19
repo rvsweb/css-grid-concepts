@@ -1,0 +1,48 @@
+/* 
+    Created on : 12-oct-2019, 12:46:37
+    Author     : RVS
+*/
+
+.first-header {
+
+}
+
+.title {
+  width: 45%;
+  margin: 1% auto;
+  height: auto;
+  padding: 1%;
+  text-align: center;
+  background-color: #e3e7f1;
+}
+
+.principal {
+  padding: 1%;
+}
+
+.main__section-space {
+  position: relative;
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill,minmax(20% , 1fr));
+  grid-auto-rows : 390px;
+  grid-gap: 20px;
+}
+
+.section-1-color{
+  background-color: #e3e7f1;
+  padding: 1%;
+}
+
+
+.section__box-1 , 
+.section__box-2 , 
+.section__box-3 ,
+.section__box-4 {
+  background-color: #c6cbef;
+}
+
+
+.div__paragraph {
+  padding: 5%;
+}

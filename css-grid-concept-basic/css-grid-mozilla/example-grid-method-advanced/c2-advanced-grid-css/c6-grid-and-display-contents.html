@@ -1,0 +1,196 @@
+<!-- 
+Created on : 12-oct-2019 12:38:08 
+User : Raul Vela 
+Ref :
+--> 
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Grid and display contents</title>
+    <!--Parte tecnica que recibe el servidor-->
+    <meta charset="utf-8">
+    <meta name="author" content="Raul Vela Salas , raulvelasalas@gmail.com">
+    <meta name="description" content="Grid and display contents">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://goo.gl/cais23" sizes="any">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" type="text/css" href="src/css/c6-grid-and-display-contents.css">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://lh3.googleusercontent.com/FoHGo_HJp1lWZ8Hj77ZRNje3Cpwu6yBCRnBlXVpDxTupkFGIrsQURTP4TuLKtlGoBuQVQRzVN44HRSC4OzD3vaeSXpS7Cs4oZC0nJYz4rhmBcugEKMX-iu7qFJtpzlXFMtSyuWUWwg=w2400">
+    <style>
+
+      *{
+        box-sizing: border-box;
+        font-family: Roboto, sans-serif;
+      }
+
+      .wrapper-display-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px , auto);
+      }
+
+      .main-title {
+        display: block;
+        width: 50%;
+        margin: 1% auto;
+        padding: 2%;
+        text-align: center;
+        font-size: 1.2em;
+        background-color: #e3e7f1;
+      }
+
+      .wrapper-display-subtitle{
+        display: block ;
+        width: 100%;
+        margin: 5%;
+        padding: 2%;
+        text-align: left;
+        font-size: 1em;
+        background-color: #e3e7f1;
+      }
+
+      .display-content-color {
+        background-color: #8186d5;
+      }
+
+      .box {
+        padding: 2%;
+        color: #494ca2;
+        font-size: 1.5em;
+        border: 2px solid #000;
+        border-radius: 5px;
+        background-color: #c6cbef;
+      }
+
+      .box1 {
+        display: content;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        background-color: #494ca2;
+      }
+
+      .wrapper-nested{
+        background-color: #e3e7f1;
+      }
+
+      .nested-color{
+        padding: 1em;
+        color: #000;
+        border: 2px solid #e3e7f1;
+        border-radius: 5px;
+        background-color: #c6cbef;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <header class="first-header">
+      <h1 class="title">Grid and display: contents</h1>
+    </header>
+
+    <main class="principal">
+      <section class="main__section-space section-1-color">
+        <div class="section__box-1">
+          <p class="div__paragraph">
+            Utilizar Grid-Layout con 
+            &apos;<b>display : contents</b>&apos;
+            <br> La propiedad &apos;<b>display : contents</b>&apos;
+            en si misma no genera una 
+            &apos;<b>Cajas o Boxes</b>&apos; 
+            pero sus descendientes hijos y 
+            pseudo-elementos generan 
+            &apos;<b>Cajas o Boxes</b>&apos; normales.
+          </p>
+        </div>
+        <div class="section__box-2">
+          <p class="div__paragraph">
+            El elemento sí mismo no genera ninguna
+            &apos;<b>Cajas o Boxes</b>,
+            pero sus &apos;<b>Elementos o Items Hijos</b>&apos;
+            descendientes y &apos;<b>pseudoelementos</b>&apos; 
+            todavía generan &apos;<b>Cajas o Boxes</b> como normales. 
+            Para los objetivos de generación de 
+            &apos;<b>Cajas o Boxes</b>  y disposición, 
+            el elemento debe ser tratado como si había sido 
+            sustituido por sus &apos;<b>Elementos o Items Hijos</b>&apos;
+            y &apos;<b>pseudoelementos</b>&apos;
+            en el árbol de documento
+          </p>
+        </div>
+        <div class="section__box-3">
+          <p class="div__paragraph">
+            Si configuras un <b>&apos;Elemento&apos; o &apos;Item&apos;</b>
+            como <br> &apos;<b>display : contents</b>&apos; <br><br>
+            La &apos;<b>Caja o Boxes</b>&apos; que se crearia desapareceria y
+            la &apos;<b>Caja o Boxes</b>&apos; de los elementos hijos apareceria
+            como si ellos hubieran subido de nivel<br>
+            Significa que el elemento hijo de los &apos;<b>Grid Items</b>&apos; se 
+            pueden convertir en &apos;<b>Grid Items</b>&apos;
+          </p>
+        </div>
+        <div class="section__box-4">
+          <p class="div__paragraph">
+            Tenemos un &apos;<b>Grid</b>&apos;
+            y el &apos;<b>Primer elemento</b>&apos;
+            sobre el &apos;<b>Grid</b>&apos; 
+            se ajusta para abarcar el total de los
+            &apos;<b>Track</b>&apos; en tres columnas.
+            <br><br>
+            Los cuales contienen 3 
+            &apos;<b>Items o Elementos</b>&apos; anidados.
+            Como esos &apos;<b>Items o Elementos</b>&apos;
+            no son directamente hijos
+            &apos;<b>no se convierten en 
+              parte de los Grid-Layout</b>&apos;
+            y se muestra como &apos;<b>Bloques o Boxes </b>
+            &apos; de &apos;<b>Layout</b>&apos;
+          </p>
+        </div>
+      </section>
+
+      <header class="first-header">
+        <h1 class="title">Ejemplo : Grid and display: contents</h1>
+        <span class="main-title">
+          Ejemplo que muestra como crear varios &apos;<b>Track</b>&apos;
+          dentro de un &apos;<b>Grid-Layout</b>&apos;
+        </span>  
+      </header>
+
+      <div class="wrapper-display-content display-content-color">
+        <span class="wrapper-display-subtitle">  
+          display: grid;<br>
+          grid-template-columns: repeat(3, 1fr);<br>
+          grid-auto-rows: minmax(100px , auto);<br>
+        </span>
+        <div class="box box1">
+          <div class="wrapper-nested nested-color">    
+            display: content;
+            grid-column-start: 1;
+            grid-column-end: 4;
+          </div>
+          <div class="wrapper-nested nested-color">
+            display: content;
+            grid-column-start: 1;
+            grid-column-end: 4;
+          </div>
+          <div class="wrapper-nested nested-color">
+            display: content;
+            grid-column-start: 1;
+            grid-column-end: 4;
+          </div>
+        </div>
+        <div class="box box2">box-2</div>
+        <div class="box box-3">box-3</div>
+        <div class="box box-4">box-4</div>
+        <div class="box box-5">box-5</div>
+      </div>
+
+    </main>
+
+  </body>
+</html>
