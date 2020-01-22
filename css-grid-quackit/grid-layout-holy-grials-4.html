@@ -1,0 +1,143 @@
+<!-- https://www.quackit.com/html/html_editors/scratchpad/?example=/html/templates/grid/_inc/inc_css_grid_layout_template_2.cfm -->
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CSS Grid Template 4</title>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "nav article ads"
+      "footer footer footer";
+    grid-template-columns: 25% 1fr 25%;
+    grid-template-rows: 80px 800px 120px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+
+    justify-content: center;
+    align-content: center;
+
+    font-family: Roboto, sans-serif;
+  }
+
+  header,
+  footer,
+  article,
+  nav,
+  div {
+    text-align: center;
+    color: #fff;
+    padding: 1em;
+    background: gold;
+    font-size: 2em;
+  }
+
+  span {
+    font-size: 2em;
+  }
+
+  #pageHeader {
+    grid-area: header;
+  }
+
+  #pageFooter {
+    grid-area: footer;
+  }
+
+  #mainArticle {
+    grid-area: article;
+  }
+
+  #mainNav {
+    grid-area: nav;
+  }
+
+  #siteAds {
+    grid-area: ads;
+  }
+
+  /* Stack the layout on small devices/viewports. */
+  @media all and (max-width: 575px) {
+    body {
+      grid-template-areas:
+        "header"
+        "article"
+        "ads"
+        "nav"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px 1fr auto 300px 120px;
+    }
+
+    body>* {
+      color: #fff;
+      font-size: 2em;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: crimson;
+    }
+
+  }
+</style>
+
+<body>
+  <header id="pageHeader">
+    <p>Header</p>
+  </header>
+  <article id="mainArticle">
+    <span>Article</span>
+    <p>Those an equal point no years do.
+      Depend warmth fat but her but played.
+      Shy and subjects wondered trifling
+      pleasant. Prudent cordial comfort do no
+      on colonel as assured chicken.
+      Smart mrs day which begin. Snug do sold mr
+      it if such. Terminated uncommonly at
+      at estimating. Man behaviour met moonlight
+      extremity acuteness direction.</p>
+  </article>
+  <nav id="mainNav">
+    <span>Nav</span>
+    <p>
+      Macaroon chupa chups. Cake
+      cheesecake wafer cotton candy.
+      Danish jelly halvah jelly beans
+      tootsie roll donut.
+      Halvah cheesecake halvah
+      jujubes sweet roll biscuit croissant wafer.
+      Cake halvah chocolate bar sugar plum apple pie.
+    </p>
+  </nav>
+  <div id="siteAds">
+    <span>Ads</span>
+    <p>Cupcake ipsum dolor sit amet
+      cake croissant fruitcake muffin.
+      Sweet bonbon candy powder cheesecake
+      muffin sesame snaps jujubes.
+      Muffin macaroon cheesecake cookie
+      souffl&eacute; cookie cheesecake lollipop candy
+      canes. Halvah cotton candy sesame
+      snaps chocolate bar. Sugar plum
+      dessert drag&eacute;e macaroon chupa chups. Cake
+      cheesecake wafer cotton candy.
+      Danish jelly halvah jelly beans
+      tootsie roll donut.
+      Halvah cheesecake halvah
+      jujubes sweet roll biscuit croissant wafer.
+      Cake halvah chocolate bar sugar plum apple pie.
+    </p>
+  </div>
+  <footer id="pageFooter">
+    <p>Footer</p>
+  </footer>
+</body>
+
+</html>
