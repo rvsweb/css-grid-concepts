@@ -1,0 +1,52 @@
+/* Pantalla IPADs 768x1024 */
+/* @media only screen and (min-width: 768px) and (max-width: 1023px){
+
+    .grid-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 825px 100px;
+        grid-template-areas: 
+        "header header"
+        "aside article"
+        "footer footer";
+    }
+
+    header{
+        grid-area: header;
+    }
+    
+    aside{
+        grid-area: aside;
+        align-self: stretch;
+    }
+    
+    p{
+
+    }
+    
+    article{
+        grid-area: article;
+        align-self: stretch;
+    }
+    
+    footer , header, h4 , h1 {
+     color: #fff;   
+    }
+    
+    .flex-wrapper{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    .image{
+        
+    }
+    
+    footer{
+        grid-area: footer;
+        align-self: stretch;
+    }
+
+}

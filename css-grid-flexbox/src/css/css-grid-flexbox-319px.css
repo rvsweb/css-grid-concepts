@@ -1,0 +1,14 @@
+@media only screen and (max-width: 319px){
+
+    .grid-wrapper{
+        display: block;
+    }
+
+    .flex-wrapper{
+        width: auto;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+    }
+}
