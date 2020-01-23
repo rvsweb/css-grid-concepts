@@ -1,0 +1,21 @@
+@media only screen and (min-width: 425px) and (max-width: 767px){
+
+    .grid-wrapper{
+        display: block;
+    }
+
+    .flex-wrapper{
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image{
+        display: block;
+        width: auto;
+        height: 100px;
+        background: gold;
+    }
+
+}
