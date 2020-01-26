@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>introduction-to-css-grid-layout</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .principal {
+            height: 100vh;
+            /* margin: calc(100% - 50%) 0; */
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            border: 5px solid #f00;
+            background: #3b404e;
+        }
+
+        .container {
+            display: grid;
+            width: 80vw;
+            grid-template-columns: 100px 30% repeat(1, 1fr);
+            grid-template-rows: 200px repeat(1, 15vw);
+            grid-gap: 1rem;
+        }
+
+        .item {
+            background-color: #1EAAFC;
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #fff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main class="principal">
+        <div class="container">
+            <div class="item item-1"></div>
+            <div class="item item-2"></div>
+            <div class="item item-3"></div>
+            <div class="item item-4"></div>
+            <div class="item item-5"></div>
+            <div class="item item-6"></div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>

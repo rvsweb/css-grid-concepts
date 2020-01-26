@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-grid-taller-alsa-creation</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #fff;
+            text-align: center;
+            background: #000;
+        }
+
+        .ingrid-hagrid {
+            display: grid;
+            margin: 10px;
+            grid-template-columns: 100px 300px;
+            grid-template-areas:
+                "nav header"
+                "aside header"
+                "footer footer";
+        }
+
+        .ingrid-hagrid>* {
+            border: 3px solid slategray;
+            margin: 2px;
+
+            display: flex;
+            flex-flow: row wrap;
+
+            justify-content: center;
+            align-items: center;
+            font-size: 1.9em;
+        }
+
+        nav {
+            grid-area: nav;
+            /* grid-column: 1 / 2;
+            grid-row: 1 / 2; */
+
+            background: palegreen;
+        }
+
+        header {
+            grid-area: header;
+            /* grid-column: 2 / 3;
+            grid-row: 1 / 2; */
+
+            background: goldenrod;
+        }
+
+        aside {
+            grid-area: aside;
+            /* grid-column: 1 / 2;
+            grid-row: 2 / 3; */
+
+            background: deepskyblue;
+        }
+
+        footer {
+            grid-area: footer;
+            /* grid-column: 1 / 3;
+            grid-row: 3 / 3; */
+
+            background: mediumpurple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Posiciona los elementos segun van añadiendose -->
+    <div class="ingrid-hagrid">
+        <nav>nav</nav>
+        <header>header</header>
+        <aside>aside</aside>
+        <footer>footer</footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-grid-taller-alsa-creation</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #fff;
+            text-align: center;
+            background: #000;
+        }
+
+        .ingrid-hagrid {
+            width: auto;
+            height: auto;
+
+            margin: 10px;
+            padding: 10px;
+
+            display: grid;
+            grid-template-columns: 150px 250px;
+            grid-template-rows: 100px;
+            border: 1px solid #f00;
+        }
+
+        .ingrid-hagrid-2 {
+            width: auto;
+            height: auto;
+
+            margin: 10px;
+            padding: 10px;
+
+            display: grid;
+            grid-template-columns: 150px 250px;
+            grid-template-rows: 100px 100px 100px;
+            border: 1px solid #f00;
+        }
+
+        nav {
+            text-align: center;
+            font-size: 1.2em;
+            background: rgb(89, 190, 89);
+        }
+
+        .nav {
+            grid-column: 2 / 3;
+        }
+
+        .nav-1 {
+            grid-column: 2;
+        }
+
+        .nav-2 {
+            grid-column: 3;
+        }
+
+        .nav-1-end {
+            grid-column-end: 1;
+        }
+
+        .nav-2-end {
+            grid-column: 3 / 2;
+        }
+
+        .nav-3-end {
+            grid-area: 2 / 1 / 4 / 2;
+        }
+
+        .p-flex {
+            text-align: center;
+            line-height: 50px;
+            font-size: 1em;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Posiciona los elementos segun van añadiendose -->
+    <div class="ingrid-hagrid">
+        <nav class="nav">Nav - grid-column: 2 / 3
+            <p>grid-column-start: 2</p>
+            <p>grid-column-end: 3</p>
+        </nav>
+    </div>
+
+    <!-- Posiciona los elementos segun van añadiendose -->
+    <div class="ingrid-hagrid">
+        <nav class="nav-1">Nav - grid-column: 2
+            <p>grid-column-start: 3</p>
+            <p>grid-column-end: 4</p>
+        </nav>
+    </div>
+
+    <!-- Posiciona los elementos segun van añadiendose -->
+    <div class="ingrid-hagrid">
+        <nav class="nav-2">Nav - grid-column: 3
+            <p>grid-column-start: 3</p>
+            <p>grid-column-end: 4</p>
+        </nav>
+    </div>
+
+    <!-- Posiciona los elementos segun van añadiendose -->
+    <div class="ingrid-hagrid">
+        <nav class="nav-1-end">
+            <p>Nav - grid-column-end: 1</p>
+            <p>grid-column-start: 3</p>
+            <p>grid-column-end: 4</p>
+        </nav>
+    </div>
+
+    <!-- Posiciona los elementos segun van añadiendose -->
+    <div class="ingrid-hagrid">
+        <nav class="nav-2-end">
+            <p>Nav - grid-column: 3 / 2</p>
+        </nav>
+    </div>
+
+    <!-- Posiciona los elementos segun van añadiendose -->
+    <div class="ingrid-hagrid-2">
+        <nav class="nav-3-end">
+            <p class="p-flex">
+                Nav - <br>
+                grid-area: 2 / 1 / 4 / 2
+            </p>
+        </nav>
+    </div>
+    
+</body>
+
+</html>
