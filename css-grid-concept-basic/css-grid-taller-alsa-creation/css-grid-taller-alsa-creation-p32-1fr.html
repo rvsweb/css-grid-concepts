@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-grid-taller-alsa-creation</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            color: #fff;
+        }
+
+        .ingrid {
+            display: grid;
+            grid-template-columns: 100px 100px 1fr;
+        }
+
+        .ingrid-1fr {
+            display: grid;
+            grid-template-columns: 100px 1fr 1fr;
+            margin: 10px 0;
+        }
+
+        .ingrid-2fr {
+            margin: 10px 0;
+            display: grid;
+            grid-template-columns: 100px 2fr 1fr;
+            grid-template-rows: auto 1fr;
+        }
+
+        .ingrid-minmax {
+            margin: 10px 0;
+            display: grid;
+            grid-template-columns: minmax(100px, 20%) 1fr 1fr;
+        }
+
+        .item {
+            border: 1px solid #f00;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ingrid">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">1fr coge todo el espacio disponible</div>
+    </div>
+
+    <div class="ingrid-1fr">
+        <div class="item item-1">1</div>
+        <div class="item item-2">1fr coge todo el espacio disponible</div>
+        <div class="item item-3">1fr coge todo el espacio disponible</div>
+    </div>
+
+    <div class="ingrid-2fr">
+        <div class="item item-1">1</div>
+        <div class="item item-2">1fr coge todo el espacio disponible</div>
+        <div class="item item-3">1fr coge todo el espacio disponible</div>
+    </div>
+
+    <div class="ingrid-minmax">
+        <div class="item item-1">Texto del elemento Grid-item</div>
+        <div class="item item-2">Texto del elemento Grid-item</div>
+        <div class="item item-3">Texto del elemento Grid-item</div>
+    </div>
+
+</body>
+
+</html>

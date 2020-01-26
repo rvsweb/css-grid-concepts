@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-grid-taller-alsa-creation</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #fff;
+            text-align: center;
+            background: #000;
+        }
+
+        .grid-container {
+            width: min-content;
+            height: auto;
+
+            margin: 10px;
+            padding: 10px;
+
+            display: grid;
+            /* grid-template-columns: 200px 200px;
+            grid-template-rows: 100px 100px; */
+            grid: ". .";
+            grid-gap: 5px;
+
+            border: 3px solid darkgray;
+            border-radius: 5px;
+        }
+
+        .grid-item {
+            font-size: 2em;
+            line-height: 90px;
+        }
+
+        .salade {
+            background: chartreuse;
+        }
+
+        .tomate {
+            background: tomato;
+        }
+
+        .oignon {
+            background: lightseagreen;
+            order: -1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Posiciona los elementos segun van añadiendose -->
+    <div class="grid-container">
+        <div class="grid-item salade">salade</div>
+        <div class="grid-item tomate">tomate</div>
+        <div class="grid-item oignon">order-1</div>
+    </div>
+
+</body>
+
+</html>

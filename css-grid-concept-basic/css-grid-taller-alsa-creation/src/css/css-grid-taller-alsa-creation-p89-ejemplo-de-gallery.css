@@ -1,0 +1,62 @@
+
+/* Layout */
+
+.container {
+    display: grid;
+    grid-gap: .2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .container img {
+    max-width: 100%;
+    align-self: stretch;
+    justify-self: stretch;
+    object-fit: cover;
+  }
+
+  .portrait {
+    grid-row: auto / span 2;
+  }
+
+  .fit-left {
+    object-position: left;
+  }
+
+  .fit-right {
+    object-position: right;
+  }
+  
+  /* Decoration */
+  
+  * {
+      box-sizing: border-box;
+    }
+
+  body {
+    margin: 2rem;
+    background: #fff;
+    font-family: arial, sans-serif;
+    font-size: 1.2em;
+  }
+  
+  .container, .container > img {
+    padding: 10px;
+    color: #fff;
+  }
+
+  .container > img {
+    margin: 5px;
+    background: #fff;
+    border: 1px solid #ddd;
+  }
+  
+  h1, h2 {
+    margin: 0 0 1em;
+    color: #345;
+    text-align: center;
+    font-family: georgia,serif;
+  }
+
+  p {
+      text-align: center;
+    }

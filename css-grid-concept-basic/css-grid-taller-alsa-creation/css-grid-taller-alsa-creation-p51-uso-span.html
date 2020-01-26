@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-grid-taller-alsa-creation</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #fff;
+            text-align: center;
+            background: #000;
+        }
+
+        .grid-container-main {
+            width: min-content;
+            height: auto;
+            display: grid;
+            grid-template-columns: 400px 400px;
+            grid-gap: 20px;
+
+            justify-content: center;
+            align-content: center;
+
+            align-items: stretch;
+            justify-items: stretch;
+
+            border: 5px solid #0f0;
+        }
+
+        .ingrid-hagrid {
+            width: 400px;
+            height: auto;
+
+            margin: 10px;
+            padding: 10px;
+
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 10px;
+
+            border: 1px solid #f00;
+        }
+
+        .span {
+            background: lightgreen;
+        }
+
+        .span-2 {
+            grid-column: span 2;
+            background: lightseagreen;
+        }
+
+        .span-3 {
+            grid-column: span 3;
+            background: sandybrown;
+        }
+
+        .span-4 {
+            background: sandybrown;
+        }
+
+        .ingrid-hagrid>* {
+            margin: 2px;
+
+            display: flex;
+            flex-flow: row wrap;
+
+            justify-content: center;
+            align-items: center;
+
+            font-size: 1.9em;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 400px;
+            grid-template-rows: auto;
+
+            border: 1px solid #f00;
+        }
+
+        .grid-item {
+            padding: 10px;
+            font-size: 1em;
+            text-align: center;
+
+            font-family: Roboto, sans-serif;
+        }
+
+        p,
+        .p-grid {
+            width: auto;
+            height: auto;
+
+            border: 1px solid #f00;
+        }
+
+        .p-grid {
+            margin: 5px 0;
+            color: cadetblue;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container-main">
+        <!-- Posiciona los elementos segun van añadiendose -->
+        <div class="ingrid-hagrid">
+            <div class="span">1</div>
+            <div class="span">2</div>
+            <div class="span">3</div>
+            <div class="span">4</div>
+            <div class="span">5</div>
+            <div class="span">6</div>
+
+            <div class="span-2">span-2</div>
+            <div class="span-2">span-2</div>
+            <div class="span-2">span-2</div>
+
+            <div class="span-3">span-3</div>
+            <div class="span-3">span-3</div>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item">
+                <p>
+                    Dividimos width : 400px de los elementos en 6 partes iguales desde el grid-container mediante:
+                </p>
+                <p class="p-grid">
+                    grid-template-columns: repeat(6, 1fr);
+                </p>
+            </div>
+            <div class="grid-item">
+                <p>
+                    Dividimos width : 400px en 3 partes iguales
+                    desde los elementos hijos
+                </p>
+                <p class="p-grid">
+                    grid-column: span 2;
+                </p>
+            </div>
+            <div class="grid-item">
+                <p>
+                    Dividimos width : 400px en 2 partes iguales
+                    desde los elementos hijos
+                </p>
+                <p class="p-grid">
+                    grid-column: span 3;
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

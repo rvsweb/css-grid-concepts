@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-grid-taller-alsa-creation</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #fff;
+            text-align: center;
+            background: #000;
+        }
+
+        .ingrid-hagrid {
+            width: 400px;
+            height: auto;
+            margin: 10px;
+            display: grid;
+            grid: ". .";
+            grid-template-areas:
+                "a b"
+                "c b";
+        }
+
+        .salade {
+            background: lightgreen;
+            grid-area: a;
+        }
+
+        .oignon {
+            background: lightseagreen;
+            grid-area: c;
+        }
+
+        .tomate {
+            background: sandybrown;
+            /* grid-area: b; */
+            grid-row: auto / span 2;
+        }
+
+        .ingrid-hagrid>* {
+            border: 3px solid slategray;
+            margin: 2px;
+
+            display: flex;
+            flex-flow: row wrap;
+
+            justify-content: center;
+            align-items: center;
+
+            font-size: 1.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Posiciona los elementos segun van añadiendose -->
+    <div class="ingrid-hagrid">
+        <div class="salade">Salade</div>
+        <div class="oignon">Oignon</div>
+        <div class="tomate">Tomate</div>
+    </div>
+</body>
+
+</html>
