@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>css-grid-taller-alsa-creation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            color: aliceblue;
+            text-transform: capitalize;
+        }
+
+        .container {
+            margin: 50px;
+            width: 80vw;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 100px 100px 400px 100px;
+            grid-template-areas:
+                "header header header header"
+                "nav title title title"
+                "nav . . ."
+                "footer footer footer footer";
+
+            grid-gap: 10px;
+            font-size: 1.5em;
+        }
+
+        header {
+            grid-area: header;
+            padding: 20px 0 0 20px;
+            background: rgb(117, 117, 117);
+        }
+
+        nav {
+            grid-area: nav;
+            padding: 20px 0 0 20px;
+            background: rgb(120, 171, 236);
+        }
+
+        .title {
+            grid-area: title;
+            padding: 20px 0 0 20px;
+            background: rgb(207, 207, 105);
+        }
+
+        article {
+            padding: 20px 0 0 20px;
+            background: rgb(83, 207, 100);
+        }
+
+        footer {
+            grid-area: footer;
+            padding: 35px 0 0 20px;
+            background: crimson;
+        }
+
+        @media screen and (max-width: 320px) {
+
+            .container {
+                margin: 0;
+                width: auto;
+                height: auto;
+                display: grid;
+                gap: 10px;
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "nav"
+                    "header"
+                    "title"
+                    "."
+                    "."
+                    "."
+                    "footer";
+            }
+
+            .container>* {
+                margin: 0;
+                padding: 10px;
+            }
+
+            article {
+                height: 100px;
+            }
+
+            footer {
+                height: 100px;
+            }
+        }
+
+        @media screen and (min-width: 321px) and (max-width: 480px) {
+
+            .container {
+                margin: 0;
+                padding: 10px;
+                width: auto;
+                height: auto;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 100px 100px 1fr 200px 200px 200px 1fr;
+                grid-template-areas:
+                    "nav"
+                    "header"
+                    "title"
+                    "."
+                    "."
+                    "."
+                    "footer";
+                gap: 10px;
+            }
+
+            .container>* {
+                margin: 0;
+                padding: 10px;
+            }
+        }
+
+        @media screen and (min-width: 481px) and (max-width: 544px) {
+
+            .container {
+                margin: 0;
+                padding: 10px;
+                width: auto;
+                height: auto;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 2fr 2fr 2fr 1fr;
+                grid-template-areas:
+                    "header header"
+                    "title title"
+                    "nav ."
+                    "nav ."
+                    "nav ."
+                    "footer footer";
+            }
+
+            footer {
+                height: 100px;
+            }
+
+        }
+
+        @media screen and (min-width: 545px) and (max-width: 992px) {
+
+            .container {
+                margin: 0;
+                padding: 10px;
+                width: auto;
+                height: auto;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 2fr 2fr 2fr 1fr;
+                grid-template-areas:
+                    "header header"
+                    "title title"
+                    "nav ."
+                    "nav ."
+                    "nav ."
+                    "footer footer";
+            }
+
+            footer {
+                height: 100px;
+            }
+        }
+
+        @media screen and (min-width: 993px) and (max-width: 1024px) {
+
+            .container {
+                margin: 0;
+                padding: 10px;
+                width: auto;
+                height: auto;
+                grid-template-columns: 1fr 3fr;
+                grid-template-rows: 1fr 1fr 2fr 2fr 2fr 1fr;
+                grid-template-areas:
+                    "header header"
+                    "title title"
+                    "nav ."
+                    "nav ."
+                    "nav ."
+                    "footer footer";
+            }
+
+            footer {
+                height: 100px;
+            }
+        }
+
+        @media screen and (min-width: 1025px) {
+
+            .container {
+                margin: 0px;
+                padding: 10px;
+                width: auto;
+                height: auto;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1.5fr 65vh 1.5fr;
+                grid-template-areas: 
+                "header header header header"
+                "nav title title title"
+                "nav . . ."
+                "footer footer footer footer";
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>header</header>
+        <nav>nav</nav>
+        <h1 class="title">title</h1>
+        <article> article 1</article>
+        <article> article 2</article>
+        <article> article 3</article>
+        <footer>footer</footer>
+    </div>
+
+</body>
+
+</html>
