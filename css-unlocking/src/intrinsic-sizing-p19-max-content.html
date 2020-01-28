@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-unlocking-the-power-of-css-grid-layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns:
+                max-content max-content max-content;
+            grid-gap: 10px;
+            border: 5px solid rgb(108, 91, 123);
+        }
+
+        .grid-container>* {
+            margin: 5px;
+            padding: 10px;
+        }
+
+        .grid-item {
+            border: 5px solid rgb(172, 74, 119);
+        }
+
+        .grid-container-2 {
+            width: auto;
+            height: auto;
+            display: grid;
+            grid-template-columns:
+                max-content max-content max-content;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .grid-2 {
+            margin: 10px;
+            display: grid;
+            grid-template-columns:
+                max-content max-content max-content;
+            grid-gap: 10px;
+            justify-content: start;
+        }
+
+        .grid-2>* {
+            padding: 10px;
+            border: 5px solid rgb(108, 91, 123);
+            border-radius: 5px;
+        }
+
+        .fixed-width {
+            width: 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+    </div>
+
+    <hr>
+
+    <div class="grid-container-2">
+        <div class="grid-item">all columns are max-content</div>
+        <div class="grid-item">all columns are max-content</div>
+        <div class="grid-item">3</div>
+
+        <div class="grid-item"></div>
+        <div class="grid-item">this item has a width applied</div>
+        <div class="grid-item">
+            <img src="img/100px-100px.jpg" alt="box">
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="grid-2">
+        <div>All columns are max-content sized</div>
+        <div>All columns are max-content sized</div>
+        <div></div>
+        <div></div>
+        <div class="fixed-width">This item has a width applied</div>
+        <div><img src="https://placehold.it/100x100" alt="placeholder image"></div>
+    </div>
+
+</body>
+
+</html>

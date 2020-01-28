@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-unlocking-the-power-of-css-grid-layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid-container {
+            width: auto;
+            height: auto;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns:
+                fit-content(10em) fit-content(10em) fit-content(15ch);
+            grid-template-rows: auto auto;
+        }
+
+        .grid-item {
+            padding: 10px;
+            width: auto;
+            height: auto;
+            border: 5px solid #0f0;
+        }
+
+        .grid {
+            margin: 10px 0;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns:
+                fit-content(10em) 
+                fit-content(10em) 
+                fit-content(15ch);
+            justify-content: start;
+        }
+
+        .fixed-width {
+            width: 200px;
+        }
+
+        .grid>* {
+            border: 5px solid rgb(108, 91, 123);
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item">All columns are fit-content sized</div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+
+        <div class="grid-item"></div>
+        <div class="grid-item">e</div>
+        <div class="grid-item"><img src="img/100px-100px.jpg">
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="grid">
+        <div>All columns are fit-content sized</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>e</div>
+        <div><img src="https://placehold.it/100x100" alt="placeholder image"></div>
+    </div>
+
+
+</body>
+
+</html>
