@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>css-grid-taller-alsa-creation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            background: #000;
+
+        }
+
+        .grid-container {
+            width: 50%;
+            height: 150px;
+            padding: 5px;
+            display: grid;
+            grid: ". .";
+            gap: 5px;
+            border: 5px solid rgb(76, 77, 80);
+        }
+
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 2em;
+            text-transform: capitalize;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .salade {
+            grid-column: 1 / -1;
+            background: lightgreen;
+        }
+
+        .tomate {
+            background: darkorange;
+        }
+
+        .oignon {
+            background: rgb(116, 180, 218);
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="grid-container">
+        <div class="grid-item salade">salade</div>
+        <div class="grid-item oignon">oignon</div>
+        <div class="grid-item tomate">tomate</div>
+    </main>
+
+</body>
+
+</html>
