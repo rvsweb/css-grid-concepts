@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>grid-flexbox-alone</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: 0;
+        }
+
+        body {
+            font-size: 2em;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .flex-header {
+            border: 1px solid #f00;
+        }
+
+        .flex-main-and-sidebar-wrapper {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid #f00;
+        }
+
+        .flex-main {
+            flex: 3;
+            margin-right: 60px;
+            border: 1px solid #f00;
+        }
+
+        .flex-sidebar {
+            flex: 1;
+            border: 1px solid #f00;
+        }
+
+        .flex-footer {
+            border: 1px solid #f00;
+        }
+
+        @media screen and(max-width: 600px) {
+
+            .flex-main-and-sidebar-wrapper {
+                flex-direction: column;
+            }
+
+            .flex-main {
+                margin-right: 0;
+                margin-bottom: 60px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="flex-header">header</header>
+    <div class="flex-main-and-sidebar-wrapper">
+        <section class="flex-main">main</section>
+        <aside class="flex-sidebar">aside</aside>
+    </div>
+    <footer class="flex-footer">footer</footer>
+
+</body>
+
+</html>

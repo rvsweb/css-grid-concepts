@@ -25,17 +25,13 @@
 
         .grid-container {
             display: grid;
-            grid-gap: 10px;
-            grid-template-columns:
-                minmax(100px, auto) minmax(10em, 20em);
-            grid-template-rows: 1fr 1fr;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(2, 200px);
+            gap: 10px;
         }
 
         .grid-item {
-            text-align: left;
-            width: auto;
-            height: auto;
-            padding: 10px 0 10px 10px;
+            padding: 10px;
             color: rgb(90, 85, 167);
             border: 3px solid rgb(90, 85, 167);
         }
@@ -44,16 +40,15 @@
 
 <body>
 
-    <h1>minmax()</h1>
+    <h1>Maximum Sizing Functions</h1>
 
     <div class="grid-container">
-        <div class="grid-item">A</div>
-        <div class="grid-item">B</div>
-        <div class="grid-item">C</div>
-
-        <div class="grid-item">D</div>
-        <div class="grid-item">F</div>
-        <div class="grid-item">G</div>
+        <div class="grid-item">Alfa</div>
+        <div class="grid-item">Beta</div>
+        <div class="grid-item">Charlie</div>
+        <div class="grid-item">Delta</div>
+        <div class="grid-item">Echo</div>
+        <div class="grid-item">Foxtrot</div>
     </div>
 
 

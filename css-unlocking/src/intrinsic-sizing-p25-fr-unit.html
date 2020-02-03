@@ -38,7 +38,7 @@
         }
 
         .flex {
-            margin: 10px 0;
+            margin: 0;
             display: flex;
             flex-flow: row wrap;
             justify-content: space-around;
@@ -47,7 +47,8 @@
 
         .flex-item {
             text-align: right;
-            padding: 10px 0 0 0px;
+            padding: 10px 0px 0px 0px;
+            margin: 10px 0px 0px 0px;
         }
 
         .item-1 {
@@ -59,10 +60,8 @@
         }
 
         .item-3 {
-            flex-basis: 10%;
+            flex-basis: 5%;
         }
-
-
 
         .grid {
             margin: 10px 0;
@@ -80,6 +79,8 @@
 </head>
 
 <body>
+
+    <h1>Sizing with fr units</h1>
 
     <div class="grid-container">
         <div class="grid-item">A</div>

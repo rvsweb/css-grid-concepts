@@ -23,39 +23,32 @@
             color: rgb(108, 91, 123);
         }
 
-        .grid-container {
+        .grid {
             display: grid;
-            grid-gap: 10px;
-            grid-template-columns:
-                minmax(100px, auto) minmax(10em, 20em);
-            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
         }
 
-        .grid-item {
-            text-align: left;
-            width: auto;
-            height: auto;
-            padding: 10px 0 10px 10px;
+        .grid>* {
+            padding: 10px;
             color: rgb(90, 85, 167);
-            border: 3px solid rgb(90, 85, 167);
+            border: 5px solid rgb(90, 85, 167);
         }
     </style>
 </head>
 
 <body>
 
-    <h1>minmax()</h1>
+    <h1>Maximum Sizing Functions</h1>
 
-    <div class="grid-container">
-        <div class="grid-item">A</div>
-        <div class="grid-item">B</div>
-        <div class="grid-item">C</div>
-
-        <div class="grid-item">D</div>
-        <div class="grid-item">F</div>
-        <div class="grid-item">G</div>
+    <div class="grid">
+        <div>pneumonoultramicroscopicsilicovolcanoconiosis</div>
+        <div>Bravo</div>
+        <div>Charlie</div>
+        <div>If we add more content to any grid item then the entire row will grow to give it space.</div>
+        <div>Echo</div>
+        <div>Foxtrot</div>
     </div>
-
 
 </body>
 

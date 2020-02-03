@@ -25,31 +25,11 @@
             color: rgb(108, 91, 123);
         }
 
-        .grid-container {
-            width: auto;
-            height: auto;
-            display: grid;
-            grid-gap: 10px;
-            grid-template-columns:
-                fit-content(10em) fit-content(10em) fit-content(15ch);
-            grid-template-rows: auto auto;
-        }
-
-        .grid-item {
-            padding: 10px;
-            width: auto;
-            height: auto;
-            border: 5px solid #0f0;
-        }
-
         .grid {
-            margin: 10px 0;
             display: grid;
             grid-gap: 10px;
             grid-template-columns:
-                fit-content(10em) 
-                fit-content(10em) 
-                fit-content(15ch);
+                fit-content(10em) fit-content(10em) fit-content(10em);
             justify-content: start;
         }
 
@@ -68,20 +48,6 @@
 <body>
 
     <h1>fit-content</h1>
-    <div class="grid-container">
-        <div class="grid-item">All columns are fit-content sized</div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        
-        <div class="grid-item"></div>
-        <div class="grid-item">e</div>
-        <div class="grid-item"><img src="img/100px-100px.jpg">
-        </div>
-    </div>
-    
-    <hr>
-    
-    <h1>fit-content</h1>
     <div class="grid">
         <div>All columns are fit-content sized</div>
         <div></div>
@@ -90,6 +56,7 @@
         <div>e</div>
         <div><img src="https://placehold.it/100x100" alt="placeholder image"></div>
     </div>
+
 
 
 </body>

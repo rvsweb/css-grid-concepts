@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flexbox-vs-grid-layout-version-grid</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estructura principal */
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            grid-template-rows: 100px 5fr 150px;
+            grid-template-areas:
+                "header header"
+                "main sidebar"
+                "footer footer";
+            grid-gap: 10px;
+        }
+
+        .logo {
+            display: block;
+        }
+
+        header {
+            grid-area: header;
+
+            display: grid;
+            grid-template-columns: 3fr 1fr 1fr;
+            grid-template-rows: minmax(auto, 1fr);
+
+            background-color: #FF4945;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        nav {
+            justify-self: center;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: minmax(auto, 1fr) repeat(4, 150px);
+            grid-template-rows: minmax(100px, 1fr);
+            justify-content: space-around;
+            gap: 10px;
+            grid-auto-flow: dense;
+            list-style: none;
+        }
+
+        li {
+            text-align: center;
+            align-self: center;
+            justify-self: stretch;
+            font-weight: bold;
+            background: #fff;
+        }
+
+        a {
+            display: block;
+            font-size: 2em;
+            text-decoration: none;
+        }
+
+        button {
+            font-size: 2em;
+            justify-self: center;
+            align-self: center;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            text-align: center;
+            font-size: 1.5em;
+            padding: 5px;
+        }
+
+        .main {
+            grid-area: main;
+            background-color: #FFA931;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #9B0579;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #00778F;
+        }
+
+        .main,
+        .sidebar,
+        footer {
+            color: #fff;
+        }
+
+        @media only screen and (max-width: 660px) {
+
+            .container {
+                width: auto;
+                height: 100vh;
+                grid-template-columns: 3fr 1fr;
+                grid-template-areas:
+                    "header header"
+                    "main main"
+                    "sidebar sidebar"
+                    "footer footer";
+            }
+
+            header {
+                width: auto;
+                height: 14vh;
+                grid-area: header;
+
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 50px;
+
+                background-color: #FF4945;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            .main {
+                width: 100vw;
+                height: 50vh;
+            }
+
+            ul {
+                margin: 10px;
+                display: grid;
+                grid-template-columns: repeat(5, 100px);
+                grid-template-rows: 50px 100px;
+                gap: 10px;
+                list-style: none;
+            }
+
+            li {
+                width: auto;
+                height: auto;
+            }
+
+            #foto {
+                width: min-content;
+                height: auto;
+            }
+
+            .logo {
+                display: block;
+                width: fit-content;
+                height: auto;
+            }
+
+            a {
+                width: 100%;
+                height: auto;
+                font-size: 1.5em;
+                text-decoration: none;
+            }
+
+            button {
+                width: fit-content;
+                height: auto;
+            }
+
+            .sidebar {
+                height: 20vh;
+            }
+
+            footer {
+                height: 15vh;
+            }
+
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li id="foto">
+                        <a href="#">
+                            <img class="logo" src="https://img.icons8.com/dusk/64/000000/css3.png" alt="image">
+                        </a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Other</a></li>
+                </ul>
+            </nav>
+            <button>Button</button>
+        </header>
+        <section class="main">
+            <h2>Main Content</h2>
+        </section>
+
+        <aside class="sidebar">
+            <h3>Sidebar</h3>
+        </aside>
+
+        <footer>
+            <h3>Footer</h3>
+            <p>Diseñado por RVSWeb</p>
+        </footer>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -23,44 +23,44 @@
             color: rgb(108, 91, 123);
         }
 
-        .grid-container {
-            display: grid;
-            grid-template-columns:
-                10fr fit-content(10em);
-            grid-gap: 10px;
-        }
-
         .grid {
-            margin: 10px 0 0 0;
             display: grid;
-            grid-template-columns:
-                minmax(100px, auto) minmax(10em, 20em);
+            gap: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-auto-rows: 100px;
+            border: 1px solid #f00;
         }
 
-        .grid-item {
-            padding: 10px 0 10px 10px;
+        .grid :nth-child(odd) {
+            grid-row: auto / span 2;
+        }
+
+        .grid :nth-child(3n) {
+            grid-column: auto / span 2;
+        }
+
+        .grid>* {
+            padding: 10px;
             color: rgb(90, 85, 167);
-            text-align: left;
-            border: 3px solid rgb(90, 85, 167);
+            border: 5px solid rgb(90, 85, 167);
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Minimum Sizing Functions</h1>
-
-    <div class="grid-container">
-        <div class="grid-item">A</div>
-        <div class="grid-item">B</div>
-    </div>
+    <h1>Maximum Sizing Functions</h1>
 
     <div class="grid">
-        <div class="grid-item">minmax(100px, auto)</div>
-        <div class="grid-item">minmax(10em, 20em)</div>
+        <div>Alfa - 200px</div>
+        <div>Bravo</div>
+        <div>Charlie</div>
+        <div>Delta - 200px</div>
+        <div>Echo</div>
+        <div>Foxtrot</div>
+        <div>Golf - 200px</div>
+        <div>Hotel</div>
     </div>
-
-
 </body>
 
 </html>

@@ -8,8 +8,6 @@
     <title>css-unlocking-the-power-of-css-grid-layout</title>
     <style>
         * {
-            padding: 0;
-            margin: 0;
             box-sizing: border-box;
         }
 
@@ -23,43 +21,45 @@
             color: rgb(108, 91, 123);
         }
 
-        .grid-container {
+        .grid {
             display: grid;
             grid-template-columns:
-                10fr fit-content(10em);
-            grid-gap: 10px;
+                minmax(auto, 200px) minmax(100px, auto) minmax(10em, 20em);
         }
 
-        .grid {
+        .d1 {
+            border: 1px solid #f00;
+        }
+
+        .grid-2 {
             margin: 10px 0 0 0;
             display: grid;
             grid-template-columns:
-                minmax(100px, auto) minmax(10em, 20em);
+                minmax(500px, auto);
         }
 
-        .grid-item {
-            padding: 10px 0 10px 10px;
-            color: rgb(90, 85, 167);
-            text-align: left;
-            border: 3px solid rgb(90, 85, 167);
+        .grid,
+        .grid-2>* {
+            padding: 10px;
+            border-radius: 5px;
+            border: 5px solid rgb(108, 91, 123);
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Minimum Sizing Functions</h1>
-
-    <div class="grid-container">
-        <div class="grid-item">A</div>
-        <div class="grid-item">B</div>
-    </div>
+    <h1>Minimum Sizing Fuctions</h1>
 
     <div class="grid">
-        <div class="grid-item">minmax(100px, auto)</div>
-        <div class="grid-item">minmax(10em, 20em)</div>
+        <div class="d1">A - <br> minmax(auto, 200px)</div>
+        <div class="d1">B - <br> minmax(100px, auto)</div>
+        <div class="d1">C - <br> minmax(10em, 20em)</div>
     </div>
 
+    <div class="grid-2">
+        <div>width: 500px - Aunque se reduzca la pantalla - No se ajustará al marco del navegador</div>
+    </div>
 
 </body>
 

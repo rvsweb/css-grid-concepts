@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flexbox-vs-grid-layout-version-flex</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            height: 150px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #FF4945;
+        }
+
+        header nav {
+            display: flex;
+            align-items: baseline;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .main,
+        .sidebar,
+        footer {
+            color: #fff;
+        }
+
+        .main {
+            height: 300px;
+            background-color: #FFA931;
+            flex: 4;
+        }
+
+        .sidebar {
+            height: 300px;
+            background-color: #9B0579;
+            flex: 1;
+        }
+
+        footer {
+            height: 100px;
+            background-color: #00778F;
+        }
+
+        @media only screen and (max-width: 660px) {
+
+            .wrapper {
+                flex-direction: column;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <nav>
+                <li><a href="#">
+                        <h1>Logo</h1>
+                    </a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </nav>
+            <button>Button</button>
+        </header>
+
+
+        <main class="wrapper">
+            <section class="main">
+                <h2>Main Content</h2>
+            </section>
+
+            <aside class="sidebar">
+                <h3>Sidebar</h3>
+            </aside>
+        </main>
+
+        <footer>
+            <h3>Footer</h3>
+            <p>Diseñado por RVSWeb</p>
+        </footer>
+
+    </div>
+
+
+</body>
+
+</html>
