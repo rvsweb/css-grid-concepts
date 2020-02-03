@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-unlocking-the-power-of-css-grid-layout</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid-container {
+            margin: 10px;
+            width: 500px;
+            height: auto;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns:
+                100px 10%;
+        }
+
+        .grid-item {
+            width: auto;
+            height: auto;
+            padding: 10px 0 10px 10px;
+            color: rgb(90, 85, 167);
+            border: 3px solid rgb(90, 85, 167);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Minimum Sizing Functions</h1>
+    <h2>500px * 10% = 50px</h2>
+
+    <div class="grid-container">
+        <div class="grid-item">100px</div>
+        <div class="grid-item">50px</div>
+    </div>
+
+
+</body>
+
+</html>

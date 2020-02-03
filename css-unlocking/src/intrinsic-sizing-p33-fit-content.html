@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-unlocking-the-power-of-css-grid-layout</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns:
+                auto fit-content(10em);
+        }
+
+        .grid-item {
+            text-align: left;
+            padding: 10px 0 10px 10px;
+            color: rgb(90, 85, 167);
+            border: 3px solid rgb(90, 85, 167);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Maximum Sizing Functions</h1>
+
+    <div class="grid-container">
+        <div class="grid-item">auto</div>
+        <div class="grid-item">fit-content(10em);</div>
+    </div>
+
+
+</body>
+
+</html>

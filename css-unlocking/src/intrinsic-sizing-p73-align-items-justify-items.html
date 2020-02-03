@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-unlocking-the-power-of-css-grid-layout</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid {
+            display: grid;
+            width: 800px;
+            height: 500px;
+            border: 5px solid rgb(108, 91, 123);
+            grid-gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            align-items: start;
+            justify-items: end;
+        }
+
+        .grid img {
+            /* arriba */
+            align-self: stretch;
+            /* horizontal */
+            justify-self: stretch;
+        }
+
+        .grid>div {
+            background-color: rgba(108, 91, 123, .5);
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="grid">
+        <div>Alfa</div>
+        <div>Bravo</div>
+        <div>Charlie</div>
+        <div>Delta</div>
+        <div>Echo</div>
+        <img src="https://placehold.it/100x100" alt="placeholder image">
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-unlocking-the-power-of-css-grid-layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns:
+                2fr 1fr 1fr;
+        }
+
+        .grid-item {
+            text-align: left;
+            width: auto;
+            height: auto;
+            padding: 10px 0 10px 10px;
+            color: rgb(90, 85, 167);
+            border: 3px solid rgb(90, 85, 167);
+        }
+
+        .flex {
+            margin: 0;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .flex-item {
+            text-align: right;
+            padding: 10px 0px 0px 0px;
+            margin: 10px 0px 0px 0px;
+        }
+
+        .item-1 {
+            flex-basis: 15%;
+        }
+
+        .item-2 {
+            flex-basis: 15%;
+        }
+
+        .item-3 {
+            flex-basis: 5%;
+        }
+
+        .grid {
+            margin: 10px 0;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 2fr 1fr 1fr;
+        }
+
+        .grid>* {
+            padding: 10px;
+            border-radius: 5px;
+            border: 5px solid rgb(108, 91, 123);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Sizing with fr units</h1>
+
+    <div class="grid-container">
+        <div class="grid-item">A</div>
+        <div class="grid-item">B</div>
+        <div class="grid-item">C</div>
+
+        <div class="grid-item">D</div>
+        <div class="grid-item">F</div>
+        <div class="grid-item">G</div>
+    </div>
+
+    <div class="flex">
+        <p class="flex-item item-1">2fr</p>
+        <p class="flex-item item-2">1fr</p>
+        <p class="flex-item item-3">1fr</p>
+    </div>
+
+    <div class="grid">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+        <div>F</div>
+    </div>
+
+
+</body>
+
+</html>

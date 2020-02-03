@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-unlocking-the-power-of-css-grid-layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns:
+                minmax(auto, 200px) minmax(100px, auto) minmax(10em, 20em);
+        }
+
+        .d1 {
+            border: 1px solid #f00;
+        }
+
+        .grid-2 {
+            margin: 10px 0 0 0;
+            display: grid;
+            grid-template-columns:
+                minmax(500px, auto);
+        }
+
+        .grid,
+        .grid-2>* {
+            padding: 10px;
+            border-radius: 5px;
+            border: 5px solid rgb(108, 91, 123);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Minimum Sizing Fuctions</h1>
+
+    <div class="grid">
+        <div class="d1">A - <br> minmax(auto, 200px)</div>
+        <div class="d1">B - <br> minmax(100px, auto)</div>
+        <div class="d1">C - <br> minmax(10em, 20em)</div>
+    </div>
+
+    <div class="grid-2">
+        <div>width: 500px - Aunque se reduzca la pantalla - No se ajustará al marco del navegador</div>
+    </div>
+
+</body>
+
+</html>

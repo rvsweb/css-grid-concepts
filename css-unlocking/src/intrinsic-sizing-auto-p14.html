@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-unlocking-the-power-of-css-grid-layout</title>
+    <style>
+        .grid-container {
+            width: auto;
+            height: 200px;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: min-content max-content fit-content(10ch) auto;
+            justify-content: start;
+            border: 1px solid #f00;
+        }
+
+        .grid-item {
+            width: auto;
+            height: auto;
+            border: 1px solid #0f0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+    </div>
+
+
+</body>
+
+</html>

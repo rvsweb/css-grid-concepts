@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-unlocking-the-power-of-css-grid-layout</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid {
+            display: grid;
+            inline-size: 800px;
+            block-size: 500px;
+            border: 5px solid rgb(108, 91, 123);
+            grid-gap: 10px;
+            grid-template-columns: 200px 200px 200px;
+            grid-auto-rows: 150px 150px;
+            justify-content: end;
+            align-content: center;
+            writing-mode: vertical-lr;
+        }
+
+        .grid>div {
+            border-radius: 5px;
+            color: rgb(30, 29, 56);
+            background: rgb(90, 85, 167);
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="grid">
+        <div>Alfa</div>
+        <div>Bravo</div>
+        <div>Charlie</div>
+        <div>Delta</div>
+        <div>Echo</div>
+        <div>Foxtrot</div>
+    </div>
+</body>
+
+</html>

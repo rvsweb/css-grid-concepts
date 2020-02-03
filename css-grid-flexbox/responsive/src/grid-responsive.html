@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>grid-responsive</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 2em;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .grid-header {
+            grid-area: header;
+            border: 1px solid #0f0;
+        }
+
+        .grid-main-and-sidebar-wrapper {
+            grid-area: main;
+            border: 1px solid #00f;
+        }
+
+        .grid-main {
+            grid-area: main;
+            border: 1px solid #0ff;
+        }
+
+        .grid-sidebar {
+            grid-area: sidebar;
+            border: 1px solid #ff0;
+        }
+
+        .grid-footer {
+            grid-area: footer;
+            border: 1px solid #000;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-areas:
+                "header header"
+                "main sidebar"
+                "footer footer";
+            grid-gap: 10px;
+
+            border: 1px solid #f00;
+        }
+
+        @media only screen and (min-width: 321px) and (max-width: 600px) {
+            .grid-container {
+                background-color: rgb(199, 125, 125);
+                grid-template-areas:
+                    "header header"
+                    "main main"
+                    "sidebar sidebar"
+                    "footer footer";
+            }
+        }
+
+        @media only screen and (max-width : 320px) {
+            .grid-container {
+                background-color: rgb(152, 200, 164);
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "sidebar"
+                    "footer";
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="grid-header">header</header>
+        <div class="grid-main-and-sidebar-wrapper">
+            <section class="grid-main">main</section>
+            <aside class="grid-sidebar">sidebar</aside>
+        </div>
+        <footer class="grid-footer">footer</footer>
+    </div>
+
+</body>
+
+</html>
