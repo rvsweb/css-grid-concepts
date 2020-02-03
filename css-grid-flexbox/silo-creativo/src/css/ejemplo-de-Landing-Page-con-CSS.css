@@ -9,14 +9,15 @@ body {
 }
 
 div {
-    border: 1px solid #f00;
+    background: #10282c;;
+    color: #fff;
 }
 
 /* Diseño "Mobile First" */
 .hero-title {
     grid-area: title;
     background: #8fbc27;
-    font-size: 2em;
+    font-size: 3.5em;
     text-align: center;
 }
 
@@ -41,6 +42,12 @@ div {
     background: #493a33;
 }
 
+.hero-img-2{
+    width: 400px;
+    height: auto;
+    background: #e2257d;
+}
+
 .hero {
     display: grid;
     grid-gap: 10px;
@@ -53,19 +60,23 @@ div {
 
 .img-small {
     grid-row: 1;
+    background: springgreen;
 }
 
 .img-med-vert {
     grid-row: 2;
+    background: coral
 }
 
 .img-med-horz {
     grid-column: 2;
+    background: steelblue;
 }
 
 .img-big {
     grid-row: 2;
     grid-column: 2;
+    background: violet;
 }
 
 .gallery {
