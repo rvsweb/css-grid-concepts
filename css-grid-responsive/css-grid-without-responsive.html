@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- https://codepen.io/tutsplus/pen/NRbOGL/ -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid Responsive</title>
+    <style>
+        .container-auto-fit>div {
+            background-color: coral;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            font-family: arial, helvetica, sans-serif;
+        }
+
+        .container-auto-fill>div {
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            font-family: arial, helvetica, sans-serif;
+        }
+
+        .container-auto-fit {
+            border: 1px solid black;
+            display: grid;
+            grid-gap: 5px;
+            /* 
+             Rellena toda la fila con elementos grid-item
+             que se van expandiendo para alcanzar el ancho total del contenedor 
+             teniendo el cuenta el numero de grid-item que hay definidos
+             en este caso hay 4
+              */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-rows: repeat(2, 200px);
+        }
+
+        .container-auto-fill {
+            border: 1px solid black;
+            display: grid;
+            grid-gap: 5px;
+            /* 
+            Rellena toda la fila con elementos grid-item de 200px 
+            y deja los huecos libres si no hay suficientes 'grid-item' 
+            para rellenar el resto del espacio sobrante del 'Grid-Container'
+              */
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-rows: repeat(2, 200px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>auto-fit: Expande los "grid-Item" sobre toda la fila </h2>
+    <h3>Los 'grid-item' que no estan definidos se contraen cuando lo estan definidos, no ocupando todo el espacio </h3>
+    <p>
+        Rellena toda la fila con elementos grid-item
+        que se van expandiendo para alcanzar el ancho total del contenedor
+        teniendo el cuenta el numero de grid-item que hay definidos
+        en este caso hay 4
+    </p>
+    <div class="container-auto-fit">
+        <div> 1 </div>
+        <div> 2 </div>
+        <div> 3 </div>
+        <div> 4 </div>
+    </div>
+    <h2>auto-fill : Los 'Grid-Items' no se expaden , se ajustan al ancho y deja el espacio libre</h2>
+    <h3>El espacio libre esta ocupado por los Grid-item que no estan definidos </h3>
+    <p> Rellena toda la fila con elementos grid-item de 200px
+        y deja los huecos libres si no hay suficientes 'grid-item'
+        para rellenar el resto del espacio sobrante del 'Grid-Container'</p>
+    <div class="container-auto-fill">
+        <div> 1 </div>
+        <div> 2 </div>
+        <div> 3 </div>
+        <div> 4 </div>
+    </div>
+
+</body>
+
+</html>
