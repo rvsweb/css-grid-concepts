@@ -28,15 +28,12 @@ header{
     font-size: 2.5em;
     text-align: left;
     background: darkorchid;
-    border: 1px solid #00f;
     padding: 0 0 0 10px;
 }
 
 aside{  
     grid-area: aside;
-
     background-color: #5eb7b5;
-    border: 5px solid #0f0;
 }
 
 .h1-aside , .h1-article{
@@ -56,7 +53,6 @@ aside{
 p{
     padding: 10px;
     margin: 5px;
-    color: white;
     text-transform: capitalize;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -65,7 +61,6 @@ article{
     grid-area: article;
 
     background-color: #fc7978;
-    border: 5px solid fuchsia;
 
     display: flex;
     flex-flow: column wrap;
@@ -73,15 +68,17 @@ article{
 }
 
 .h1-article{
-    color: yellow;
+    color: #fff;
 }
 
 .title-article {
+    text-align: center;
     flex: 0 1 auto;
 }   
 
 .p-article{
-
+    color: #fff;
+    font-weight: bolder;
 }
 
 .flex-wrapper{
@@ -94,12 +91,12 @@ article{
 }
 
 span{
-    border: 5px solid #f00;
+    display: block;
 }
 
 .image{
     flex: 0 1 auto;
-    margin: 5px;
+    margin: 20px 0;
 }
 
 .logo{
@@ -109,11 +106,11 @@ span{
 }
 
 footer{
+    padding: 10px;
     grid-area: footer;
     
     font-size: 3em;
     background: #96d1c7;
-    border: 5px solid darkgoldenrod;
 }
     
 }
@@ -134,41 +131,28 @@ footer{
     color: #fff;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
 
 header{
     grid-area: header;
-    text-align: left;
     font-size: 2.5em;
     background: darkorchid;
-    border: 1px solid #00f;
 }
 
 aside{  
     grid-area: aside;
-
     background-color: #5eb7b5;
-    border: 5px solid #0f0;
 }
 
 .h1-aside , .h1-article{
-    margin: 10px 0;
+    margin: 10px 0px;
     font-family: Roboto , sans-serif;
     text-align: center;
  }
 
- .title-aside{
-    text-align: center;
- }
-
- .p-aside{
-    text-align: center;
- }
-
 p{
-    padding: 10px;
     margin: 5px;
+    padding: 10px;
     color: white;
     text-transform: capitalize;
     font-family: Arial, Helvetica, sans-serif;
@@ -178,15 +162,10 @@ article{
     grid-area: article;
 
     background-color: #fc7978;
-    border: 5px solid fuchsia;
 
     display: flex;
     flex-flow: column wrap;
 
-}
-
-.h1-article{
-    color: yellow;
 }
 
 .title-article {
@@ -194,7 +173,7 @@ article{
 }   
 
 .p-article{
-
+    font-weight: bold;
 }
 
 .flex-wrapper{
@@ -206,13 +185,9 @@ article{
     align-items: center;
 }
 
-span{
-    border: 5px solid #f00;
-}
-
 .image{
     flex: 0 1 auto;
-    margin: 5px;
+    margin: 15px 0px;
 }
 
 .logo{
@@ -226,8 +201,7 @@ footer{
     
     font-size: 3em;
     background: #96d1c7;
-    border: 5px solid darkgoldenrod;
-}
+    }
 }
 
 @media only screen and (min-width:  768px) and (max-width: 1280px) {
@@ -235,12 +209,13 @@ footer{
 .grid-wrapper{
     /* Define el tamaño del contenedor principal */
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 18fr 16fr 2fr;
     grid-template-areas: 
-    "header"
-    "aside"
-    "article"
-    "footer";
+    "header header"
+    "aside article"
+    "aside article"
+    "footer footer";
 
     color: #fff;
     text-align: center;
@@ -253,14 +228,12 @@ header{
     text-align: left;
     font-size: 2.5em;
     background: darkorchid;
-    border: 1px solid #00f;
 }
 
 aside{  
     grid-area: aside;
 
     background-color: #5eb7b5;
-    border: 5px solid #0f0;
 }
 
 .h1-aside , .h1-article{
@@ -289,15 +262,10 @@ article{
     grid-area: article;
 
     background-color: #fc7978;
-    border: 5px solid fuchsia;
 
     display: flex;
     flex-flow: column wrap;
 
-}
-
-.h1-article{
-    color: yellow;
 }
 
 .title-article {
@@ -305,8 +273,8 @@ article{
 }   
 
 .p-article{
-
-}
+    font-weight: bold;
+}   
 
 .flex-wrapper{
     display: flex;
@@ -317,12 +285,8 @@ article{
     align-items: center;
 }
 
-span{
-    border: 5px solid #f00;
-}
-
 .image{
-    flex: 0 1 auto;
+    flex: 0 1 40%;
     margin: 5px;
 }
 
@@ -337,7 +301,6 @@ footer{
     
     font-size: 3em;
     background: #96d1c7;
-    border: 5px solid darkgoldenrod;
 }
 }
 
@@ -348,7 +311,7 @@ footer{
     /* Define el tamaño del contenedor principal */
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto minmax(300px,2fr) minmax(300px,5fr) 100px;
+    grid-template-rows: 4fr 50fr 20fr 12fr;
     grid-template-areas: 
     "header header header"
     "aside article article"
@@ -357,7 +320,7 @@ footer{
 
     color: #fff;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif
 
 }
 
@@ -367,14 +330,12 @@ header{
     text-align: left;
     font-size: 2.5em;
     background: darkorchid;
-    border: 1px solid #00f;
 }
 
 aside{  
     grid-area: aside;
 
     background-color: #5eb7b5;
-    border: 5px solid #0f0;
 }
 
 .h1-aside , .h1-article{
@@ -403,15 +364,10 @@ article{
     grid-area: article;
 
     background-color: #fc7978;
-    border: 5px solid fuchsia;
 
     display: flex;
     flex-flow: column wrap;
 
-}
-
-.h1-article{
-    color: yellow;
 }
 
 .title-article {
@@ -431,10 +387,6 @@ article{
     align-items: left;
 }
 
-span{
-    border: 5px solid #f00;
-}
-
 .image{
     flex: 0 1 auto;
     margin: 5px;
@@ -451,7 +403,6 @@ footer{
     
     font-size: 3em;
     background: #96d1c7;
-    border: 5px solid darkgoldenrod;
 }
 }
 
