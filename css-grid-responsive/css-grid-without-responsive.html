@@ -8,22 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Grid Responsive</title>
     <style>
-        .container-auto-fit>div {
-            background-color: coral;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 48px;
-            font-family: arial, helvetica, sans-serif;
-        }
-
-        .container-auto-fill>div {
-            background-color: aqua;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 48px;
-            font-family: arial, helvetica, sans-serif;
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
         }
 
         .container-auto-fit {
@@ -40,6 +28,15 @@
             grid-template-rows: repeat(2, 200px);
         }
 
+        .container-auto-fit>div {
+            background-color: coral;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            font-family: arial, helvetica, sans-serif;
+        }
+
         .container-auto-fill {
             border: 1px solid black;
             display: grid;
@@ -51,6 +48,15 @@
               */
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             grid-template-rows: repeat(2, 200px);
+        }
+
+        .container-auto-fill>div {
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            font-family: arial, helvetica, sans-serif;
         }
     </style>
 </head>
@@ -71,11 +77,13 @@
         <div> 3 </div>
         <div> 4 </div>
     </div>
-    <h2>auto-fill : Los 'Grid-Items' no se expaden , se ajustan al ancho y deja el espacio libre</h2>
+    <h2>auto-fill : Los 'Grid-Items' no se expaden , se ajustan al ancho
+        y deja el espacio libre</h2>
     <h3>El espacio libre esta ocupado por los Grid-item que no estan definidos </h3>
     <p> Rellena toda la fila con elementos grid-item de 200px
         y deja los huecos libres si no hay suficientes 'grid-item'
-        para rellenar el resto del espacio sobrante del 'Grid-Container'</p>
+        para rellenar el resto del espacio sobrante del 'Grid-Container'
+    </p>
     <div class="container-auto-fill">
         <div> 1 </div>
         <div> 2 </div>

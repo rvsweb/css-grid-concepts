@@ -1,0 +1,131 @@
+/* General Styles */
+body{
+    padding: 0;
+    margin-top: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat' , sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1{
+    padding: 0 25px 0 0;
+    margin-top: 0;
+    font-size: 2.5em;
+    font-family: 'Cinzel' , serif;
+}
+
+.button{
+    background-color: #d3001d;
+    padding: 8px;
+    border-radius: 3px;
+    color: #ddd;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+/* GRID LAYOUT STYLES */
+/* Contenedor principal que engloba todo */
+.container{
+    display: grid;
+    /* Dividimos el ancho total en 6 columnas fragmentadas */
+    grid-template-columns: repeat(6 , 1fr);
+    /* Anchura de las filas */
+    grid-template-rows: minmax(10px , auto);
+    border: 5px solid #f00;
+}
+
+/* Imagen de cabecera */
+main {
+    background: url('http://grid-layout.com/images/wine-header.jpg') center;
+    background-size: cover;
+    padding: 5rem 2rem;
+    /* Indica longitud que va a tener la columna como elemento 'grid-item' */
+    grid-column: 1 / 7;
+    /* La misma columna se convierte en un 'Grid-Container' de elementos 'Grid-Items'  */
+    display: grid;
+    /* El ancho  */
+    grid-template-columns: repeat(auto-fit , minmax(280px , 1fr));
+    color: #fff;
+    align-items: center;
+    border: 5px solid #00f;
+}
+
+/* Texto dentro 'Main' */
+article{
+    font-family: 'Montserrat' , sans-serif;
+    font-size: 1.4em;
+    text-shadow: 2px 2px 8px #000000;
+    border: 5px solid deepskyblue;
+}
+
+section {
+    /* Ocupa la parte centra de la pagina incluyendo card */
+    grid-column: 1 / 7;
+    display: grid;
+    /* Estira las 'card' hasta llegar a su max anchura para saltar
+    a la siguiente fila */
+    grid-template-columns: repeat(auto-fit, minmax(330px,auto));
+    justify-content: center;
+    border: 5px solid #0f0;
+}
+
+.card {
+    width: 300px;
+    padding: 12px;
+    color: #333;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    margin-top: 12px;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 5px solid gold;
+}
+
+/* Superposicion - Imagen interior */
+.overlay {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(2px , auto);
+    align-items: end;
+    border: 5px solid crimson
+}
+
+/* Foto de la uva */
+.variety1{
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    border: 5px solid darkmagenta;
+}
+
+/* Leyenda de la Foto de la uva */
+.variety2{
+    /* Posicionamos el elemento dentro del contenedor */
+        grid-column: 1;
+        grid-row: 1;
+        
+        height: 1.3em;
+        padding: 10px;
+        z-index: 2;
+
+        border: 5px solid cyan;
+        background-color: rgba(24, 24, 24, 0.7);
+        color: #eee;
+        font-size: 1.2em;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+footer{
+    /* El elemento va a ocupar todo el ancho de la fila */
+    grid-column: 1 / 7;
+    margin-top: 18px;
+    padding-left: 18px;
+    color: #eee;
+    background-color: #d3001d;
+}
