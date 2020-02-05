@@ -1,0 +1,138 @@
+/* General Styles */
+body{
+    padding: 0;
+    margin-top: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat' , sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1{
+    padding: 0 25px 0 0;
+    margin-top: 0;
+    font-size: 2.5em;
+    font-family: 'Cinzel' , serif;
+    color: rgb(241, 239, 239);
+    text-shadow: 2px 2px 8px #000;
+}
+
+.button{
+    text-decoration: none;
+    padding: 8px;
+    font-size: .8em;
+    color: #ddd;
+    background: #d3001d;
+    border-radius: 3px;
+}
+
+/* Desarrollo Layout - GRID LAYOUT STYLES */
+/* Grid-Container - Contenedor Padre */
+.container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(10px , auto);
+}
+
+/* Contenedor de elementos */
+main {
+    background: url("/css-grid-responsive/src/img/carrete-3-1280x853.jpg") center;
+    background-size: cover;
+    padding: 5rem 2rem;
+    /* Definimos la longitud del Grid-item - Elemento HIJO descendiente de Grid-Container */
+    grid-column: 1 / 7;
+    /* Convertimos el elemento en Grid-Container  */
+    display: grid;
+    /* Cada "Grid-Item" que añadamos al 'Grid-Container' tendra estas caracteristicas de ajuste */
+    grid-template-columns: repeat(auto-fit,minmax(280px , 1fr));
+    /* Centra los elementos 'grid-items' dentro del contenenedor */
+    align-items: center; 
+}
+
+/* Grid-item - Elemento dentro "Main" centrado mediante 'align-items' */
+article{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    text-shadow: 2px 2px 8px #000;
+}
+
+.paragraph{
+    color: rgb(241, 239, 239);
+}
+
+/* Grid-item - Contenedor de elementos */
+section {
+    /* Indicamos la distancia que tendra 'Grid-Item'  */
+    grid-column: 1 / 7; /* Ocupa todo el ancho */
+    /* Creamos otro contenedor de elementos dentro del 'Grid-Container' */
+    display: grid;
+    /* Cada 'grid-item' se ajustará al ancho del contendor 
+    y tendra como minimo 330px al reducir la pantalla  */
+    grid-template-columns: repeat(auto-fit, minmax(330px,auto));
+
+    justify-content: center;
+}
+
+/* Tarjeta basica aparece descripcion de los elementos */
+.card {
+    width: 300px;
+    padding: 12px;
+    color: #333;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    margin-top: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Imagen principal de la portada de la Tarjeta */
+.overlay {
+    /* Creamos otro contenedor para distribuir los elementos */
+    display: grid;
+    /* Le damos a la columna una anchura fija */
+    grid-template-columns: 1fr;
+    /* Ajustamos el ancho de la fila del
+    elemento a las dimensiones de la imagen teniendo
+    un minimo de 2px */
+    grid-auto-rows: minmax(2px , auto);
+    /* Ajustamos el 'grid-item' en la parte baja del contenedor */
+    align-items: end;
+}
+
+.variety1{
+    /* Establecemos las medidas del grid-item almacena la imagen 
+     Le asignamos un ancho y una alto en relacion al Grid-Container que lo alberga */
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+}
+
+.variety2{
+    /* Establecemos las medidas del grid-item almacena la imagen 
+     Le asignamos un ancho y una alto en relacion al Grid-Container que lo alberga */
+    grid-column: 1;
+    grid-row: 1;
+    height: 1.3em;
+    padding: 10px;
+    z-index: 2;
+    
+    color: #eee;
+    font-size: 1.2em;
+    background-color: rgba(24, 24, 24, 0.7);
+}
+
+.description {
+    margin-top: 10px;
+}
+
+footer {
+    grid-column: 1 / 7;
+    background-color: #d3001d;
+    color: #eee;
+    margin-top: 18px;
+    padding-left: 18px;
+}
