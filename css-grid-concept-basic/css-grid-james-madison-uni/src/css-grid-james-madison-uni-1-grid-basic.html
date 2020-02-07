@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-grid-james-madison-uni-grid-basic</title>
+    <link rel="stylesheet" type="text/css" href="css/css-grid-james-madison-uni-grid-basic.css">
+</head>
+
+<body>
+
+    <h3>
+        Tenemos 4 grid-items y 2 columnas definidas
+        Como hay más DIVs que columnas
+        Los DIVS restantes pasan a la siguiente FILA para agregar los DIVS que nos faltan
+    </h3>
+
+    <div class="container-percentage">
+        <div class="grid-item">Grid item 1</div>
+        <div class="grid-item">Grid item 2</div>
+        <div class="grid-item">Grid item 3</div>
+        <div class="grid-item">Grid item 4</div>
+    </div>
+
+    <h3>
+        El algoritmo de colocación automatica redistribuye y
+        coloca de forma automatica los grid-item
+        que no estan definidos dentro
+        de las columnas
+        y los coloca en la siguiente fila
+    </h3>
+
+    <div class="container-fr">
+        <div class="grid-item">Grid item 1</div>
+        <div class="grid-item">Grid item 2</div>
+        <div class="grid-item">Grid item 3</div>
+        <div class="grid-item">Grid item 4</div>
+    </div>
+
+    <h3>
+        Expandimos las columnas con 2fr
+        Todos los elementos que vayamos creando
+        se ajustaran al total de las columnas que
+        tengamos definidas
+    </h3>
+
+    <div class="container-2fr">
+        <div class="grid-item">Grid item 1</div>
+        <div class="grid-item">Grid item 2</div>
+        <div class="grid-item">Grid item 3</div>
+        <div class="grid-item">Grid item 4</div>
+        <div class="grid-item">Grid item 5</div>
+        <div class="grid-item">Grid item 6</div>
+        <div class="grid-item">Grid item 7</div>
+        <div class="grid-item">Grid item 8</div>
+    </div>
+
+    <h3>
+        Creamos 8 columnas
+    </h3>
+
+    <div class="container-8fr">
+        <div class="grid-item">Grid item 1</div>
+        <div class="grid-item">Grid item 2</div>
+        <div class="grid-item">Grid item 3</div>
+        <div class="grid-item">Grid item 4</div>
+        <div class="grid-item">Grid item 5</div>
+        <div class="grid-item">Grid item 6</div>
+        <div class="grid-item">Grid item 7</div>
+        <div class="grid-item">Grid item 8</div>
+    </div>
+
+    <h3>
+        Funcion basica repeat()
+    </h3>
+
+    <div class="container-fr-repeat">
+        <div class="grid-item">Grid item 1</div>
+        <div class="grid-item">Grid item 2</div>
+        <div class="grid-item">Grid item 3</div>
+        <div class="grid-item">Grid item 4</div>
+        <div class="grid-item">Grid item 5</div>
+        <div class="grid-item">Grid item 6</div>
+        <div class="grid-item">Grid item 7</div>
+        <div class="grid-item">Grid item 8</div>
+    </div>
+
+    <h3>
+        La filas se ajustan automaticamente al ancho del
+        contenido que tienen implementado
+    </h3>
+
+    <div class="container-elements-expand">
+        <div>
+            Grid item one.
+            Grid item one.
+            Grid item one.
+            Grid item one.
+            Grid item one.
+            Grid item one.
+            Grid item one.
+            Grid item one.
+        </div>
+        <div>Grid item two.</div>
+        <div>Grid item three.</div>
+        <div>Grid item four.</div>
+        <div>Grid item five.</div>
+        <div>Grid item six.</div>
+        <div>Grid item seven.</div>
+        <div>Grid item eight.</div>
+    </div>
+
+    <h3>
+        Control de alturas de filas 
+        utilizando grid-auto-rows
+    </h3>
+    <div class="container-elements-heights">
+        <div>
+            Grid item one.
+            Grid item one.
+            Grid item one.
+            Grid item one.
+            Grid item one.
+            Grid item one.
+            Grid item one.
+            Grid item one.
+        </div>
+        <div>Grid item two.</div>
+        <div>Grid item three.</div>
+        <div>Grid item four.</div>
+        <div>Grid item five.</div>
+        <div>Grid item six.</div>
+        <div>Grid item seven.</div>
+        <div>Grid item eight.</div>
+    </div>
+
+</body>
+
+</html>

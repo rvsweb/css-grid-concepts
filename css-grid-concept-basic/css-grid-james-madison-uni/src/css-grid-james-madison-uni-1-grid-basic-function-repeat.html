@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css-grid-james-madison-uni-nested-grids</title>
+    <link rel="stylesheet" type="text/css" href="css/css-grid-james-madison-uni-grid-basic-function-repeat.css">
+
+</head>
+
+<body>
+
+    <h1 class="title">Uso de la funcion repeat()</h1>
+
+    <code class="code-basic">
+        grid-template-columns: repeat(3, 1fr 2fr);
+    </code>
+
+    <p class="paragraph-1">
+        Primer parametro <b>'3'</b> indica en cuantos grupos se va
+        a dividir los elementos <b>'grid-item'</b>
+    </p>
+
+    <p class="paragraph-2">
+        Segundo parametro <b>'1fr 2fr'</b> indica cuantas columnas y que tamaños va a tener cada elemento
+        <b>'grid-item'</b>
+    </p>
+
+    <p class="paragraph-2">Grid-Container</p>
+
+    <div class="container">
+        <!-- columna 1 -->
+        <div class="grid-item">1 grid-item</div>
+        <div class="grid-item">2 grid-item</div>
+
+        <!-- columna 2 -->
+        <div class="grid-item">1 grid-item</div>
+        <div class="grid-item">2 grid-item</div>
+
+        <!-- columna 3 -->
+        <div class="grid-item">1 grid-item</div>
+        <div class="grid-item">2 grid-item</div>
+
+        <!-- Este grupo de 2 columnas pasan a la fila siguiente
+            porque repeat solo esta definido para 3 grupo de elementos -->
+        <!-- columna 4 -->
+        <div class="grid-item">1 grid-item</div>
+        <div class="grid-item">2 grid-item</div>
+
+    </div>
+
+</body>
+
+</html>
