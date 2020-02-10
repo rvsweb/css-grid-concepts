@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 , h2{
+    width: max-content;
+    height: auto;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 7px;
+    text-align: center;
+    background: rgb(233, 203, 192);
+}
+
+.container{
+    margin: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(3 , 80px); 
+    grid-auto-rows: minmax(120px , auto);
+    grid-gap: 1em;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid #000;
+}
+
+.container-end{
+    margin: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(3 , 80px); 
+    grid-auto-rows: minmax(120px , auto);
+    grid-gap: 1em;
+    justify-content: end;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid #000;
+}
+
+.container > div{
+    padding: 1em;
+    text-align: center;
+    background: yellow;
+}
+
+.container > div:nth-child(odd){
+    background: #ddd;
+    color: #00f;
+}
+
+.container > div:nth-child(even){
+    background: #ccc;
+    color: #f00;
+}
