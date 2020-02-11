@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout - inline-block</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 40px;
+            margin: #fff;
+            font: 1.2em / 1.4 'Pontano sans', sans-serif;
+        }
+
+        .grid>div {
+            display: inline-block;
+        }
+
+        .grid {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(3, auto);
+            width: 500px;
+        }
+
+        .grid>div {
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 10px;
+            border: 5px solid rgba(104, 100, 102, .4);
+            background-color: rgb(177, 225, 233);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Grid Overrides: inline-block item </h1>
+    <div class="grid">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+    </div>
+
+
+
+</body>
+
+</html>

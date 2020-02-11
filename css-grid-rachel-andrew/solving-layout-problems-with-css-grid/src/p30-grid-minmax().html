@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p30-grid-minmax()</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            font: 1.2em / 1.4 'Pontano sans', sans-serif;
+        }
+
+        .wrapper {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+
+        .col {
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 10px;
+            border: 5px solid rgba(104, 100, 102, .4);
+            background-color: rgb(177, 225, 233);
+        }
+
+        .col.span2 {
+            grid-column: auto / span 2;
+        }
+
+        .col.span3 {
+            grid-column: auto / span 3;
+        }
+
+        .col.span4 {
+            grid-column: auto / span 4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>grid minmax() </h1>
+    <div class="wrapper">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+        <div class="col">5</div>
+        <div class="col">6</div>
+        <div class="col">7</div>
+        <div class="col">8</div>
+    </div>
+
+</body>
+
+</html>
