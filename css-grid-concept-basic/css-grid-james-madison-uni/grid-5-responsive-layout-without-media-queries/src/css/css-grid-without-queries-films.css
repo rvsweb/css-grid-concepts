@@ -1,3 +1,4 @@
+
 /* General Styles */
 body{
     padding: 0;
@@ -33,7 +34,9 @@ h1{
 /* Grid-Container - Contenedor Padre */
 .container{
     display: grid;
+    /* Definimos 6 columnas que contienen 7 lineas para posicionar elementos */
     grid-template-columns: repeat(6, 1fr);
+    /* Ajustamos el ancho de las filas automaticamente */
     grid-auto-rows: minmax(10px , auto);
 }
 
@@ -42,13 +45,13 @@ main {
     background: url("/css-grid-responsive/src/img/carrete-3-1280x853.jpg") center;
     background-size: cover;
     padding: 5rem 2rem;
-    /* Definimos la longitud del Grid-item - Elemento HIJO descendiente de Grid-Container */
+    /* Definimos la longitud del Grid-item - Elemento HIJO descendiente de Grid-Container que los almacena */
     grid-column: 1 / 7;
-    /* Convertimos el elemento en Grid-Container  */
+    /* Convertimos el elemento 'grid-item' en otro Grid-Container  */
     display: grid;
-    /* Cada "Grid-Item" que añadamos al 'Grid-Container' tendra estas caracteristicas de ajuste */
+    /* Cada "Grid-Item" que añadamos al 'Grid-Container' que tendra estas caracteristicas de ajuste */
     grid-template-columns: repeat(auto-fit,minmax(280px , 1fr));
-    /* Centra los elementos 'grid-items' dentro del contenenedor */
+    /* Centra los elementos 'grid-items' dentro del contenenedor en dirección vertical */
     align-items: center; 
 }
 
@@ -65,14 +68,14 @@ article{
 
 /* Grid-item - Contenedor de elementos */
 section {
-    /* Indicamos la distancia que tendra 'Grid-Item'  */
+    /* Indicamos la amplitud que tendra 'Grid-Item'  */
     grid-column: 1 / 7; /* Ocupa todo el ancho */
     /* Creamos otro contenedor de elementos dentro del 'Grid-Container' */
     display: grid;
-    /* Cada 'grid-item' se ajustará al ancho del contendor 
+    /* Cada 'grid-item' se ajustará al ancho del contenedor 
     y tendra como minimo 330px al reducir la pantalla  */
     grid-template-columns: repeat(auto-fit, minmax(330px,auto));
-
+    /* Centramos contenedor de los elementos en horizontal */
     justify-content: center;
 }
 
@@ -89,7 +92,7 @@ section {
 
 /* Imagen principal de la portada de la Tarjeta */
 .overlay {
-    /* Creamos otro contenedor para distribuir los elementos */
+    /* Creamos otro 'Grid-Container' para distribuir los elementos 'grid-items'*/
     display: grid;
     /* Le damos a la columna una anchura fija */
     grid-template-columns: 1fr;
@@ -103,7 +106,8 @@ section {
 
 .variety1{
     /* Establecemos las medidas del grid-item almacena la imagen 
-     Le asignamos un ancho y una alto en relacion al Grid-Container que lo alberga */
+     Le asignamos un ancho y una alto en relacion al Grid-Container que lo alberga
+     en este caso 'overlay' */
     grid-column: 1;
     grid-row: 1;
     z-index: 1;
@@ -113,7 +117,8 @@ section {
 
 .variety2{
     /* Establecemos las medidas del grid-item almacena la imagen 
-     Le asignamos un ancho y una alto en relacion al Grid-Container que lo alberga */
+     Le asignamos un ancho y una alto en relacion al Grid-Container que lo alberga
+     en este caso 'overlay' */
     grid-column: 1;
     grid-row: 1;
     height: 1.3em;
@@ -130,6 +135,7 @@ section {
 }
 
 footer {
+    /* Asignamos todo el ancho a la pagina */
     grid-column: 1 / 7;
     background-color: #d3001d;
     color: #eee;
