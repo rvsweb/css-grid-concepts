@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Overrides: flex-layout </title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 40px;
+            margin: #fff;
+            font: 1.2em / 1.4 'Pontano sans', sans-serif;
+        }
+
+        .grid {
+            display: flex;
+            align-items: center;
+            width: 500px;
+            height: 200px;
+            border: 1px dotted #694486;
+        }
+
+        .grid {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(3, auto);
+        }
+
+
+        .grid>div {
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 10px;
+            border: 5px solid rgba(104, 100, 102, .4);
+            background-color: rgb(177, 225, 233);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Grid Overrides: flex-layout </h1>
+    <div class="grid">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+    </div>
+
+
+</body>
+
+</html>
