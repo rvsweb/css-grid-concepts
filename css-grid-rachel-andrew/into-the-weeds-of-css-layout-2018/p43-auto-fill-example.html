@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid flexible minmax</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            font: 1.2em / 1.4 'Pontano sans', sans-serif;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-auto-rows: 100px;
+            gap: 10px;
+        }
+
+        .grid-container :nth-child(odd) {
+            grid-row: auto / span 2;
+        }
+
+        .grid-container :nth-child(3n) {
+            grid-column: auto / span 2;
+        }
+
+        .grid-container>* {
+            border: 5px solid rgb(108, 91, 123);
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        pre {
+            color: #000;
+            background-color: rgb(209, 221, 172);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Grid-flexible - repeat(auto-fill,minmax(200px , 1fr)) </h2>
+    <div class="grid-container">
+        <div>Alfa</div>
+        <div>Bravo</div>
+        <div>Charlie</div>
+        <div>Delta</div>
+        <div>Echo</div>
+        <div>Foxtrot</div>
+        <div>Golf</div>
+        <div>Hotel</div>
+    </div>
+
+    <pre>
+        .grid-container {
+            display: grid;
+            <b>grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));</b>
+            grid-auto-rows: 100px;
+        }
+
+        .grid-container :nth-child(odd) {
+           <b>grid-row: auto / span 2;</b>
+        }
+
+        .grid-container :nth-child(3n) {
+           <b>grid-column: auto / span 2;</b>
+        }
+    </pre>
+</body>
+
+</html>

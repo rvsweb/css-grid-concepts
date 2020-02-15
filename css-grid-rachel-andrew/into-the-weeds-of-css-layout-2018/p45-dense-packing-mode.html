@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auto-fill example: dense packing</title>
+    <style>
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid {
+            display: grid;
+            /*
+             Ocupa todo el ancho con elementos de un ancho minimo : 200px y  maximo : 1fr
+              */
+            grid-template-columns:
+                repeat(auto-fill, minmax(200px, 1fr));
+            grid-auto-rows: 100px;
+            grid-auto-flow: dense;
+            grid-gap: 10px;
+        }
+
+        .grid :nth-child(odd) {
+            grid-row: auto / span 2;
+        }
+
+        .grid :nth-child(3n) {
+            grid-column: auto / span 2;
+        }
+
+        .grid>* {
+            border: 5px solid rgb(108, 91, 123);
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        pre {
+            color: #000;
+            background-color: rgb(209, 221, 172);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Grid-flexible - auto-fill example: dense packing </h2>
+    <div class="grid">
+        <div>Alfa</div>
+        <div>Bravo</div>
+        <div>Charlie</div>
+        <div>Delta</div>
+        <div>Echo</div>
+        <div>Foxtrot</div>
+        <div>Golf</div>
+        <div>Hotel</div>
+    </div>
+
+    <pre>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-auto-rows: 100px;
+            <b>grid-auto-flow: dense;</b>
+            grid-gap: 10px;
+        }
+    </pre>
+
+</body>
+
+</html>

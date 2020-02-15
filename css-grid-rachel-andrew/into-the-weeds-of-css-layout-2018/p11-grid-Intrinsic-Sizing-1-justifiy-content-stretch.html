@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-Intrinsic-Sizing-auto</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        .container-stretch {
+            display: grid;
+            grid-template-columns: min-content max-content fit-content(10ch) auto;
+            grid-auto-rows: minmax(0, auto);
+            gap: 10px;
+            justify-content: stretch;
+        }
+
+        .grid>* {
+            border: 5px solid rgb(108, 91, 123);
+        }
+
+        .grid-item {
+            padding: 10px;
+            color: rgb(61, 63, 73);
+            border: 5px solid rgb(61, 63, 73);
+            border-radius: 6px;
+        }
+
+        .min-content {
+            color: #f00;
+        }
+
+        .max-content {
+            color: #0f0;
+        }
+
+        .fit-content {
+            color: #00f;
+        }
+
+        .auto {
+            color: #000;
+            background-color: rgb(116, 197, 197);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>grid-Intrinsic-Sizing-stretch</h1>
+    <div class="container-stretch">
+        <div class="grid-item min-content">
+            This column is min-content sized
+        </div>
+        <div class="grid-item max-content">
+            This column is max-content sized
+        </div>
+        <div class="grid-item fit-content">
+            This column is fit-content sized
+        </div>
+        <div class="grid-item auto">
+            auto <br>
+            justify-content: stretch;
+        </div>
+        <div class="grid-item">
+        </div>
+        <div class="grid-item">
+        </div>
+        <div class="grid-item">
+        </div>
+        <div class="grid-item">
+        </div>
+    </div>
+
+</body>
+
+</html>

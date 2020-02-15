@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid flexible minmax</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            font: 1.2em / 1.4 'Pontano sans', sans-serif;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid-container {
+            width: 500px;
+            display: grid;
+            grid-template-columns:
+                100px 10%;
+            gap: 10px;
+        }
+
+        .grid-container>* {
+            border: 5px solid rgb(108, 91, 123);
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Grid-flexible - grid minimum sizing function </h1>
+    <h1>Two track is auto </h1>
+    <div class="grid-container">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+        <div>E</div>
+        <div>F</div>
+    </div>
+
+</body>
+
+</html>
