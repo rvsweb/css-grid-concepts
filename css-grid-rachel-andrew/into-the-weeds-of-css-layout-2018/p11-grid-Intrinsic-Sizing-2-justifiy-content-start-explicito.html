@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-Intrinsic-Sizing-auto</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            font: 1.2em / 1.4 'Pontano sans', sans-serif;
+        }
+
+        .container-stretch {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(0, auto);
+            gap: 10px;
+            justify-content: start;
+        }
+
+        .grid-item {
+            padding: 10px;
+            color: rgb(61, 63, 73);
+            border-radius: 6px;
+            border: 5px solid rgb(61, 63, 73);
+        }
+
+        .min-content {
+            width: min-content;
+        }
+
+        .max-content {
+            width: max-content;
+        }
+
+        .fit-content {
+            width: fit-content(10ch);
+        }
+
+        .auto {
+            width: auto;
+            height: auto;
+            background-color: rgb(116, 197, 197);
+        }
+
+        pre {
+            width: auto;
+            padding: 10px;
+            background: bisque;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>grid-Intrinsic-Sizing-auto explicito</h1>
+    <div class="container-stretch">
+        <div class="grid-item min-content">
+            This column is min-content sized
+        </div>
+        <div class="grid-item max-content">
+            This column is max-content sized
+        </div>
+        <div class="grid-item fit-content">
+            This column is fit-content sized
+        </div>
+        <div class="grid-item auto">
+            auto <br>
+            justify-content: start;
+        </div>
+        <div class="grid-item">
+        </div>
+        <div class="grid-item">
+        </div>
+        <div class="grid-item">
+        </div>
+        <div class="grid-item">
+        </div>
+    </div>
+
+    <pre>
+    .container-stretch {
+        display: grid;
+        <b>grid-template-columns: repeat(4, 1fr);</b>
+        grid-auto-rows: minmax(0, auto);
+        gap: 10px;
+        <b>justify-content: start;</b>
+    }
+
+    .min-content {
+    <b> width: min-content;</b>
+    }
+
+    .max-content {
+    <b> width: max-content;</b>
+    }
+
+    .fit-content {
+    <b> width: fit-content(10ch);</b>
+    }
+
+    .auto {
+        width: auto;
+        height: auto;
+        background-color: rgb(116, 197, 197);
+    }
+    </pre>
+
+</body>
+
+</html>

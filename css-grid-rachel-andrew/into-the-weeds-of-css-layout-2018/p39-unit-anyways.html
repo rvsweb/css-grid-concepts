@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid flexible minmax</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            font: 1.2em / 1.4 'Pontano sans', sans-serif;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns:
+                minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+            gap: 10px;
+        }
+
+        .grid-container>* {
+            border: 5px solid rgb(108, 91, 123);
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Grid-flexible - make minimum size 0 to force 3 equal columns </h1>
+    <div class="grid-container">
+        <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        </div>
+        <div>B</div>
+        <div>C</div>
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+    </div>
+
+</body>
+
+</html>
