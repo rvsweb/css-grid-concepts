@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p62-align-content, justify-content</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid-start {
+            width: 800px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(2, 150px);
+            justify-content: end;
+            align-content: start;
+            gap: 10px;
+            border: 10px solid #f00;
+
+        }
+
+        .grid-start >div {
+            border: 5px solid rgb(108, 91, 123);
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .grid-center {
+            margin: 10px 0;
+            width: 800px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(2, 150px);
+            justify-content: end;
+            align-content: center;
+            gap: 10px;
+            border: 10px solid #f00;
+        }
+
+        .grid-center>div {
+            border: 5px solid rgb(108, 91, 123);
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>align-content : start - justify-content : end</h1>
+    <div class="grid-start">
+        <div>Alfa 1</div>
+        <div>Bravo 2</div>
+        <div>Charlie 3</div>
+        <div>Delta 4</div>
+        <div>Echo 5</div>
+        <div>Foxtrot 6</div>
+    </div>
+    
+    <h1>align-content : start - justify-content : center</h1>
+    <div class="grid-center">
+        <div>Alfa 1</div>
+        <div>Bravo 2</div>
+        <div>Charlie 3</div>
+        <div>Delta 4</div>
+        <div>Echo 5</div>
+        <div>Foxtrot 6</div>
+    </div>
+
+</body>
+
+</html>

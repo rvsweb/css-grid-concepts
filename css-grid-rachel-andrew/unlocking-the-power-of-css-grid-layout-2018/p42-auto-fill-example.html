@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p42-auto-fill-example</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fill, minmax(200px, 1fr));
+            grid-auto-rows: 100px;
+            gap: 10px;
+        }
+
+        .grid:nth-child(odd) {
+            grid-row: auto / span 2;
+        }
+
+        .grid :nth-child(3n) {
+            grid-column: auto / span 2;
+        }
+
+        .grid>* {
+            color: rgb(108, 91, 123);
+            border: 5px solid rgb(108, 91, 123);
+            border-radius: 5px;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="grid">
+        <div>Alfa</div>
+        <div>Bravo</div>
+        <div>Charlie - 3 </div>
+        <div>Delta</div>
+        <div>Echo</div>
+        <div>Foxtrot - 3</div>
+        <div>Golf</div>
+        <div>Hotel</div>
+    </div>
+</body>
+
+</html>

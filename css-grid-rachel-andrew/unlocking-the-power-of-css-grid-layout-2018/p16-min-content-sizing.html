@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p16-min-content-sizing</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: min-content min-content min-content;
+            justify-content: start;
+            gap: 10px;
+        }
+
+        .fixed-width {
+            width: 200px;
+        }
+
+        .grid>* {
+            color: rgb(108, 91, 123);
+            border: 5px solid rgb(108, 91, 123);
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid">
+        <div>All columns are <b>min-content</b> sized</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="fixed-width">
+            Fixed : 200px
+            <p>Esta propiedad define el ancho de la columna de la 1º fila</p>
+        </div>
+        <div><img src="https://placehold.it/100x100" alt="placeholder image"></div>
+    </div>
+
+</body>
+
+</html>

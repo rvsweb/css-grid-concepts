@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p13-Intrinsic-sizing</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: min-content max-content fit-content(10ch) auto;
+            gap: 10px;
+            justify-content: stretch;
+        }
+
+        .grid>* {
+            color: rgb(108, 91, 123);
+            border: 5px solid rgb(108, 91, 123);
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .grid-2 {
+            margin: 10px 0 0 0;
+            display: grid;
+            grid-template-columns: min-content max-content fit-content(10ch) auto;
+            gap: 10px;
+            justify-content: start;
+        }
+
+        .grid-2>* {
+            color: rgb(202, 65, 118);
+            border: 5px solid rgb(202, 65, 118);
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid">
+        <div>This column is <b>min-content</b> sized 1</div>
+        <div>This column is <b>max-content</b> sized 2 </div>
+        <div>This column is <b>fit-content(10ch)</b> 3 </div>
+        <div>stretch 4 </div>
+        <div> 5 </div>
+        <div> 6 </div>
+        <div> 7 </div>
+        <div> 8 </div>
+    </div>
+
+
+    <div class="grid-2">
+        <div>This column is <b>min-content</b> sized 1</div>
+        <div>This column is <b>max-content</b> sized 2 </div>
+        <div>This column is <b>fit-content(10ch)</b> 3 </div>
+        <div>auto 4 </div>
+        <div> 5 </div>
+        <div> 6 </div>
+        <div> 7 </div>
+        <div> 8 </div>
+    </div>
+
+</body>
+
+</html>

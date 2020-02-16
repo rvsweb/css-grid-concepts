@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p45-auto-fill-example-dense-packing</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-auto-rows: 100px;
+            grid-auto-flow: dense;
+            gap: 10px;
+        }
+
+        .grid :nth-child(odd) {
+            grid-row: auto / span 2;
+            color: #00f;
+        }
+
+        .grid :nth-child(3n) {
+            grid-column: auto / span 2;
+            color: #f00;
+        }
+
+        .grid>* {
+            border: 5px solid rgb(108, 91, 123);
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Dense Packing Mode</h1>
+    <div class="grid">
+        <div>Alfa 1</div>
+        <div>Bravo 2</div>
+        <div>Charlie 3</div>
+        <div>Delta 4</div>
+        <div>Echo 5</div>
+        <div>Foxtrot 6</div>
+        <div>Golf 7</div>
+        <div>Hotel 8</div>
+    </div>
+</body>
+
+</html>

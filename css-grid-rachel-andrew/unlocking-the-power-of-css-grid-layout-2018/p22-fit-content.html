@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p22-fit-content sizing</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        span {
+            display: inline-block;
+            padding: 10px 5px;
+        }
+
+        .grid {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: fit-content(10em) fit-content(10em) fit-content(10ch);
+            justify-content: start;
+        }
+
+        .grid>* {
+            color: rgb(108, 91, 123);
+            border: 5px solid rgb(108, 91, 123);
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .content {
+            color: #f00;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>
+        Ajusta todo el contenido al tamaño del grid-items
+    </h1>
+
+    <span>
+        fit-content(10em)
+    </span>
+    <span>
+        fit-content(10em)
+    </span>
+    <span>
+        fit-content(10ch)
+    </span>
+    <div class="grid">
+        <div>All columns are <b>fit-content</b> sized<br></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="content">e</div>
+        <div><img src="https://placehold.it/100x100" alt="placeholder image"></div>
+    </div>
+
+</body>
+
+</html>
