@@ -43,6 +43,6 @@
         - grid-column-start:
         - grid-column-end:
         
-    order
+    order:
     justify-self:
     align-self:
