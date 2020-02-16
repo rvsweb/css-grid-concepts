@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p78-align-items, justify-items</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid-content {
+            margin: 10px auto;
+            display: grid;
+            /* define tamaño horizontal y verticla de un bloque de elementos dependiendo del modo de escritura */
+            width: auto;
+            height: auto;
+
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: 100px;
+            gap: 10px;
+
+            justify-content: center;
+            align-content: center;
+
+
+            justify-items: center;
+            align-items: center;
+
+            border: 5px solid rgb(108, 91, 123);
+        }
+
+        div>img {
+            display: block;
+
+            justify-self: stretch;
+            align-self: stretch;
+
+            border: 1px solid #f00;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>p87-a-12-columns-layout</h1>
+    <div class="grid-content">
+        <div>
+            <img src="https://placehold.it/50x50" alt="placeholder image">
+        </div>
+        <div>
+            <img src="https://placehold.it/50x50" alt="placeholder image">
+        </div>
+        <div>
+            <img src="https://placehold.it/50x50" alt="placeholder image">
+        </div>
+        <div>
+            <img src="https://placehold.it/50x50" alt="placeholder image">
+        </div>
+        <div>
+            <img src="https://placehold.it/50x50" alt="placeholder image">
+        </div>
+        <div>
+            <img src="https://placehold.it/50x50" alt="placeholder image">
+        </div>
+        <div>
+            <img src="https://placehold.it/50x50" alt="placeholder image">
+        </div>
+        <div>
+            <img src="https://placehold.it/50x50" alt="placeholder image">
+        </div>
+        <div>
+            <img src="https://placehold.it/50x50" alt="placeholder image">
+        </div>
+        <div>
+            <img src="https://placehold.it/50x50" alt="placeholder image">
+        </div>
+        <div>
+            <img src="https://placehold.it/50x50" alt="placeholder image">
+        </div>
+        <div>
+            <img src="https://placehold.it/50x50" alt="placeholder image">
+        </div>
+    </div>
+
+</body>
+
+
+</html>

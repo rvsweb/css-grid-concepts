@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p78-align-items, justify-items</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid-end {
+            display: grid;
+            /* define tamaño horizontal y verticla de un bloque de elementos dependiendo del modo de escritura */
+            width: 800px;
+            height: 500px;
+
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+
+            align-items: start;
+            justify-items: end;
+
+            border: 5px solid rgb(108, 91, 123);
+        }
+
+        .grid-start {
+            margin: 10px 0;
+            display: grid;
+            /* define tamaño horizontal y verticla de un bloque de elementos dependiendo del modo de escritura */
+            width: 800px;
+            height: 500px;
+
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+
+            align-items: start;
+            justify-items: start;
+
+            border: 5px solid rgb(108, 91, 123);
+        }
+
+        .grid-end img,
+        .grid-start img {
+            align-items: stretch;
+            justify-items: stretch;
+        }
+
+        .grid-end>div,
+        .grid-start>div {
+            color: black;
+            background-color: rgba(195, 36, 36, 0.5);
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>p78-align-items, justify-items</h1>
+    <div class="grid-end">
+        <div>Alfa</div>
+        <div>Bravo</div>
+        <div>Charlie</div>
+        <div>Delta</div>
+        <div>Echo</div>
+        <img src="https://placehold.it/100x100" alt="placeholder image">
+    </div>
+
+    <div class="grid-start">
+        <div>Alfa</div>
+        <div>Bravo</div>
+        <div>Charlie</div>
+        <div>Delta</div>
+        <div>Echo</div>
+        <img src="https://placehold.it/100x100" alt="placeholder image">
+    </div>
+
+</body>
+
+</html>

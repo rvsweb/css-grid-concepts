@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p77-align-items, justify-items</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font: 1.2em Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #fff;
+            color: rgb(108, 91, 123);
+        }
+
+        .grid {
+            display: grid;
+            /* define tamaño horizontal y verticla de un bloque de elementos dependiendo del modo de escritura */
+            width: 800px;
+            height: 500px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+            align-items: stretch;
+            justify-items: stretch;
+            border: 5px solid rgb(108, 91, 123);
+        }
+
+        .grid>div {
+            background-color: rgba(108, 91, 123, .5);
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .grid img {
+            width: 100px;
+            height: 100px;
+            align-items: start;
+            justify-items: start;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>p77-align-items, justify-items</h1>
+    <div class="grid">
+        <div>Alfa 1</div>
+        <div>Bravo 2</div>
+        <div>Charlie 3</div>
+        <div>Delta 4</div>
+        <div>Echo 5 </div>
+        <img src="https://placehold.it/100" alt="placeholder image">
+    </div>
+
+</body>
+
+</html>
