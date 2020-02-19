@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-container-min-content-max-content-fit-content</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            border: 2px solid rgb(88, 104, 164);
+            background-color: rgba(88, 104, 164, .2);
+            border-radius: 5px;
+        }
+
+        .a {
+            width: 50vw;
+            height: 50vh;
+        }
+
+        .b {
+            width: 50vmax;
+            height: 50vmin;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="box a">width: 50vw;<br>height: 50vh;</div>
+
+        <div class="box b">width: 50vmax;<br>height: 50vmin;</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-container-min-content-max-content-fit-content</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 30px;
+        }
+
+        div {
+            border-radius: 5px;
+        }
+
+        .wrapper {
+            width: 400px;
+            border: 2px dotted rgb(60, 39, 153);
+        }
+
+        .wrapper>div {
+            width: max-content;
+            border: 5px solid rgb(240, 33, 33);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div>I am sized with min-content and wrap where possible.</div>
+    </div>
+</body>
+
+</html>

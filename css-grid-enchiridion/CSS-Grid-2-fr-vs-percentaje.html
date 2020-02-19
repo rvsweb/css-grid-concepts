@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-1,
+        .grid-2 {
+            display: grid;
+            grid-column-gap: 30px;
+        }
+
+        .grid-1 {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .grid-2 {
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+
+        /* CSS below. Presentational styles. */
+        * {
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1;
+        }
+
+        .item {
+            border: 5px solid;
+            color: white;
+            display: grid;
+            font-size: 1.5rem;
+            height: 100px;
+            width: 100%;
+            justify-items: center;
+            align-items: center;
+            border: 1px solid #f00;
+        }
+
+        a {
+            background: hsl(0, 65%, 51%);
+            border-color: hsl(0, 65%, 51% - 15%);
+        }
+
+        .b {
+            background: hsl(122, 39%, 49%);
+            border-color: hsl(122, 39%, 49% - 15%);
+        }
+
+        .c {
+            background: hsl(210, 79%, 46%);
+            border-color: hsl(210, 79%, 46% - 15%);
+        }
+
+        .d {
+            background: hsl(43, 96%, 58%);
+            border-color: hsl(43, 96%, 58% - 15%);
+        }
+
+        .e {
+            background: hsl(340, 82%, 52%);
+            border-color: hsl(340, 82%, 52% - 15%);
+        }
+
+        .f {
+            background: hsl(34, 100%, 50%);
+            border-color: hsl(34, 100%, 50% - 15%);
+        }
+
+        .g {
+            background: hsl(187, 100%, 38%);
+            border-color: hsl(187, 100%, 38% - 15%);
+        }
+
+        .h {
+            background: hsl(262, 52%, 47%);
+            border-color: hsl(262, 52%, 47% - 15%);
+        }
+
+        .i {
+            background: hsl(16, 25%, 38%);
+            border-color: hsl(16, 25%, 38% - 15%);
+        }
+
+        .j {
+            background: hsl(199, 18%, 40%);
+            border-color: hsl(199, 18%, 40% - 15%);
+        }
+
+        span {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Grid with fr columns</h1>
+    <p>Gaps don't make container larger than screen</p>
+    <div class="grid-1">
+        <div class="item a">1fr - 1</div>
+        <div class="item b">1fr - 2</div>
+        <div class="item c">1fr - 3</div>
+        <div class="item d">1fr - 4</div>
+        <div class="item e">- 5</div>
+        <div class="item a">- 6</div>
+        <div class="item b">- 7</div>
+        <div class="item c">- 8</div>
+    </div>
+    <h1>Grid with % columns</h1>
+    <p>Gaps make the container go out of screen</p>
+    <div class="grid-2">
+        <div class="item f">25% - 1</div>
+        <div class="item g">25% - 2</div>
+        <div class="item h">25% - 3</div>
+        <div class="item i">25% - 4</div>
+        <div class="item j">- 5</div>
+        <div class="item f">- 6</div>
+        <div class="item g">- 7</div>
+        <div class="item h">- 8</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid {
+            display: grid;
+            /* === GRID TRACKS === */
+            /* Longhand */
+            grid-template-rows: 100px 30vmin 20vmax 5em 6rem;
+            grid-template-columns: 1fr 20% 25vw 30vh;
+            /* -----------            grid-template-rows / grid-template-columns */
+            grid-template: 100px 30vmin 20vmax 5em 5rem / 1fr 20% 25vw 30vh;
+
+            /* === GRID GAPS === */
+            grid-row-gap: 20px;
+            grid-column-gap: 2vw;
+            gap: 20px 2vw;
+        }
+
+        /* CSS below. Presentational styles. */
+        * {
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1;
+        }
+
+        .item {
+            border: 5px solid;
+            color: white;
+            display: grid;
+            font-size: 1.5rem;
+            /* height: 100px; */
+            width: 100%;
+            justify-items: center;
+            align-items: center;
+        }
+
+        a {
+            background: hsl(0, 65%, 51%);
+            border-color: hsl(0, 65%, 51% - 15%);
+        }
+
+        .b {
+            background: hsl(122, 39%, 49%);
+            border-color: hsl(122, 39%, 49% - 15%);
+        }
+
+        .c {
+            background: hsl(210, 79%, 46%);
+            border-color: hsl(210, 79%, 46% - 15%);
+        }
+
+        .d {
+            background: hsl(43, 96%, 58%);
+            border-color: hsl(43, 96%, 58% - 15%);
+        }
+
+        .e {
+            background: hsl(340, 82%, 52%);
+            border-color: hsl(340, 82%, 52% - 15%);
+        }
+
+        .f {
+            background: hsl(34, 100%, 50%);
+            border-color: hsl(34, 100%, 50% - 15%);
+        }
+
+        .g {
+            background: hsl(187, 100%, 38%);
+            border-color: hsl(187, 100%, 38% - 15%);
+        }
+
+        .h {
+            background: hsl(262, 52%, 47%);
+            border-color: hsl(262, 52%, 47% - 15%);
+        }
+
+        .i {
+            background: hsl(16, 25%, 38%);
+            border-color: hsl(16, 25%, 38% - 15%);
+        }
+
+        .j {
+            background: hsl(199, 18%, 40%);
+            border-color: hsl(199, 18%, 40% - 15%);
+        }
+
+        span {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="item a">100px (row 1)/ 1fr (col 1)</div>
+        <div class="item b">20% (col 2)</div>
+        <div class="item c">25vw (col 3)</div>
+        <div class="item d">30vh (col 4)</div>
+        <div class="item e">30vmin (row 2)</div>
+        <div class="item f"></div>
+        <div class="item g"></div>
+        <div class="item h"></div>
+        <div class="item i">20vmax (row 3)</div>
+        <div class="item j"></div>
+        <div class="item a"></div>
+        <div class="item b"></div>
+        <div class="item c">5em (row 5)</div>
+        <div class="item d"></div>
+        <div class="item e"></div>
+        <div class="item f"></div>
+        <div class="item g">6rem (row 6)</div>
+        <div class="item h"></div>
+        <div class="item i"></div>
+        <div class="item j"></div>
+    </div>
+</body>
+
+</html>
