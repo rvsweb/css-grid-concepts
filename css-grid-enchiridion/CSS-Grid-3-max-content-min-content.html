@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns:
+                max-content min-content minmax(60px, min-content) minmax(max-content, 500px);
+        }
+
+        /* // Ignore CSS below. Presentational styles. */
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1;
+        }
+
+        .item {
+            border: 5px solid;
+            color: white;
+            display: grid;
+            font-size: 1.5em;
+            height: 100px;
+            width: 100%;
+            justify-items: center;
+            align-items: center;
+        }
+
+        a {
+            background: hsl(0, 65%, 51%);
+            border-color: hsl(0, 65%, 51% - 15%);
+        }
+
+        .b {
+            background: hsl(122, 39%, 49%);
+            border-color: hsl(122, 39%, 49% - 15%);
+        }
+
+        .c {
+            background: hsl(210, 79%, 46%);
+            border-color: hsl(210, 79%, 46% - 15%);
+        }
+
+        .d {
+            background: hsl(43, 96%, 58%);
+            border-color: hsl(43, 96%, 58% - 15%);
+        }
+
+        .e {
+            background: hsl(340, 82%, 52%);
+            border-color: hsl(340, 82%, 52% - 15%);
+        }
+
+        .f {
+            background: hsl(34, 100%, 50%);
+            border-color: hsl(34, 100%, 50% - 15%);
+        }
+
+        .g {
+            background: hsl(187, 100%, 38%);
+            border-color: hsl(187, 100%, 38% - 15%);
+        }
+
+        .h {
+            background: hsl(262, 52%, 47%);
+            border-color: hsl(262, 52%, 47% - 15%);
+        }
+
+        .i {
+            background: hsl(16, 25%, 38%);
+            border-color: hsl(16, 25%, 38% - 15%);
+        }
+
+        .j {
+            background: hsl(199, 18%, 40%);
+            border-color: hsl(199, 18%, 40% - 15%);
+        }
+
+        span {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Grid with fr columns</h1>
+    <div class="grid">
+        <div class="item a">max-content</div>
+        <div class="item b">min-content</div>
+        <div class="item c">minmax(80px, min-content)</div>
+        <div class="item d">minmax(max-content, 500px)</div>
+        <div class="item e"><span>I am unwrapped</span></div>
+        <div class="item f"><span>I am wrapped</span></div>
+        <div class="item g"><span>Between 80px and wrapped size</span></div>
+        <div class="item h"><span>Between unwrapped size and 500px</span></div>
+        <div class="item e"><span>I am unwrapped</span></div>
+        <div class="item f"><span>I am wrapped</span></div>
+        <div class="item g"><span>Between 80px and wrapped size</span></div>
+        <div class="item h"><span>Between unwrapped size and 500px</span></div>
+        <div class="item e"><span>I am unwrapped</span></div>
+        <div class="item f"><span>I am wrapped</span></div>
+        <div class="item g"><span>Between 80px and wrapped size</span></div>
+        <div class="item h"><span>Between unwrapped size and 500px</span></div>
+    </div>
+</body>
+
+</html>

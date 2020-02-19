@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-1,
+        .grid-2 {
+            display: grid;
+            grid-template-columns: fit-content(350px) fit-content(350px) 1fr;
+            grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content) 1fr;
+            grid-template-columns: auto auto 1fr;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: fit-content(350px) fit-content(350px) 1fr;
+            grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content) 1fr;
+            grid-template-columns: auto auto;
+        }
+
+        /* // Ignore CSS below. Presentational styles. */
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1;
+        }
+
+        .item {
+            display: grid;
+            font-size: 1.5em;
+            height: 100px  ;
+            width: 100%;
+            color: white;
+            justify-items: center;
+            align-items: center;
+            border: 5px solid;
+        }
+
+        a {
+            background: hsl(0, 65%, 51%);
+            border-color: hsl(0, 65%, 51% - 15%);
+        }
+
+        .b {
+            background: hsl(122, 39%, 49%);
+            border-color: hsl(122, 39%, 49% - 15%);
+        }
+
+        .c {
+            background: hsl(210, 79%, 46%);
+            border-color: hsl(210, 79%, 46% - 15%);
+        }
+
+        .d {
+            background: hsl(43, 96%, 58%);
+            border-color: hsl(43, 96%, 58% - 15%);
+        }
+
+        .e {
+            background: hsl(340, 82%, 52%);
+            border-color: hsl(340, 82%, 52% - 15%);
+        }
+
+        .f {
+            background: hsl(34, 100%, 50%);
+            border-color: hsl(34, 100%, 50% - 15%);
+        }
+
+        .g {
+            background: hsl(187, 100%, 38%);
+            border-color: hsl(187, 100%, 38% - 15%);
+        }
+
+        .h {
+            background: hsl(262, 52%, 47%);
+            border-color: hsl(262, 52%, 47% - 15%);
+        }
+
+        .i {
+            background: hsl(16, 25%, 38%);
+            border-color: hsl(16, 25%, 38% - 15%);
+        }
+
+        .j {
+            background: hsl(199, 18%, 40%);
+            border-color: hsl(199, 18%, 40% - 15%);
+        }
+
+        span {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Grid with auto &amp; fr tracks</h1>
+    <div class="grid-1">
+        <div class="item a">auto</div>
+        <div class="item b">auto</div>
+        <div class="item c">1fr</div>
+        <div class="item d"><span>max size: max-content</span></div>
+        <div class="item e"><span>max size: max-content</span></div>
+        <div class="item f"></div>
+        <div class="item d"><span>min size: min-content</span></div>
+        <div class="item e"><span>min size: min-content</span></div>
+        <div class="item f"></div>
+    </div>
+    <h1>Grid with auto &amp; no fr tracks</h1>
+    <div class="grid-2">
+        <div class="item g">auto</div>
+        <div class="item h">auto</div>
+        <div class="item i"><span>max size: 1fr</span></div>
+        <div class="item j"><span>max size: 1fr</span></div>
+        <div class="item i"><span>min size: min-content</span></div>
+        <div class="item j"><span>min size: min-content</span></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-container-min-content-max-content-fit-content</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .grid {
+            width: 500px;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(3, min-content);
+            gap: 20px;
+
+            border: 2px solid rgb(245, 199, 28);
+        }
+
+        .grid>div {
+            border: 2px solid rgb(88, 104, 164);
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div>Alfa</div>
+        <div>Charlie</div>
+        <div>Delta</div>
+        <div>Echo</div>
+        <div>Foxtrot</div>
+        <div>Bravo has some additional content which will wrap</div>
+
+    </div>
+</body>
+
+</html>
