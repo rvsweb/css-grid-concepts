@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-container-min-content-max-content-fit-content</title>
+    <style>
+        .grid {
+            border: 2px solid rgb(245, 199, 28);
+            margin-bottom: 20px;
+            width: 500px;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+        }
+
+        .grid>div {
+            border: 2px solid rgb(88, 104, 164);
+            padding: 10px;
+        }
+
+        .grid>div:last-child {
+            width: 200px;
+        }
+
+        .flex {
+            display: flex;
+            width: 500px;
+            border: 2px solid rgb(245, 199, 28);
+            margin-bottom: 20px;
+        }
+
+        .flex>div {
+            border: 2px solid rgb(88, 104, 164);
+            padding: 10px;
+            flex: 1 1 auto;
+        }
+
+        .flex>div:last-child {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>grid-template-columns: repeat(3, auto);</h1>
+    <div class="grid">
+        <div>Alfa - auto</div>
+        <div>Beta - auto</div>
+        <div>Charlie - auto</div>
+        <div>Delta - auto</div>
+        <div>Echo - auto</div>
+        <div>Foxtrot - 200px</div>
+    </div>
+
+
+    <h1>flex: 1 1 auto</h1>
+    <div class="flex">
+        <div>Alfa</div>
+        <div>Beta</div>
+        <div>Charlie</div>
+        <div>Delta - width: 200px;</div>
+    </div>
+</body>
+
+</html>
