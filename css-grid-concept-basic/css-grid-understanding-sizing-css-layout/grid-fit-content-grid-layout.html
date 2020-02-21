@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-container-min-content-max-content-fit-content</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .grid {
+            border: 2px solid rgb(245, 199, 28);
+            width: 500px;
+
+            display: grid;
+            grid-template-columns: repeat(3, fit-content(10em));
+            gap: 20px;
+        }
+
+        .grid>div {
+            padding: 10px;
+            font-weight: bolder;
+            border: 2px solid rgb(88, 104, 164);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div>Alfa</div>
+        <div>
+            Bravo has some additional content which will wrap after 10em
+        </div>
+        <div>Charlie</div>
+        <div>Delta</div>
+        <div>Echo</div>
+        <div>Foxtrot</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-css-percentage-tracks-and-gaps</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .grid {
+            width: 500px;
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            grid-column-gap: 5%;
+            border: 2px solid rgb(245, 199, 28);
+        }
+
+        .grid>div {
+            border: 2px solid rgb(88, 104, 164);
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid">
+        <div>Alfa</div>
+        <div>Bravo</div>
+        <div>Charlie</div>
+        <div>Delta</div>
+        <div>Echo</div>
+        <div>Foxtrot</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-space-distribution-in-flexbox-and-grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 40px;
+        }
+
+        .box {
+            padding: 10px;
+            border: 2px solid rgb(245, 199, 28);
+            margin-bottom: 2em;
+            width: 500px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+        }
+
+        .box>div {
+            border: 2px solid rgb(88, 104, 164);
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Flexbox</h1>
+    <p>Los elementos del 'grid-cell' colapsa hacia abajo</p>
+    <div class="box flex">
+        <div>A Alfa</div>
+        <div>B Bravo</div>
+        <div>C Charlie</div>
+        <div>D Delta has much more text in it than the other items.</div>
+    </div>
+
+    <h1>Grid</h1>
+    <div class="box grid">
+        <div>A Alfa</div>
+        <div>B Bravo</div>
+        <div>C Charlie</div>
+        <div>D Delta has much more text in it than the other items.</div>
+    </div>
+
+</body>
+
+</html>
