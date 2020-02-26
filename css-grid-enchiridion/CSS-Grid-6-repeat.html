@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-1,
+        .grid-2 {
+            display: grid;
+            border: 5px solid rgb(163, 105, 105);
+            border-radius: 6px;
+        }
+
+        .grid-1 {
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+        }
+
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        * {
+            box-sizing: border-box;
+            line-height: 1;
+        }
+
+        h1,
+        p,
+        .item {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        pre{
+            font-size: large;
+            font-weight: bolder;
+        }
+
+        .item {
+            width: 100%;
+            height: 100px;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+
+            color: #fff;
+            font-size: 1.5em;
+            border: 2px solid #000;
+        }
+
+        .a {
+            background: hsl(0, 65%, 51%);
+            border-color: hsl(0, 65%, 51% - 15%);
+        }
+
+        .b {
+            background: hsl(122, 39%, 49%);
+            border-color: hsl(122, 39%, 49% - 15%);
+        }
+
+        .c {
+            background: hsl(210, 79%, 46%);
+            border-color: hsl(210, 79%, 46% - 15%);
+        }
+
+        .d {
+            background: hsl(43, 96%, 58%);
+            border-color: hsl(43, 96%, 58% - 15%);
+        }
+
+        .e {
+            background: hsl(340, 82%, 52%);
+            border-color: hsl(340, 82%, 52% - 15%);
+        }
+
+        .f {
+            background: hsl(34, 100%, 50%);
+            border-color: hsl(34, 100%, 50% - 15%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Grid with auto-fit</h1>
+    <pre>repeat(auto-fit, minmax(60px, 1fr))</pre>
+    <p>Estira todos los elementos hasta llenar el <b>Grid-Container</b></p>
+    <p>Si hubiera elementos no incluidos dentro de <b>auto-fill</b> se plegarian</p>
+    
+    <div class="grid-1">
+        <div class="item a"></div>
+        <div class="item b"></div>
+        <div class="item c"></div>
+        <div class="item d"></div>
+    </div>
+    
+    <h1>Grid with auto-fill</h1>
+    <pre>repeat(auto-fill, minmax(60px, 1fr))</pre>
+    <p>No Estira todos los elementos hasta llenar el <b>Grid-Container</b></p>
+    <p>Si hubiera elementos incluidos dentro de <b>auto-fit</b> se mantendria el espacio</p>
+    <div class="grid-2">
+        <div class="item e"></div>
+        <div class="item f"></div>
+        <div class="item g"></div>
+        <div class="item h"></div>
+    </div>
+
+</body>
+
+</html>

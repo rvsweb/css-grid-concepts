@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .grid {
+        .grid-1,
+        .grid-2 {
             display: grid;
-            grid-template-columns:
-                max-content 
-                min-content 
-                minmax(80px, min-content)
-                minmax(max-content, 500px);
+        }
+
+        .grid-1 {
+            grid-template-columns: fit-content(350px) fit-content(350px) 1fr;
+        }
+
+        .grid-2 {
+            grid-template-columns: fit-content(350px) fit-content(350px);
         }
 
         /* // Ignore CSS below. Presentational styles. */
@@ -25,14 +29,14 @@
         }
 
         .item {
-            border: 5px solid;
-            color: white;
             display: grid;
             font-size: 1.5em;
             height: 100px;
             width: 100%;
+            color: white;
             justify-items: center;
             align-items: center;
+            border: 5px solid;
         }
 
         .a {
@@ -92,24 +96,39 @@
 </head>
 
 <body>
-    <h1>Grid with fr columns</h1>
-    <div class="grid">
-        <div class="item a">max-content</div>
-        <div class="item b">min-content</div>
-        <div class="item c">minmax(80px, min-content)</div>
-        <div class="item d">minmax(max-content, 500px)</div>
-        <div class="item e"><span>I am unwrapped</span></div>
-        <div class="item f"><span>I am wrapped</span></div>
-        <div class="item g"><span>Between 80px and wrapped size</span></div>
-        <div class="item h"><span>Between unwrapped size and 500px</span></div>
-        <div class="item e"><span>I am unwrapped</span></div>
-        <div class="item f"><span>I am wrapped</span></div>
-        <div class="item g"><span>Between 80px and wrapped size</span></div>
-        <div class="item h"><span>Between unwrapped size and 500px</span></div>
-        <div class="item e"><span>I am unwrapped</span></div>
-        <div class="item f"><span>I am wrapped</span></div>
-        <div class="item g"><span>Between 80px and wrapped size</span></div>
-        <div class="item h"><span>Between unwrapped size and 500px</span></div>
+
+    <h1>Grid with fit-content() &amp; (fr tracks)</h1>
+    <div class="grid-1">
+        <!-- Ajustar tamaño 350px y establecer el resto a 1fr -->
+        <div class="item a">fit-content(350px)</div>
+        <div class="item b">fit-content(350px)</div>
+        <div class="item c">1fr</div>
+
+        <!-- Como el texto < 350px maximo tamaño  -->
+        <div class="item d"><span>As text &lt; 350px, max size: max-content</span></div>
+        <!-- Como la longitud real texto , maximo tamaño 350px -->
+        <div class="item e"><span>As this really long text &gt; 350px, max size: 350px</span></div>
+        <div class="item f"></div>
+
+        <div class="item d"><span>min size: auto</span></div>
+        <div class="item e"><span>min size: auto</span></div>
+        <!-- En presencia de 'fr' auto == min-content -->
+        <div class="item f"><span>In presence of fr, (auto == min-content)</span></div>
+    </div>
+
+    <h1>Grid with fit-content() &amp; (NO fr tracks)</h1>
+    <div class="grid-2">
+        <div class="item g">fit-content(350px)</div>
+        <div class="item h">fit-content(350px)</div>
+        <!-- No hay 1fr -->
+
+        <div class="item i"><span>min size: auto</span></div>
+        <div class="item j"><span>min size: auto</span></div>
+
+        <!-- En ausencia de 'fr',  (auto == 1fr) -->
+        <div class="item i"><span>In absence of fr, (auto == 1fr)</span></div>
+        <!-- Como 1fr > 350px o max-content asi que el tamaño de la (banda == 1fr)  -->
+        <div class="item j"><span>As 1fr &gt; 350px or max-content, so track (size == 1fr)</span></div>
     </div>
 </body>
 
