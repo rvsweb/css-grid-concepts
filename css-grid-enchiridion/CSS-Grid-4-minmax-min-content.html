@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* // Ignore CSS below. Presentational styles. */
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1;
+        }
+
+        .grid-1 {
+            display: grid;
+            /* 
+                Cada elemento grid-item es un minmax(min-content ,1fr) 
+            */
+            grid-template-columns: repeat(3, minmax(min-content, 1fr));
+        }
+
+        .item {
+            display: grid;
+            font-size: 1.5em;
+            height: 100px;
+            width: 100%;
+            color: white;
+            justify-items: center;
+            align-items: center;
+            border: 5px solid;
+        }
+
+        p {
+            display: inline-block;
+            max-width: 20%;
+            height: auto;
+            border: 1px solid #f00;
+            padding: 1%;
+        }
+
+        .a {
+            background: hsl(0, 65%, 51%);
+            border-color: hsl(0, 65%, 51% - 15%);
+        }
+
+        .b {
+            background: hsl(122, 39%, 49%);
+            border-color: hsl(122, 39%, 49% - 15%);
+        }
+
+        .c {
+            background: hsl(107, 44%, 61%);
+            border-color: hsl(210, 79%, 46% - 15%);
+        }
+
+        .d {
+            background: hsl(43, 96%, 58%);
+            border-color: hsl(43, 96%, 58% - 15%);
+        }
+
+        .e {
+            background: hsl(340, 50%, 58%);
+            border-color: hsl(340, 82%, 52% - 15%);
+        }
+
+        .f {
+            background: hsl(198, 51%, 38%);
+            border-color: hsl(34, 100%, 50% - 15%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Grid with auto &amp; fr tracks</h1>
+    <h2>minmax(min-content, 1fr);</h2>
+
+    <p>
+        <b>minmax(min-content, max-content)</b>
+        <br>Se reduce hasta llegar al maximo
+        del texto creando <b>soft-wrapper</b>
+        y se expande hasta la anchura maximo
+        del <b>Grid-Container</b>
+    </p>
+
+    <div class="grid-1">
+        <div class="item a">minmax(min-content, 1fr)</div>
+        <div class="item b">minmax(min-content, 1fr)</div>
+        <div class="item c">minmax(min-content, 1fr)</div>
+
+        <div class="item d">minmax(min-content, 1fr)</div>
+        <div class="item e">minmax(min-content, 1fr)</div>
+        <div class="item f">minmax(min-content, 1fr)</div>
+
+        <div class="item d">minmax(min-content, 1fr)</div>
+        <div class="item e">minmax(min-content, 1fr)</div>
+        <div class="item f">minmax(min-content, 1fr)</div>
+    </div>
+
+</body>
+
+</html>

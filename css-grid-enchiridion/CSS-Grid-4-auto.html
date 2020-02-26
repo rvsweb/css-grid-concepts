@@ -6,19 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .grid-1,
-        .grid-2 {
+        .grid-1 {
             display: grid;
-            grid-template-columns: fit-content(350px) fit-content(350px) 1fr;
             grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content) 1fr;
+            grid-template-columns: fit-content(350px) fit-content(350px) 1fr;
             grid-template-columns: auto auto 1fr;
         }
 
         .grid-2 {
             display: grid;
-            grid-template-columns: fit-content(350px) fit-content(350px) 1fr;
             grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content) 1fr;
+            grid-template-columns: fit-content(350px) fit-content(350px) 1fr;
             grid-template-columns: auto auto;
+        }
+
+        .grid-1-auto {
+            display: grid;
+            /* Todo estas columnas actuan como 'auto' usando 'fr' */
+            grid-template-columns: auto auto 1fr;
+        }
+
+        .grid-1-minmax {
+            display: grid;
+            /* Todo estas columnas actuan como 'auto' usando 'fr' */
+            grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content) 1fr;
+        }
+
+        .grid-1-fit-content {
+            display: grid;
+            /* Todo estas columnas actuan como 'auto' usando 'fr' */
+            grid-template-columns: fit-content(350px) fit-content(350px) 1fr;
+        }
+     
+        .grid-2-auto {
+            display: grid;
+            /* Todo estas columnas actuan como 'auto' usando NO 'fr' */
+            grid-template-columns: auto auto;
+        }
+
+        .grid-2-fit-content {
+            display: grid;
+            /* Todo estas columnas actuan como 'auto' usando NO 'fr' */
+            grid-template-columns: fit-content(350px) fit-content(350px) 1fr;
+        }
+
+        .grid-2-minmax {
+            display: grid;
+            /* Todo estas columnas actuan como 'auto' usando NO 'fr' */
+            grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content) 1fr;
         }
 
         /* // Ignore CSS below. Presentational styles. */
@@ -33,7 +68,7 @@
         .item {
             display: grid;
             font-size: 1.5em;
-            height: 100px  ;
+            height: 100px;
             width: 100%;
             color: white;
             justify-items: center;
@@ -41,7 +76,7 @@
             border: 5px solid;
         }
 
-        a {
+        .a {
             background: hsl(0, 65%, 51%);
             border-color: hsl(0, 65%, 51% - 15%);
         }
@@ -98,24 +133,67 @@
 </head>
 
 <body>
+
     <h1>Grid with auto &amp; fr tracks</h1>
+    <h2>Todas las columnas ajustan su tamaño</h2>
     <div class="grid-1">
         <div class="item a">auto</div>
         <div class="item b">auto</div>
         <div class="item c">1fr</div>
+        <!-- grid-template-columns: minmax(min-content, max-content) 1fr; -->
         <div class="item d"><span>max size: max-content</span></div>
         <div class="item e"><span>max size: max-content</span></div>
         <div class="item f"></div>
+        <!-- fit-content(350px) 1fr -->
         <div class="item d"><span>min size: min-content</span></div>
         <div class="item e"><span>min size: min-content</span></div>
         <div class="item f"></div>
     </div>
+
     <h1>Grid with auto &amp; no fr tracks</h1>
+    <h2>Todas las columnas ajustan su tamaño</h2>
     <div class="grid-2">
         <div class="item g">auto</div>
         <div class="item h">auto</div>
+
         <div class="item i"><span>max size: 1fr</span></div>
         <div class="item j"><span>max size: 1fr</span></div>
+        
+        <div class="item i"><span>min size: min-content</span></div>
+        <div class="item j"><span>min size: min-content</span></div>
+    </div>
+
+    <h1>Ejemplo de columnas separadas con distintos tipo de tamaños</h1>
+    <div class="grid-1-auto">
+        <div class="item a">auto</div>
+        <div class="item b">auto</div>
+        <div class="item c">1fr</div>
+    </div>
+
+    <div class="grid-1-minmax">
+        <div class="item d"><span>max size: max-content</span></div>
+        <div class="item e"><span>max size: max-content</span></div>
+        <div class="item f">minmax(min-content, max-content) minmax(min-content, max-content) 1fr;</div>
+    </div>
+
+    <div class="grid-1-fit-content">
+        <div class="item d"><span>min size: min-content</span></div>
+        <div class="item e"><span>min size: min-content</span></div>
+        <div class="item f">.grid-1-fit-content</div>
+    </div>
+
+    <h1>Ejemplo de columnas separadas con distintos tipo de tamaños</h1>
+    <div class="grid-2-auto">
+        <div class="item g">auto</div>
+        <div class="item h">auto</div>
+    </div>
+
+    <div class="grid-2-fit-content">
+        <div class="item i"><span>max size: 1fr</span></div>
+        <div class="item j"><span>max size: 1fr</span></div>
+    </div>
+
+    <div class="grid-2-minmax">
         <div class="item i"><span>min size: min-content</span></div>
         <div class="item j"><span>min size: min-content</span></div>
     </div>
