@@ -1,5 +1,3 @@
-@import 'css-grid-samples-h1.css';
-
 * {
   padding: 0;
   margin: 0;
@@ -100,4 +98,3 @@ footer.item {
     z-index: -1; }
 
 /*# sourceMappingURL=css-grid-samples-4-grid-areas.css.map */
-
