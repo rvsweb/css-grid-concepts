@@ -1,0 +1,22 @@
+
+@import 'css-grid-samples-simple-items.scss';
+@import 'css-grid-samples-h1.scss';
+
+$color: #000;
+
+.container {
+    width: 500px;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: fit-content(300px) fit-content(300px);
+    grid-template-rows: 1fr;
+    border: 8px solid #ccc;
+    border-radius: 7px;
+}   
+
+.item{
+    font-size: 2em;
+}
+
+ 

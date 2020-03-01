@@ -1,0 +1,35 @@
+
+@import 'css-grid-samples-simple-items.scss';
+
+.container {
+    width: 500px;
+    height: 500px;
+
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+
+    border: 10px solid rgb(88, 84, 84);
+    border-radius: 6px;
+}
+
+.item{
+    width: 150px;
+    height: 150px;
+}
+
+.item:nth-child(1){
+    justify-self: start;
+}
+
+.item:nth-child(2){
+    justify-self: center;
+}
+
+.item:nth-child(3){
+    justify-self: end;
+}
+
+.item:nth-child(4){
+    justify-self: stretch;
+}

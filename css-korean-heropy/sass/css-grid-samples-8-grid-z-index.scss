@@ -1,0 +1,35 @@
+
+@import 'css-grid-samples-simple-items.scss';
+@import 'css-grid-samples-h1.scss';
+
+$color: #000;
+
+.container {
+    width: 500px;
+    height: auto;
+
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
+    
+    border: 8px solid #ccc;
+    border-radius: 7px;
+}   
+
+.item{
+    font-size: 2em;
+}
+
+.item:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.item:nth-child(2) {
+    grid-area: 1 / 2 / 3 / 3;
+    z-index: 1;
+}
+
+.item:nth-child(3) {
+    grid-area: 2 / 2 / 3 / 4;
+ }
+  
