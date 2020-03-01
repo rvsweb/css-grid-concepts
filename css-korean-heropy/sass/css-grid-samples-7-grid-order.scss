@@ -1,0 +1,32 @@
+@import 'css-grid-samples-simple-items.scss';
+@import 'css-grid-samples-h1.scss';
+
+$tam: 200px;
+
+.container {
+    width: 600px;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    border: 5px solid #f00;
+}
+
+.item{
+    width: $tam;
+    height: $tam;
+}
+
+.item:nth-child(1){
+    order: 1;
+}
+
+.item:nth-child(3){
+    order: 5;
+}
+
+.item:nth-child(5){
+    order: -1;
+}
