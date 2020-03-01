@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAMQ,0CAA+B;AANvC,CAAC;EACG,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,UAAU;;AAK1B,UAAU;EACL,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EAEb,OAAO,EAAE,IAAI;EACb,kBAAkB,EAAE,cAAa;EACjC,qBAAqB,EAAE,cAAa;;AAGzC,KAAK;EACD,MAAM,EAAE,cAAc;EACtB,aAAa,EAAE,GAAG;;AAGtB,kBAAkB;EACb,UAAU,EAAE,KAAK;;AAGtB,kBAAkB;EACb,UAAU,EAAE,MAAM;;AAGtB,kBAAkB;EACd,UAAU,EAAE,GAAG;;AAGnB,kBAAkB;EACd,UAAU,EAAE,OAAO",
+"sources": ["../../sass/css-grid-samples-grid-align-self.scss"],
+"names": [],
+"file": "css-grid-samples-grid-align-self.css"
+}
