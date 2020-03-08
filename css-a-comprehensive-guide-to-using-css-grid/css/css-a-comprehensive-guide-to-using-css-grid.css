@@ -1,0 +1,402 @@
+@charset "UTF-8";
+/* Funcion para a├▒adir elementos mediante pseudo-clase ::after */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  height: 100%; }
+
+html {
+  font-size: 80%; }
+
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  padding: 50px;
+  font-family: 'Lato'; }
+
+h1 {
+  margin: 64px 0 32px;
+  font-weight: 700;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase; }
+
+p {
+  width: 50%;
+  height: auto;
+  margin: 24px 0;
+  padding: 10px;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+  border: 1px solid #f00;
+  border-radius: 7px; }
+
+code,
+pre {
+  padding: 20px;
+  margin: 0 auto;
+  min-width: 575px;
+  display: inline-block;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: 'Source Code Pro';
+  border-radius: 5px;
+  background: #0d1526; }
+
+.wrapper {
+  margin: 40px 0; }
+
+.child,
+.area,
+.item {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase; }
+  .child.header::after,
+  .area.header::after,
+  .item.header::after {
+    content: "header"; }
+  .child.menu::after,
+  .area.menu::after,
+  .item.menu::after {
+    content: "menu"; }
+  .child.hero::after,
+  .area.hero::after,
+  .item.hero::after {
+    content: "hero"; }
+  .child.main::after,
+  .area.main::after,
+  .item.main::after {
+    content: "main"; }
+  .child.banner::after,
+  .area.banner::after,
+  .item.banner::after {
+    content: "banner"; }
+  .child.extra::after,
+  .area.extra::after,
+  .item.extra::after {
+    content: "extra"; }
+  .child.image::after,
+  .area.image::after,
+  .item.image::after {
+    content: "image"; }
+  .child.toolbar::after,
+  .area.toolbar::after,
+  .item.toolbar::after {
+    content: "toolbar"; }
+
+.area {
+  color: #24344b;
+  font-weight: 700;
+  border-right: 1px solid #24344b;
+  border-bottom: 1px dashed #24344b; }
+  .area:nth-child(4n + 1) {
+    border-left: 1px dashed #24344b; }
+  .area:nth-child(-n + 4) {
+    border-top: 1px dashed #24344b; }
+  .area:nth-child(1), .area:nth-child(2), .area:nth-child(3), .area:nth-child(4) {
+    grid-row: 1; }
+  .area:nth-child(5), .area:nth-child(6), .area:nth-child(7), .area:nth-child(8) {
+    grid-row: 2; }
+  .area:nth-child(9), .area:nth-child(10), .area:nth-child(11), .area:nth-child(12) {
+    grid-row: 3; }
+  .area:nth-child(13), .area:nth-child(14), .area:nth-child(15), .area:nth-child(16) {
+    grid-row: 4; }
+  .area:nth-child(1), .area:nth-child(5), .area:nth-child(9), .area:nth-child(13) {
+    grid-column: 1; }
+  .area:nth-child(2), .area:nth-child(6), .area:nth-child(10), .area:nth-child(14) {
+    grid-column: 2; }
+  .area:nth-child(3), .area:nth-child(7), .area:nth-child(11), .area:nth-child(15) {
+    grid-column: 3; }
+  .area:nth-child(4), .area:nth-child(8), .area:nth-child(12), .area:nth-child(16) {
+    grid-column: 4; }
+
+.item {
+  background: rgba(240, 60, 77, 0.85);
+  border: 3px solid #24344b; }
+
+.header {
+  background: #0d1526; }
+
+.menu {
+  background: #f03c4d; }
+
+.hero {
+  background: #1e90ff; }
+
+.main {
+  background: #24344b; }
+
+.banner {
+  background: #FFD166; }
+
+.extra {
+  background: #06D6A0; }
+
+.image {
+  background: #BEE9E8; }
+
+.toolbar {
+  background: #6a727c; }
+
+.banner,
+.extra,
+.image {
+  color: black; }
+
+.grid {
+  width: 575px;
+  padding: 5px;
+  border: 2px solid #000; }
+
+#define-grid .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 40px 2fr repeat(2, minmax(75px, 1fr)); }
+
+#placement .grid,
+#placement-no-lines .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 40px 2fr repeat(2, minmax(75px, 1fr)); }
+#placement #item1,
+#placement-no-lines #item1 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: -1; }
+#placement #item2,
+#placement-no-lines #item2 {
+  grid-column: 3;
+  grid-row: 1; }
+
+#placement-shorthand .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 40px 2fr repeat(2, minmax(75px, 1fr)); }
+#placement-shorthand #item1 {
+  grid-column: 1;
+  grid-row: 2 / 4; }
+#placement-shorthand #item2 {
+  grid-column: 2 / span 3;
+  grid-row: 3 / span 2; }
+
+#placement-area .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 40px 2fr repeat(2, minmax(75px, 1fr)); }
+#placement-area #item1 {
+  grid-area: 2 / 1 / span 2 / span 2; }
+#placement-area #item2 {
+  grid-area: 4 / 4; }
+
+#placement-name #item1 {
+  grid-area: item1; }
+#placement-name #item2 {
+  grid-area: item2; }
+#placement-name .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 40px 2fr repeat(2, minmax(75px, 1fr));
+  grid-template-areas: ". . . ." ". . . item1" "item2 item2 item2 item1" "item2 item2 item2 ."; }
+
+#responsive .header {
+  grid-area: header; }
+#responsive .menu {
+  grid-area: menu; }
+#responsive .hero {
+  grid-area: hero; }
+#responsive .main {
+  grid-area: main; }
+#responsive .banner {
+  grid-area: banner; }
+#responsive .extra {
+  grid-area: extra; }
+#responsive .image {
+  grid-area: image; }
+@media screen and (min-width: 321px) and (max-width: 720px) {
+  #responsive .grid {
+    margin: 0 auto;
+    padding: 5px;
+    width: 300px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 285px;
+    grid-template-rows: 100px 150px fit-content(300px) 200px 100px 100px 100px;
+    grid-template-areas: "header" "menu" "hero" "main" "extra" "image" "banner";
+    border: 2px solid #00f;
+    gap: 0px; } }
+@media screen and (min-width: 721px) {
+  #responsive .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px 2fr repeat(4, 1fr);
+    grid-template-areas: "header header header header" "hero hero hero hero" "menu main main main" "menu main main main" "menu banner banner banner" "menu extra image image";
+    border: 2px solid #f00; } }
+@media screen and (min-width: 1001px) {
+  #responsive .grid {
+    grid-template-areas: "header menu menu menu" "hero hero hero hero" "hero hero hero hero" "main main . image" "main main . extra" "banner banner banner banner";
+    border: 2px solid #0f0; } }
+
+#overlap .header {
+  grid-area: header; }
+#overlap .menu {
+  grid-area: menu; }
+#overlap .hero {
+  grid-area: hero; }
+#overlap .main {
+  grid-area: main; }
+#overlap .banner {
+  grid-area: banner; }
+#overlap .extra {
+  grid-area: extra; }
+#overlap .image {
+  grid-area: image; }
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  #overlap .grid {
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 2fr repeat(4, 1fr);
+    grid-template-areas: "header" "hero" "menu" "main" "banner" "image" "extra";
+    border: 2px solid #0f0; }
+    #overlap .grid .toolbar {
+      grid-column: 4;
+      grid-row: 1 / -1;
+      opacity: .85;
+      z-index: 1; } }
+@media (min-width: 721px) {
+  #overlap .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px 2fr repeat(4, 1fr);
+    grid-template-areas: "header header header header" "hero hero hero hero" "menu main main main" "menu main main main" "menu banner banner banner" "menu extra image image";
+    border: 2px solid #f00; } }
+@media (min-width: 1001px) {
+  #overlap .grid {
+    grid-template-areas: "header menu menu menu" "hero hero hero hero" "hero hero hero hero" "main main . image" "main main . extra" "banner banner banner banner";
+    border: 2px solid #00f; } }
+#overlap .toolbar {
+  grid-column: 4;
+  grid-row: 1 / -1;
+  opacity: .85;
+  z-index: 1; }
+
+#grid-gap .header {
+  grid-area: header; }
+#grid-gap .menu {
+  grid-area: menu; }
+#grid-gap .hero {
+  grid-area: hero; }
+#grid-gap .main {
+  grid-area: main; }
+#grid-gap .banner {
+  grid-area: banner; }
+#grid-gap .extra {
+  grid-area: extra; }
+#grid-gap .image {
+  grid-area: image; }
+#grid-gap .grid {
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 40px 2fr repeat(4, 1fr);
+  gap: 5px;
+  grid-template-areas: "header menu menu menu" "hero hero hero hero" "hero hero hero hero" "main main . image" "main main . extra" "banner banner banner banner"; }
+  @media screen and (min-width: 320px) and (max-width: 720px) {
+    #grid-gap .grid {
+      width: auto;
+      height: auto;
+      padding: 5px;
+      margin: 0;
+      grid-template-columns: 1fr;
+      grid-template-rows: 40px 2fr repeat(4, 1fr);
+      gap: 5px;
+      grid-template-areas: "header" "menu" "hero" "image" "main" "extra" "banner";
+      border: 1px solid #f00; } }
+
+#fallback .header {
+  grid-area: header; }
+#fallback .menu {
+  grid-area: menu; }
+#fallback .hero {
+  grid-area: hero; }
+#fallback .main {
+  grid-area: main; }
+#fallback .banner {
+  grid-area: banner; }
+#fallback .extra {
+  grid-area: extra; }
+#fallback .image {
+  grid-area: image; }
+@media screen and (max-width: 320px) {
+  #fallback .grid {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 2fr repeat(4, 1fr);
+    grid-template-areas: "header" "menu" "hero" "image" "main" "extra" "banner";
+    border: 5px solid #183318; } }
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  #fallback .grid {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 2fr repeat(4, 1fr);
+    grid-template-areas: "header" "menu" "hero" "image" "main" "extra" "banner";
+    border: 1px solid #0f0; } }
+@media screen and (min-width: 721px) {
+  #fallback .grid {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px 2fr repeat(4, 1fr);
+    grid-template-areas: "header header header header" "hero hero hero hero" "menu main main main" "menu main main main" "menu banner banner banner" "menu extra image image";
+    border: 1px solid #f00; } }
+@media screen and (min-width: 1001px) {
+  #fallback .grid {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px 2fr repeat(4, 1fr);
+    grid-template-areas: "header header header header" "hero hero hero hero" "menu main main main" "menu main main main" "menu banner banner banner" "menu extra image image";
+    border: 1px solid #00f; } }
+
+@supports not (display: grid) {
+  @media (min-width: 721px) {
+    .header,
+    .menu,
+    .extra,
+    .image {
+      float: left;
+      width: 50%; } } }
+@media (min-width: 721px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .header,
+  .menu,
+  .extra,
+  .image {
+    float: left;
+    width: 50%;
+    border: 1px solid #f00; } }
+
+/*# sourceMappingURL=css-a-comprehensive-guide-to-using-css-grid.css.map */
