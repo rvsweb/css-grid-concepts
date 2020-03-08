@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-grid-layout-implicit-grid-start</title>
+    <style>
+        .grid {
+            max-width: 800px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 100px 100px;
+
+            grid-auto-columns: 200px;
+            grid-auto-rows: 60px;
+
+            /* gap: 20px; */
+
+            border: 5px solid #f00;
+            border-radius: 6px;
+        }
+
+        .item {
+            padding: 10px;
+
+            font-size: 2em;
+            font-family: Arial, Helvetica, sans-serif;
+
+            color: #fff;
+            border: 5px solid rgb(19, 22, 19);
+            border-radius: 6px;
+        }
+
+        .item:first-child {
+            grid-row-start: span 2;
+            grid-row-end: 2;
+            background: rgb(143, 142, 175);
+        }
+
+        .item:nth-child(2) {
+            grid-column-start: span 3;
+            grid-column-end: 2;
+            background: rgb(112, 149, 131);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1>css grid layout implicit tracks</h1> -->
+    <div class="grid">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+    </div>
+</body>
+
+</html>

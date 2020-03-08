@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout: Implicit grid</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .grid {
+            max-width: 800px;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 100px 100px;
+         
+            gap: 20px;
+            grid-auto-columns: minmax(200px, auto);
+            grid-auto-rows:  minmax(60px, auto);
+
+            border: 5px solid #ccc;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .item {
+            font-size: 2em;
+            background-color: rgb(206, 142, 142);
+            border: 5px solid rgb(75, 83, 75);
+        }
+
+
+        .item:first-child {
+            grid-column-start: -1;
+        }
+
+        .item:nth-child(2) {
+            grid-row-start: 4;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="grid">
+        <div class="item">1</div>
+        <div class="item">2</div>
+    </section>
+
+</body>
+
+</html>
