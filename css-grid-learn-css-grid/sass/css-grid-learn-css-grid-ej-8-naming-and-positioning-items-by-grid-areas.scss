@@ -1,0 +1,13 @@
+
+@import 'css-grid-items';
+
+.container{
+   width: auto;
+   height: auto;
+   grid-template-rows: 150px 1fr 100px;
+   grid-template-columns: 1fr 200px; 
+   grid-template-areas: 
+   "header header"
+   "content content"
+   "footer footer";
+}
