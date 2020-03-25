@@ -1,0 +1,27 @@
+@import "css-grid-items";
+
+.container{
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.elem-1,
+.elem-2,
+.elem-3{
+    background: teal;
+}
+
+.elem-1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.elem-2 {
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.elem-3{
+    grid-row: 2 / span 3;
+    grid-column: span 2;
+}

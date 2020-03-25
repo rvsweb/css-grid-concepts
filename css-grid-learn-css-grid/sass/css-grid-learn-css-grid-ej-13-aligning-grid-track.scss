@@ -1,0 +1,34 @@
+
+@import "css-grid-items";
+
+.container{
+    width: 100%;
+    height: 300px;
+    grid-template-columns: repeat(4 , 45px);
+    grid-template-rows: repeat(4, 45px);
+    gap: .5em;
+}
+
+.start {
+    align-content: start;
+}
+
+.end{
+    align-content: end;
+}
+
+.center{
+    align-content: center;
+}
+
+.around{
+    align-content: space-around;
+}
+
+.between{
+    align-content: space-between;
+}
+
+.evenly{
+    align-content: space-evenly;
+}

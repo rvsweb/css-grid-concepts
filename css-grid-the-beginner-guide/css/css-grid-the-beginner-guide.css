@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.container {
+  width: auto;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 100px);
+  grid-template-areas: "x y y y y" "x center center center w" "x center center center w" "x z z z z";
+  gap: 10px;
+  border: 5px solid #ccc;
+  border-radius: 6px; }
+
+div {
+  padding: 10px;
+  font-size: 1em;
+  color: #302d2d;
+  font-style: oblique;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold; }
+
+.w {
+  grid-area: w;
+  background: #ee9d5a; }
+
+.x {
+  grid-area: x;
+  background: violet; }
+
+.y {
+  grid-area: y;
+  background: #98f0ab; }
+
+.z {
+  grid-area: z;
+  background: #bfc4db; }
+
+.center {
+  grid-area: center;
+  background: #e7cfb3; }
+
+/*# sourceMappingURL=css-grid-the-beginner-guide.css.map */

@@ -1,0 +1,18 @@
+
+@import 'css-grid-items';   
+
+
+.container{
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: 70px;
+    grid-auto-rows: 140px;
+}
+
+.container2 {   
+    @extend .container;
+    height: auto;
+    grid-template-columns: 30px 60px;
+    grid-auto-columns: 140px;
+    grid-auto-flow: column;
+    gap: 10px;
+}

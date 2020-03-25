@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.container {
+  display: grid;
+  width: auto;
+  height: 300px;
+  margin: 15px auto;
+  gap: 10px;
+  border: 5px solid #ac9f9f;
+  border-radius: 7px;
+  padding: 10px; }
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #cf0c47; }
+
+.container {
+  width: auto;
+  height: auto;
+  grid-template-rows: 150px 1fr 100px;
+  grid-template-columns: 1fr 200px;
+  grid-template-areas: "header header" "content content" "footer footer"; }
+
+/*# sourceMappingURL=css-grid-learn-css-grid-ej-8-naming-and-positioning-items-by-grid-areas.css.map */

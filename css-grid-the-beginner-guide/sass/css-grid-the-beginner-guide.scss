@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: auto;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    grid-template-areas: 
+    "x y y y y"
+    "x center center center w"
+    "x center center center w"
+    "x z z z z";
+    gap: 10px;
+    border: 5px solid #ccc;
+    border-radius: 6px;
+}
+
+div{
+    padding: 10px;
+    font-size: 1em;
+    color: rgb(48, 45, 45);
+    font-style: oblique;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+
+}
+
+.w{ 
+ grid-area: w;   
+ background: rgb(238, 157, 90);
+}
+
+.x{
+ grid-area: x;   
+ background: violet;
+}
+
+.y{
+ grid-area: y;   
+ background: rgb(152, 240, 171);
+}
+
+.z{
+ grid-area: z;   
+ background: rgb(191, 196, 219);
+}
+
+.center{
+ grid-area: center;   
+ background: rgb(231, 207, 179);
+}

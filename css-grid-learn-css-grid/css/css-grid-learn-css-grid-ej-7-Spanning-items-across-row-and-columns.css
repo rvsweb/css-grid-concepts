@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.container {
+  display: grid;
+  width: auto;
+  height: 300px;
+  margin: 15px auto;
+  gap: 10px;
+  border: 5px solid #ac9f9f;
+  border-radius: 7px;
+  padding: 10px; }
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #cf0c47; }
+
+.container {
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(3, 1fr); }
+
+.elem-1,
+.elem-2,
+.elem-3 {
+  background: teal; }
+
+.elem-1 {
+  grid-column-start: 1;
+  grid-column-end: 4; }
+
+.elem-2 {
+  grid-row-start: 1;
+  grid-row-end: 4; }
+
+.elem-3 {
+  grid-row: 2 / span 3;
+  grid-column: span 2; }
+
+/*# sourceMappingURL=css-grid-learn-css-grid-ej-7-Spanning-items-across-row-and-columns.css.map */
