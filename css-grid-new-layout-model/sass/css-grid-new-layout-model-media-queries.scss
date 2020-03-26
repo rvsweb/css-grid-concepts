@@ -1,0 +1,68 @@
+ 
+ @import "css-grid-new-layout-items.scss";
+
+.main{
+    width: auto;
+    height: auto;
+
+    display: grid;
+    grid-template-rows: 100px 500px 150px;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas: 
+    "header header"
+    "content aside"
+    "footer aside";
+    gap: 10px;
+}
+
+.main{
+    grid-area: main;
+    font-weight: bold;
+    color: #fff;
+}
+
+.header ,
+.content ,
+.aside ,
+.footer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border: 2px dashed #fff;
+    border-radius: 3px;
+}
+
+.header{
+    grid-area: header;
+    background: rgb(190, 24, 168);
+}
+
+.content{
+    grid-area: content;
+    background: rgb(15, 143, 136);
+}
+
+.aside{
+    grid-area: aside;
+    background: rgb(118, 214, 27);
+}
+
+.footer{
+    grid-area: footer;
+    background: rgb(168, 170, 44);
+}
+
+@media screen and (max-width: 600px){
+    .main{
+        grid-template-rows: 100px 400px 100px minmax(150px, auto);
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "content"
+        "aside"
+        "footer";
+        gap: 5px;
+    }
+}

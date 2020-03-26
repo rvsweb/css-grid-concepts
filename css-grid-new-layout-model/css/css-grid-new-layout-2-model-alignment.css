@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #000; }
+
+.main-self {
+  margin: 10px;
+  width: 600px;
+  height: 350px;
+  display: grid;
+  grid-template-rows: 200px;
+  grid-template-columns: 300px 300px;
+  gap: 2px;
+  color: #fff;
+  border: 2px dashed #fff;
+  border-radius: 6px; }
+
+p {
+  text-align: center;
+  width: 160px;
+  height: auto; }
+
+.p1 {
+  background: #d6385a; }
+
+.p2 {
+  background: #21a588; }
+
+.p3 {
+  background: #97a015; }
+
+.header-self {
+  align-self: stretch;
+  justify-self: stretch;
+  background: #d6385a;
+  border: 5px solid #940853; }
+
+.aside-self {
+  width: 200px;
+  height: auto;
+  grid-column: span 2;
+  align-self: center;
+  justify-self: center;
+  background: #97a015;
+  border: 5px solid #82cc0b; }
+
+.footer-self {
+  width: 200px;
+  height: auto;
+  align-self: end;
+  justify-self: start;
+  background: #21a588;
+  border: 5px solid #0b4e40; }
+
+.header-self,
+.aside-self,
+.footer-self {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 1.2em;
+  text-align: center; }
+
+/*# sourceMappingURL=css-grid-new-layout-2-model-alignment.css.map */
