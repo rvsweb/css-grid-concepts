@@ -1,0 +1,69 @@
+@import "css-grid-new-layout-items.scss";
+
+.main-self{
+    margin: 10px;
+    width: 600px;
+    height: 350px;
+    display: grid;
+    grid-template-rows: 200px;
+    grid-template-columns: 300px 300px; 
+    gap: 2px;
+    color: #fff;
+    border: 2px dashed #fff;
+    border-radius: 6px;
+}
+
+p{
+    text-align: center;
+    width: 160px;
+    height: auto;
+}
+
+.p1{
+    background: rgb(214, 56, 90);
+}
+
+.p2{
+    background: rgb(33, 165, 136);
+}
+
+.p3{
+    background: rgb(151, 160, 21);
+}
+
+.header-self{
+    align-self: stretch;
+    justify-self: stretch;
+    background: rgb(214, 56, 90);
+    border: 5px solid rgb(148, 8, 83);
+}
+
+.aside-self{
+    width: 200px;
+    height: auto;
+    grid-column: span 2;
+    align-self: center;
+    justify-self: center;
+    background: rgb(151, 160, 21);
+    border: 5px solid rgb(130, 204, 11);
+}
+
+.footer-self{
+    width: 200px;
+    height: auto;
+    align-self: end;
+    justify-self: start;
+    background: rgb(33, 165, 136);
+    border: 5px solid rgb(11, 78, 64);
+}
+
+.header-self,
+.aside-self,
+.footer-self{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: center;
+}
